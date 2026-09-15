@@ -142,12 +142,70 @@
       .hero { padding: 55px 0; }
       .card { padding: 22px; }
     }
+    .brand-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 14px 7px 7px;
+  border: 1px solid #4b3830;
+  background: #191b1d;
+  color: var(--ivory);
+  text-decoration: none;
+}
+
+.brand-card img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+
+.brand-card span {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.brand-card strong {
+  font-size: 13px;
+  letter-spacing: .08em;
+}
+
+.brand-card small {
+  margin-top: 4px;
+  color: var(--orange);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .3em;
+}
+
+.brand-card:hover { border-color: var(--orange); }
+
+.hero { text-align: center; }
+
+.hero-logo {
+  width: min(310px, 75%);
+  margin: 0 auto 32px;
+}
+
+.hero h1,
+.hero p {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero .actions { justify-content: center; }
   </style>
 </head>
 <body>
   <main>
     <header class="site-header">
-      <a class="brand" href="#home">Forged Destiny Gaming</a>
+      <a class="brand-card" href="#home" aria-label="Forged Destiny Gaming home">
+  <img src="fdg-logo.png" alt="">
+  <span>
+    <strong>FORGED DESTINY</strong>
+    <small>GAMING</small>
+  </span>
+</a>
       <nav aria-label="Main navigation">
         <a href="#home">Home</a>
         <a href="#games">Games</a>
