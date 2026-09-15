@@ -1,1 +1,172 @@
-index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Forged Destiny Gaming brings creators, players, and game developers together to make memorable content and original games.">
+  <title>Forged Destiny Gaming</title>
+  <style>
+    :root {
+      --bg: #151719;
+      --panel: #232629;
+      --orange: #ff5a1f;
+      --ivory: #fff3df;
+      --muted: #b8b8b5;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--ivory);
+      background: radial-gradient(circle at top, #292a2b, var(--bg) 65%);
+      font-family: Inter, Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    main {
+      width: min(100% - 40px, 760px);
+      margin: 0 auto;
+      padding: 70px 0;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 70px;
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .mark {
+      display: grid;
+      place-items: center;
+      width: 48px;
+      height: 48px;
+      border: 2px solid var(--orange);
+      color: var(--orange);
+      font-size: 20px;
+      letter-spacing: -.08em;
+    }
+
+    .eyebrow {
+      color: var(--orange);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 12px 0;
+      font-size: clamp(42px, 9vw, 76px);
+      line-height: 1.08;
+      letter-spacing: -.05em;
+    }
+
+    .intro {
+      max-width: 620px;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 30px 0 70px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 13px 20px;
+      border: 1px solid var(--orange);
+      color: var(--ivory);
+      font-weight: 700;
+      text-decoration: none;
+      transition: background .2s, transform .2s;
+    }
+
+    .button:hover {
+      background: var(--orange);
+      color: var(--bg);
+      transform: translateY(-2px);
+    }
+
+    .button.primary {
+      background: var(--orange);
+      color: var(--bg);
+    }
+
+    .button.primary:hover { background: #ff7844; }
+
+    .card {
+      padding: 30px;
+      border: 1px solid #414141;
+      border-left: 3px solid var(--orange);
+      background: var(--panel);
+    }
+
+    .card h2 { margin: 8px 0; font-size: 28px; }
+    .card p { margin-bottom: 0; color: var(--muted); }
+
+    footer {
+      margin-top: 65px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    footer a { color: var(--ivory); }
+
+    @media (max-width: 500px) {
+      main { padding-top: 35px; }
+      .brand { margin-bottom: 55px; }
+      .actions { margin-bottom: 55px; }
+      .card { padding: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="brand">
+      <div class="mark" aria-hidden="true">FD</div>
+      <span>Forged Destiny Gaming</span>
+    </div>
+
+    <section>
+      <div class="eyebrow">Forge your own path. Share the victory.</div>
+      <h1>Games are better built together.</h1>
+      <p class="intro">
+        Forged Destiny Gaming brings creators, players, and game developers
+        together to make memorable content and original games. Follow along,
+        meet the creators, and be part of what we build next.
+      </p>
+
+      <div class="actions">
+        <!-- Replace this URL with your permanent Discord invite link -->
+        <a class="button primary" href="https://discord.gg/PASTE-YOUR-INVITE">Join the Discord</a>
+        <a class="button" href="mailto:contact@forgeddestinygaming.com">Contact us</a>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="eyebrow">In development</div>
+      <h2>No Exit Necessary</h2>
+      <p>
+        A multiplayer survival-horror game built to play with friends.
+        Explore the unfamiliar, gather what you need, and make a place to survive.
+        More details are coming as development continues.
+      </p>
+    </section>
+
+    <footer>
+      © 2026 Forged Destiny Gaming ·
+      <a href="mailto:contact@forgeddestinygaming.com">contact@forgeddestinygaming.com</a>
+    </footer>
+  </main>
+</body>
+</html>
