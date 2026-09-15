@@ -15,10 +15,10 @@
     }
 
     * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
-      min-height: 100vh;
       color: var(--ivory);
       background: radial-gradient(circle at top, #292a2b, var(--bg) 65%);
       font-family: Inter, Arial, sans-serif;
@@ -26,31 +26,53 @@
     }
 
     main {
-      width: min(100% - 40px, 760px);
-      margin: 0 auto;
-      padding: 70px 0;
+      width: min(100% - 40px, 900px);
+      margin: auto;
+      padding: 30px 0 70px;
+    }
+
+    .site-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid #383838;
     }
 
     .brand {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      margin-bottom: 70px;
-      font-size: 14px;
+      color: var(--ivory);
       font-weight: 800;
-      letter-spacing: .12em;
+      letter-spacing: .08em;
+      text-decoration: none;
       text-transform: uppercase;
     }
 
-    .mark {
-      display: grid;
-      place-items: center;
-      width: 48px;
-      height: 48px;
-      border: 2px solid var(--orange);
-      color: var(--orange);
-      font-size: 20px;
-      letter-spacing: -.08em;
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 20px;
+    }
+
+    nav a {
+      color: var(--muted);
+      font-size: 14px;
+      text-decoration: none;
+    }
+
+    nav a:hover, footer a:hover { color: var(--orange); }
+    nav .discord { color: var(--orange); font-weight: 700; }
+
+    section { scroll-margin-top: 25px; }
+
+    .hero { padding: 75px 0 80px; }
+
+    .hero-logo {
+      display: block;
+      width: min(260px, 65%);
+      height: auto;
+      margin: 0 0 32px;
     }
 
     .eyebrow {
@@ -62,23 +84,27 @@
     }
 
     h1 {
+      max-width: 750px;
       margin: 12px 0;
-      font-size: clamp(42px, 9vw, 76px);
+      font-size: clamp(42px, 8vw, 76px);
       line-height: 1.08;
       letter-spacing: -.05em;
     }
 
-    .intro {
-      max-width: 620px;
+    h2 { margin: 8px 0; font-size: 28px; }
+
+    p {
+      max-width: 680px;
       color: var(--muted);
-      font-size: 18px;
     }
+
+    .intro { font-size: 18px; }
 
     .actions {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
-      margin: 30px 0 70px;
+      margin-top: 30px;
     }
 
     .button {
@@ -88,78 +114,90 @@
       color: var(--ivory);
       font-weight: 700;
       text-decoration: none;
-      transition: background .2s, transform .2s;
     }
 
-    .button:hover {
-      background: var(--orange);
-      color: var(--bg);
-      transform: translateY(-2px);
-    }
-
-    .button.primary {
-      background: var(--orange);
-      color: var(--bg);
-    }
-
+    .button:hover { background: var(--orange); color: var(--bg); }
+    .button.primary { background: var(--orange); color: var(--bg); }
     .button.primary:hover { background: #ff7844; }
 
     .card {
+      margin-bottom: 20px;
       padding: 30px;
       border: 1px solid #414141;
       border-left: 3px solid var(--orange);
       background: var(--panel);
     }
 
-    .card h2 { margin: 8px 0; font-size: 28px; }
-    .card p { margin-bottom: 0; color: var(--muted); }
+    .card p { margin-bottom: 0; }
 
     footer {
-      margin-top: 65px;
+      padding-top: 45px;
       color: var(--muted);
       font-size: 14px;
     }
 
     footer a { color: var(--ivory); }
 
-    @media (max-width: 500px) {
-      main { padding-top: 35px; }
-      .brand { margin-bottom: 55px; }
-      .actions { margin-bottom: 55px; }
+    @media (max-width: 600px) {
+      .hero { padding: 55px 0; }
       .card { padding: 22px; }
     }
   </style>
 </head>
 <body>
   <main>
-    <div class="brand">
-      <div class="mark" aria-hidden="true">FD</div>
-      <span>Forged Destiny Gaming</span>
-    </div>
+    <header class="site-header">
+      <a class="brand" href="#home">Forged Destiny Gaming</a>
+      <nav aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#games">Games</a>
+        <a href="#creators">Creators</a>
+        <a href="#about">About</a>
+        <!-- Replace this with your real Discord invite URL -->
+        <a class="discord" href="https://discord.gg/NxDS5DkhHs">Discord</a>
+        <a href="mailto:contact@forgeddestinygaming.com">Contact</a>
+      </nav>
+    </header>
 
-    <section>
+    <section class="hero" id="home">
+      <img class="hero-logo" src="fdg-logo.png" alt="Forged Destiny Gaming logo">
       <div class="eyebrow">Forge your own path. Share the victory.</div>
       <h1>Games are better built together.</h1>
       <p class="intro">
         Forged Destiny Gaming brings creators, players, and game developers
-        together to make memorable content and original games. Follow along,
-        meet the creators, and be part of what we build next.
+        together to make memorable content and original games.
       </p>
-
       <div class="actions">
-        <!-- Replace this URL with your permanent Discord invite link -->
         <a class="button primary" href="https://discord.gg/NxDS5DkhHs">Join the Discord</a>
-        <a class="button" href="mailto:contact@forgeddestinygaming.com">Contact us</a>
+        <a class="button" href="#games">Explore our games</a>
       </div>
     </section>
 
-    <section class="card">
+    <section class="card" id="games">
       <div class="eyebrow">In development</div>
       <h2>No Exit Necessary</h2>
       <p>
         A multiplayer survival-horror game built to play with friends.
         Explore the unfamiliar, gather what you need, and make a place to survive.
         More details are coming as development continues.
+      </p>
+    </section>
+
+    <section class="card" id="creators">
+      <div class="eyebrow">Our community</div>
+      <h2>Creators & players</h2>
+      <p>
+        We make content, play together, and share the victories along the way.
+        Meet the community and follow what we're building in our Discord.
+      </p>
+    </section>
+
+    <section class="card" id="about">
+      <div class="eyebrow">About FDG</div>
+      <h2>Forge your own path</h2>
+      <p>
+        Forged Destiny Gaming is a home for creators, players, and developers
+        working toward something worth remembering. This is only the beginning.
       </p>
     </section>
 
