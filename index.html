@@ -99,6 +99,36 @@
 
     section { scroll-margin-top: 25px; }
 
+    .announcement {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+      margin-top: 30px;
+      padding: 24px 26px;
+      border: 1px solid #4b3830;
+      border-left: 3px solid var(--orange);
+      background: #191b1d;
+    }
+
+    .announcement-copy { flex: 1; }
+
+    .announcement h2 {
+      margin: 5px 0 7px;
+      font-size: clamp(22px, 4vw, 30px);
+      line-height: 1.2;
+    }
+
+    .announcement p {
+      margin: 0;
+      max-width: 620px;
+    }
+
+    .announcement .button {
+      flex: 0 0 auto;
+      white-space: nowrap;
+    }
+
     .hero {
       padding: 75px 0 80px;
       text-align: center;
@@ -206,6 +236,15 @@
       .hero { padding: 55px 0; }
       .card { padding: 22px; }
 
+      .announcement {
+        align-items: stretch;
+        flex-direction: column;
+        gap: 18px;
+        padding: 22px;
+      }
+
+      .announcement .button { text-align: center; }
+
       .footer-inner {
         flex-direction: column;
         gap: 14px;
@@ -234,6 +273,24 @@
         <a href="mailto:contact@forgeddestinygaming.com">Contact</a>
       </nav>
     </header>
+
+    <aside class="announcement" aria-labelledby="creator-call-title">
+      <div class="announcement-copy">
+        <div class="eyebrow">Founding creator applications</div>
+        <h2 id="creator-call-title">Join our first creator roster.</h2>
+        <p>
+          Forged Destiny Gaming is selecting eight creators to join us from the
+          beginning. You keep full control of your channels and content—there is
+          no exclusivity and no required posting schedule.
+        </p>
+      </div>
+      <a
+        class="button primary"
+        href="https://docs.google.com/forms/d/e/1FAIpQLScuPxF7qDzVZMR8FjXOhKLvPp3Qv4o7qzVFVt1GRz0PTo04zA/viewform"
+        target="_blank"
+        rel="noopener noreferrer"
+      >Apply to join</a>
+    </aside>
 
     <section class="hero" id="home">
       <img class="hero-logo" src="logogo.png" alt="Forged Destiny Gaming logo">
