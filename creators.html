@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Meet the creators of Forged Destiny Gaming.">
+  <title>Creators | Forged Destiny Gaming</title>
+  <link rel="icon" href="favicon.png" type="image/png">
+  <style>
+    :root {
+      --background: #1c1f20;
+      --surface: #242728;
+      --surface-dark: #111314;
+      --text: #fff1dd;
+      --muted: #b9b9b9;
+      --orange: #ff4f1f;
+      --line: #3a3d3e;
+      --max-width: 1050px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
+
+    a { color: inherit; }
+
+    .site-header {
+      width: min(var(--max-width), calc(100% - 36px));
+      margin: 0 auto;
+      min-height: 96px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 9px 12px;
+      border: 1px solid #513426;
+      background: var(--surface-dark);
+      text-decoration: none;
+    }
+
+    .brand img {
+      width: 38px;
+      height: 38px;
+      object-fit: contain;
+    }
+
+    .brand-text {
+      font-weight: 800;
+      font-size: 0.92rem;
+      letter-spacing: 0.08em;
+      line-height: 1.15;
+    }
+
+    .brand-text span {
+      display: block;
+      margin-top: 4px;
+      color: var(--orange);
+      font-size: 0.67rem;
+      letter-spacing: 0.28em;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 24px;
+    }
+
+    .nav-links a {
+      color: #dedede;
+      text-decoration: none;
+      font-size: 0.94rem;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--orange);
+    }
+
+    main {
+      width: min(var(--max-width), calc(100% - 36px));
+      margin: 0 auto;
+      padding: 78px 0 96px;
+    }
+
+    .page-heading {
+      max-width: 720px;
+      margin-bottom: 48px;
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--orange);
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.5rem, 7vw, 5rem);
+      line-height: 1.02;
+      letter-spacing: -0.04em;
+    }
+
+    .page-heading p:last-child {
+      margin: 22px 0 0;
+      max-width: 650px;
+      color: #d0d0d0;
+      font-size: 1.08rem;
+    }
+
+    .creator-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 26px;
+    }
+
+    .creator-card {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: var(--surface);
+      transition: transform 160ms ease, border-color 160ms ease;
+    }
+
+    .creator-card:hover {
+      transform: translateY(-3px);
+      border-color: #6f412e;
+    }
+
+    .creator-photo {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      background:
+        linear-gradient(135deg, rgba(255,79,31,0.15), transparent 48%),
+        var(--surface-dark);
+      border-bottom: 3px solid var(--orange);
+    }
+
+    .creator-photo img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    .photo-placeholder {
+      color: #777;
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .creator-info { padding: 26px; }
+
+    .creator-role {
+      margin: 0 0 4px;
+      color: var(--orange);
+      font-size: 0.74rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .creator-name {
+      margin: 0;
+      font-size: 1.65rem;
+      line-height: 1.2;
+    }
+
+    .creator-bio {
+      margin: 14px 0 22px;
+      color: #d0d0d0;
+    }
+
+    .creator-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .creator-links a {
+      padding: 8px 12px;
+      border: 1px solid #6f412e;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 700;
+    }
+
+    .creator-links a:hover {
+      border-color: var(--orange);
+      background: var(--orange);
+      color: #111;
+    }
+
+    .site-footer {
+      border-top: 1px solid var(--line);
+      background: #17191a;
+    }
+
+    .footer-inner {
+      width: min(var(--max-width), calc(100% - 36px));
+      margin: 0 auto;
+      padding: 34px 0;
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-links a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    .footer-links a:hover { color: var(--orange); }
+
+    @media (max-width: 760px) {
+      .site-header {
+        padding: 18px 0;
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .nav-links {
+        justify-content: flex-start;
+        gap: 14px 19px;
+      }
+
+      main { padding-top: 56px; }
+      .creator-grid { grid-template-columns: 1fr; }
+
+      .footer-inner {
+        flex-direction: column;
+        gap: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Forged Destiny Gaming home">
+      <!-- Change logo.png if your current logo uses a different filename. -->
+      <img src="logo.png" alt="Forged Destiny Gaming logo">
+      <div class="brand-text">FORGED DESTINY<span>GAMING</span></div>
+    </a>
+
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="games.html">Games</a>
+      <a class="active" href="creators.html" aria-current="page">Creators</a>
+      <a href="about.html">About</a>
+      <a href="#">Discord</a>
+      <a href="mailto:contact@forgeddestinygaming.com">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-heading">
+      <p class="eyebrow">Forged Destiny Gaming</p>
+      <h1>Meet our creators.</h1>
+      <p>Independent creators with their own voices, communities, and ambitions—working together under one shared banner.</p>
+    </section>
+
+    <section class="creator-grid" aria-label="Forged Destiny Gaming creators">
+      <!-- CREATOR CARD: duplicate this entire article for each new creator. -->
+      <article class="creator-card">
+        <div class="creator-photo">
+          <!-- Replace the placeholder span with: <img src="images/creator-name.jpg" alt="Creator Name"> -->
+          <span class="photo-placeholder">Creator Photo</span>
+        </div>
+        <div class="creator-info">
+          <p class="creator-role">Founder · Creator · Game Developer</p>
+          <h2 class="creator-name">DecoTheRobot</h2>
+          <p class="creator-bio">Add a short bio describing the creator's content, personality, projects, and what viewers can expect from them.</p>
+          <div class="creator-links" aria-label="DecoTheRobot links">
+            <a href="#" target="_blank" rel="noopener noreferrer">YouTube</a>
+            <a href="#" target="_blank" rel="noopener noreferrer">Twitch</a>
+            <a href="#" target="_blank" rel="noopener noreferrer">TikTok</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="creator-card">
+        <div class="creator-photo">
+          <!-- Replace the placeholder span with: <img src="images/creator-name.jpg" alt="Creator Name"> -->
+          <span class="photo-placeholder">Creator Photo</span>
+        </div>
+        <div class="creator-info">
+          <p class="creator-role">Leadership · Creator</p>
+          <h2 class="creator-name">Box Beard</h2>
+          <p class="creator-bio">Add a short bio describing the creator's content, personality, projects, and what viewers can expect from them.</p>
+          <div class="creator-links" aria-label="Box Beard links">
+            <a href="#" target="_blank" rel="noopener noreferrer">YouTube</a>
+            <a href="#" target="_blank" rel="noopener noreferrer">Twitch</a>
+            <a href="#" target="_blank" rel="noopener noreferrer">TikTok</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- BLANK TEMPLATE: duplicate, rename, and fill in as founding creators join. -->
+      <article class="creator-card">
+        <div class="creator-photo">
+          <span class="photo-placeholder">Creator Photo</span>
+        </div>
+        <div class="creator-info">
+          <p class="creator-role">Founding Creator</p>
+          <h2 class="creator-name">Creator Name</h2>
+          <p class="creator-bio">Creator bio goes here. Keep it to two or three sentences so every profile remains easy to scan.</p>
+          <div class="creator-links" aria-label="Creator links">
+            <a href="#" target="_blank" rel="noopener noreferrer">YouTube</a>
+            <a href="#" target="_blank" rel="noopener noreferrer">Twitch</a>
+            <a href="#" target="_blank" rel="noopener noreferrer">TikTok</a>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        © 2026 Forged Destiny Gaming<br>
+        Forge your own path. Share the victory.
+      </div>
+      <div class="footer-links">
+        <a href="games.html">Games</a>
+        <a href="creators.html">Creators</a>
+        <a href="about.html">About</a>
+        <a href="mailto:contact@forgeddestinygaming.com">Contact</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
