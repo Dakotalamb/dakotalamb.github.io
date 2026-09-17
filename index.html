@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="apple-touch-icon" href="favicon.png">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Forged Destiny Gaming brings creators, players, and game developers together to make memorable content and original games.">
+
+  <meta
+    name="description"
+    content="Forged Destiny Gaming brings creators, players, and game developers together to make memorable content and original games."
+  >
+
   <title>Forged Destiny Gaming</title>
+
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/favicon.png">
 
   <style>
     :root {
@@ -17,8 +23,13 @@
       --muted: #b8b8b5;
     }
 
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       margin: 0;
@@ -69,7 +80,7 @@
 
     .brand-card strong {
       font-size: 13px;
-      letter-spacing: .08em;
+      letter-spacing: 0.08em;
     }
 
     .brand-card small {
@@ -77,10 +88,12 @@
       color: var(--orange);
       font-size: 10px;
       font-weight: 800;
-      letter-spacing: .3em;
+      letter-spacing: 0.3em;
     }
 
-    .brand-card:hover { border-color: var(--orange); }
+    .brand-card:hover {
+      border-color: var(--orange);
+    }
 
     nav {
       display: flex;
@@ -94,10 +107,18 @@
       text-decoration: none;
     }
 
-    nav a:hover { color: var(--orange); }
-    nav .discord { color: var(--orange); font-weight: 700; }
+    nav a:hover {
+      color: var(--orange);
+    }
 
-    section { scroll-margin-top: 25px; }
+    nav .discord {
+      color: var(--orange);
+      font-weight: 700;
+    }
+
+    section {
+      scroll-margin-top: 25px;
+    }
 
     .announcement {
       display: flex;
@@ -111,7 +132,9 @@
       background: #191b1d;
     }
 
-    .announcement-copy { flex: 1; }
+    .announcement-copy {
+      flex: 1;
+    }
 
     .announcement h2 {
       margin: 5px 0 7px;
@@ -145,7 +168,7 @@
       color: var(--orange);
       font-size: 13px;
       font-weight: 800;
-      letter-spacing: .18em;
+      letter-spacing: 0.18em;
       text-transform: uppercase;
     }
 
@@ -154,10 +177,13 @@
       margin: 12px auto;
       font-size: clamp(42px, 8vw, 76px);
       line-height: 1.08;
-      letter-spacing: -.05em;
+      letter-spacing: -0.05em;
     }
 
-    h2 { margin: 8px 0; font-size: 28px; }
+    h2 {
+      margin: 8px 0;
+      font-size: 28px;
+    }
 
     p {
       max-width: 680px;
@@ -169,7 +195,9 @@
       margin-right: auto;
     }
 
-    .intro { font-size: 18px; }
+    .intro {
+      font-size: 18px;
+    }
 
     .actions {
       display: flex;
@@ -178,7 +206,9 @@
       margin-top: 30px;
     }
 
-    .hero .actions { justify-content: center; }
+    .hero .actions {
+      justify-content: center;
+    }
 
     .button {
       display: inline-block;
@@ -189,9 +219,19 @@
       text-decoration: none;
     }
 
-    .button:hover { background: var(--orange); color: var(--bg); }
-    .button.primary { background: var(--orange); color: var(--bg); }
-    .button.primary:hover { background: #ff7844; }
+    .button:hover {
+      background: var(--orange);
+      color: var(--bg);
+    }
+
+    .button.primary {
+      background: var(--orange);
+      color: var(--bg);
+    }
+
+    .button.primary:hover {
+      background: #ff7844;
+    }
 
     .card {
       margin-bottom: 20px;
@@ -201,7 +241,9 @@
       background: var(--panel);
     }
 
-    .card p { margin-bottom: 0; }
+    .card p {
+      margin-bottom: 0;
+    }
 
     .site-footer {
       border-top: 1px solid #3a3d3e;
@@ -230,11 +272,18 @@
       text-decoration: none;
     }
 
-    .footer-links a:hover { color: var(--orange); }
+    .footer-links a:hover {
+      color: var(--orange);
+    }
 
     @media (max-width: 600px) {
-      .hero { padding: 55px 0; }
-      .card { padding: 22px; }
+      .hero {
+        padding: 55px 0;
+      }
+
+      .card {
+        padding: 22px;
+      }
 
       .announcement {
         align-items: stretch;
@@ -243,7 +292,9 @@
         padding: 22px;
       }
 
-      .announcement .button { text-align: center; }
+      .announcement .button {
+        text-align: center;
+      }
 
       .footer-inner {
         flex-direction: column;
@@ -256,8 +307,12 @@
 <body>
   <main>
     <header class="site-header">
-      <a class="brand-card" href="#home" aria-label="Forged Destiny Gaming home">
-        <img src="favicon.png" alt="">
+      <a
+        class="brand-card"
+        href="/"
+        aria-label="Forged Destiny Gaming home"
+      >
+        <img src="/favicon.png" alt="">
         <span>
           <strong>FORGED DESTINY</strong>
           <small>GAMING</small>
@@ -265,91 +320,156 @@
       </a>
 
       <nav aria-label="Main navigation">
-        <a href="#home">Home</a>
-        <a href="games.html">Games</a>
-        <a href="creators.html">Creators</a>
-        <a href="about.html">About</a>
-        <a class="discord" href="https://discord.gg/NxDS5DkhHs" target="_blank" rel="noopener noreferrer">Discord</a>
-        <a href="mailto:contact@forgeddestinygaming.com">Contact</a>
+        <a href="/">Home</a>
+        <a href="/games/">Games</a>
+        <a href="/creators/">Creators</a>
+        <a href="/about/">About</a>
+
+        <a
+          class="discord"
+          href="https://discord.gg/NxDS5DkhHs"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Discord
+        </a>
+
+        <a href="mailto:contact@forgeddestinygaming.com">
+          Contact
+        </a>
       </nav>
     </header>
 
-    <aside class="announcement" aria-labelledby="creator-call-title">
+    <aside
+      class="announcement"
+      aria-labelledby="creator-call-title"
+    >
       <div class="announcement-copy">
-        <div class="eyebrow">Founding creator applications</div>
-        <h2 id="creator-call-title">Join our first creator roster.</h2>
+        <div class="eyebrow">
+          Founding creator applications
+        </div>
+
+        <h2 id="creator-call-title">
+          Join our first creator roster.
+        </h2>
+
         <p>
           Forged Destiny Gaming is selecting eight creators to join us from the
           beginning. You keep full control of your channels and content—there is
           no exclusivity and no required posting schedule.
         </p>
       </div>
+
       <a
         class="button primary"
         href="https://docs.google.com/forms/d/e/1FAIpQLScuPxF7qDzVZMR8FjXOhKLvPp3Qv4o7qzVFVt1GRz0PTo04zA/viewform"
         target="_blank"
         rel="noopener noreferrer"
-      >Apply to join</a>
+      >
+        Apply to join
+      </a>
     </aside>
 
     <section class="hero" id="home">
-      <img class="hero-logo" src="logogo.png" alt="Forged Destiny Gaming logo">
-      <div class="eyebrow">Forge your own path. Share the victory.</div>
+      <img
+        class="hero-logo"
+        src="/logogo.png"
+        alt="Forged Destiny Gaming logo"
+      >
+
+      <div class="eyebrow">
+        Forge your own path. Share the victory.
+      </div>
+
       <h1>Games are better built together.</h1>
+
       <p class="intro">
         Forged Destiny Gaming brings creators, players, and game developers
         together to make memorable content and original games.
       </p>
+
       <div class="actions">
-        <a class="button primary" href="https://discord.gg/NxDS5DkhHs" target="_blank" rel="noopener noreferrer">Join the Discord</a>
-        <a class="button" href="games.html">Explore our games</a>
+        <a
+          class="button primary"
+          href="https://discord.gg/NxDS5DkhHs"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Join the Discord
+        </a>
+
+        <a class="button" href="/games/">
+          Explore our games
+        </a>
       </div>
     </section>
 
     <section class="card" id="games">
       <div class="eyebrow">In development</div>
+
       <h2>No Exit Necessary</h2>
+
       <p>
         A multiplayer survival-horror game built to play with friends.
         Explore the unfamiliar, gather what you need, and make a place to survive.
         More details are coming as development continues.
       </p>
+
+      <div class="actions">
+        <a class="button" href="/games/">
+          View our games
+        </a>
+      </div>
     </section>
 
     <section class="card" id="creators">
       <div class="eyebrow">Our community</div>
+
       <h2>Creators &amp; players</h2>
+
       <p>
         We make content, play together, and share the victories along the way.
         Meet the creators working together under the Forged Destiny Gaming banner.
       </p>
+
       <div class="actions">
-        <a class="button" href="creators.html">Meet our creators</a>
+        <a class="button" href="/creators/">
+          Meet our creators
+        </a>
       </div>
     </section>
 
     <section class="card" id="about">
       <div class="eyebrow">About FDG</div>
+
       <h2>Forge your own path</h2>
+
       <p>
         Forged Destiny Gaming is an independent game collective and creator
-        organization supporting original games, content creators, and collaborative
-        projects. This is only the beginning.
+        organization supporting original games, content creators, and
+        collaborative projects. This is only the beginning.
       </p>
+
+      <div class="actions">
+        <a class="button" href="/about/">
+          Learn more about FDG
+        </a>
+      </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="footer-inner">
       <div>
-        © 2026 Forged Destiny Gaming<br>
+        &copy; 2026 Forged Destiny Gaming<br>
         Forge your own path. Share the victory.
       </div>
 
       <div class="footer-links">
-        <a href="games.html">Games</a>
-        <a href="creators.html">Creators</a>
-        <a href="about.html">About</a>
+        <a href="/">Home</a>
+        <a href="/games/">Games</a>
+        <a href="/creators/">Creators</a>
+        <a href="/about/">About</a>
         <a href="mailto:contact@forgeddestinygaming.com">Contact</a>
       </div>
     </div>
