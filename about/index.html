@@ -3,10 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Learn about the mission, values, and vision behind Forged Destiny Gaming.">
+
+  <meta
+    name="description"
+    content="Learn about the mission, values, and vision behind Forged Destiny Gaming."
+  >
+
   <title>About | Forged Destiny Gaming</title>
-  <link rel="icon" href="favicon.png" type="image/png">
-  <link rel="apple-touch-icon" href="favicon.png">
+
+  <link rel="icon" href="/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="/favicon.png">
 
   <style>
     :root {
@@ -20,8 +26,13 @@
       --max-width: 1050px;
     }
 
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       margin: 0;
@@ -31,7 +42,9 @@
       line-height: 1.65;
     }
 
-    a { color: inherit; }
+    a {
+      color: inherit;
+    }
 
     .site-header {
       width: min(var(--max-width), calc(100% - 36px));
@@ -62,8 +75,8 @@
 
     .brand-text {
       font-weight: 800;
-      font-size: .92rem;
-      letter-spacing: .08em;
+      font-size: 0.92rem;
+      letter-spacing: 0.08em;
       line-height: 1.15;
     }
 
@@ -71,8 +84,8 @@
       display: block;
       margin-top: 4px;
       color: var(--orange);
-      font-size: .67rem;
-      letter-spacing: .28em;
+      font-size: 0.67rem;
+      letter-spacing: 0.28em;
     }
 
     .nav-links {
@@ -85,11 +98,13 @@
     .nav-links a {
       color: #dedede;
       text-decoration: none;
-      font-size: .94rem;
+      font-size: 0.94rem;
     }
 
     .nav-links a:hover,
-    .nav-links a.active { color: var(--orange); }
+    .nav-links a.active {
+      color: var(--orange);
+    }
 
     main {
       width: min(var(--max-width), calc(100% - 36px));
@@ -105,9 +120,9 @@
     .eyebrow {
       margin: 0 0 10px;
       color: var(--orange);
-      font-size: .8rem;
+      font-size: 0.8rem;
       font-weight: 800;
-      letter-spacing: .18em;
+      letter-spacing: 0.18em;
       text-transform: uppercase;
     }
 
@@ -115,7 +130,7 @@
       margin: 0;
       font-size: clamp(2.7rem, 7vw, 5.2rem);
       line-height: 1.02;
-      letter-spacing: -.04em;
+      letter-spacing: -0.04em;
     }
 
     .hero-copy {
@@ -181,11 +196,13 @@
       border-top: 1px solid var(--line);
     }
 
-    .principle:last-child { border-bottom: 1px solid var(--line); }
+    .principle:last-child {
+      border-bottom: 1px solid var(--line);
+    }
 
     .principle strong {
       color: var(--orange);
-      letter-spacing: .04em;
+      letter-spacing: 0.04em;
     }
 
     .principle p {
@@ -252,7 +269,7 @@
       justify-content: space-between;
       gap: 30px;
       color: var(--muted);
-      font-size: .85rem;
+      font-size: 0.85rem;
     }
 
     .footer-links {
@@ -266,7 +283,9 @@
       text-decoration: none;
     }
 
-    .footer-links a:hover { color: var(--orange); }
+    .footer-links a:hover {
+      color: var(--orange);
+    }
 
     @media (max-width: 760px) {
       .site-header {
@@ -280,15 +299,22 @@
         gap: 14px 19px;
       }
 
-      main { padding-top: 56px; }
-      .info-grid { grid-template-columns: 1fr; }
+      main {
+        padding-top: 56px;
+      }
+
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
 
       .principle {
         grid-template-columns: 1fr;
         gap: 8px;
       }
 
-      .closing { padding: 30px 22px; }
+      .closing {
+        padding: 30px 22px;
+      }
 
       .footer-inner {
         flex-direction: column;
@@ -300,109 +326,194 @@
 
 <body>
   <header class="site-header">
-    <a class="brand" href="index.html#home" aria-label="Forged Destiny Gaming home">
-      <img src="favicon.png" alt="Forged Destiny Gaming logo">
-      <div class="brand-text">FORGED DESTINY<span>GAMING</span></div>
+    <a
+      class="brand"
+      href="/"
+      aria-label="Forged Destiny Gaming home"
+    >
+      <img
+        src="/favicon.png"
+        alt="Forged Destiny Gaming logo"
+      >
+
+      <div class="brand-text">
+        FORGED DESTINY
+        <span>GAMING</span>
+      </div>
     </a>
 
     <nav class="nav-links" aria-label="Main navigation">
-      <a href="index.html#home">Home</a>
-      <a href="games.html">Games</a>
-      <a href="creators.html">Creators</a>
-      <a class="active" href="about.html" aria-current="page">About</a>
-      <a href="https://discord.gg/NxDS5DkhHs" target="_blank" rel="noopener noreferrer">Discord</a>
-      <a href="mailto:contact@forgeddestinygaming.com">Contact</a>
+      <a href="/">Home</a>
+      <a href="/games/">Games</a>
+      <a href="/creators/">Creators</a>
+
+      <a
+        class="active"
+        href="/about/"
+        aria-current="page"
+      >
+        About
+      </a>
+
+      <a
+        href="https://discord.gg/NxDS5DkhHs"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Discord
+      </a>
+
+      <a href="mailto:contact@forgeddestinygaming.com">
+        Contact
+      </a>
     </nav>
   </header>
 
   <main>
     <section class="hero">
-      <p class="eyebrow">About Forged Destiny Gaming</p>
+      <p class="eyebrow">
+        About Forged Destiny Gaming
+      </p>
+
       <h1>Independent ideas. Shared momentum.</h1>
+
       <p class="hero-copy">
-        Forged Destiny Gaming is an independent game collective and creator organization built to give original games, developers, and content creators a shared place to grow. We believe strong ideas deserve support without losing the voice that made them worth pursuing.
+        Forged Destiny Gaming is an independent game collective and creator
+        organization built to give original games, developers, and content
+        creators a shared place to grow. We believe strong ideas deserve
+        support without losing the voice that made them worth pursuing.
       </p>
     </section>
 
     <section class="statement">
       <p class="eyebrow">Our mission</p>
+
       <h2>Build games and communities worth returning to.</h2>
+
       <p>
-        Our mission is to connect independent developers, creators, players, and collaborators around memorable projects. We provide a shared identity, website, community, moderation, promotion, and room for collaboration while allowing every project and creator to keep its own personality.
+        Our mission is to connect independent developers, creators, players,
+        and collaborators around memorable projects. We provide a shared
+        identity, website, community, moderation, promotion, and room for
+        collaboration while allowing every project and creator to keep its
+        own personality.
       </p>
     </section>
 
-    <section class="info-grid" aria-label="What Forged Destiny Gaming does">
+    <section
+      class="info-grid"
+      aria-label="What Forged Destiny Gaming does"
+    >
       <article class="info-card">
         <p class="eyebrow">Original games</p>
+
         <h2>A home for distinct projects</h2>
+
         <p>
-          FDG gives independently developed games a professional home under one recognizable banner. Each project can have its own website pages, Discord space, community, updates, and identity while benefiting from shared infrastructure and visibility.
+          FDG gives independently developed games a professional home under
+          one recognizable banner. Each project can have its own website
+          pages, Discord space, community, updates, and identity while
+          benefiting from shared infrastructure and visibility.
         </p>
       </article>
 
       <article class="info-card">
         <p class="eyebrow">Creator network</p>
+
         <h2>Growth through collaboration</h2>
+
         <p>
-          Our creators remain independent while gaining a trusted network for collaborations, shared opportunities, community events, playtests, and promotion. Audience size matters less to us than authenticity, consistency, ambition, and fit.
+          Our creators remain independent while gaining a trusted network
+          for collaborations, shared opportunities, community events,
+          playtests, and promotion. Audience size matters less to us than
+          authenticity, consistency, ambition, and fit.
         </p>
       </article>
 
       <article class="info-card">
         <p class="eyebrow">Shared support</p>
+
         <h2>Infrastructure without the overhead</h2>
+
         <p>
-          FDG currently provides the shared domain, project pages, Discord organization, moderation, community access, and promotional support. Developers bring their games, maintain ownership, and publish their work through their own accounts unless a separate agreement says otherwise.
+          FDG currently provides the shared domain, project pages, Discord
+          organization, moderation, community access, and promotional
+          support. Developers bring their games, maintain ownership, and
+          publish their work through their own accounts unless a separate
+          agreement says otherwise.
         </p>
       </article>
 
       <article class="info-card">
         <p class="eyebrow">Future vision</p>
+
         <h2>Support ideas from pitch to release</h2>
+
         <p>
-          As FDG grows, our long-term goal is to fund promising original concepts, connect creators with small development teams, and help strong ideas become finished games. Growth will remain selective, sustainable, and centered on the quality of the experience.
+          As FDG grows, our long-term goal is to fund promising original
+          concepts, connect creators with small development teams, and help
+          strong ideas become finished games. Growth will remain selective,
+          sustainable, and centered on the quality of the experience.
         </p>
       </article>
     </section>
 
     <section class="principles">
       <p class="eyebrow">What we believe</p>
+
       <h2>Our guiding principles</h2>
 
       <div class="principle-list">
         <article class="principle">
           <strong>Quality over trends</strong>
+
           <p>
-            We believe quality creates demand. FDG exists to support engaging, distinctive experiences—not disposable copies of whatever happens to be popular.
+            We believe quality creates demand. FDG exists to support
+            engaging, distinctive experiences—not disposable copies of
+            whatever happens to be popular.
           </p>
         </article>
 
         <article class="principle">
           <strong>Experience over graphics</strong>
+
           <p>
-            A game does not need photorealistic visuals or an enormous budget to be excellent. Quality means delivering on the central idea, respecting the player's time, and creating something people genuinely want to revisit.
+            A game does not need photorealistic visuals or an enormous
+            budget to be excellent. Quality means delivering on the central
+            idea, respecting the player's time, and creating something
+            people genuinely want to revisit.
           </p>
         </article>
 
         <article class="principle">
           <strong>Creative authority</strong>
+
           <p>
-            Creators and developers should keep control of their vision. FDG supports projects without redesigning them into safer, more generic products. Intervention is reserved for clear legal, safety, or serious reputational concerns.
+            Creators and developers should keep control of their vision.
+            FDG supports projects without redesigning them into safer, more
+            generic products. Intervention is reserved for clear legal,
+            safety, or serious reputational concerns.
           </p>
         </article>
 
         <article class="principle">
           <strong>Creator ownership</strong>
+
           <p>
-            Joining FDG does not automatically transfer ownership of a creator's content, personal brand, or game. Responsibilities, funding, publishing rights, and revenue terms must be clearly agreed upon in writing whenever they apply.
+            Joining FDG does not automatically transfer ownership of a
+            creator's content, personal brand, or game. Responsibilities,
+            funding, publishing rights, and revenue terms must be clearly
+            agreed upon in writing whenever they apply.
           </p>
         </article>
 
         <article class="principle">
           <strong>Shared victories</strong>
+
           <p>
-            We are not building a culture where one person's success creates jealousy or competition. A creator reaching a milestone, a developer releasing a game, or a community member contributing something meaningful strengthens the entire collective.
+            We are not building a culture where one person's success creates
+            jealousy or competition. A creator reaching a milestone, a
+            developer releasing a game, or a community member contributing
+            something meaningful strengthens the entire collective.
           </p>
         </article>
       </div>
@@ -410,14 +521,30 @@
 
     <section class="closing">
       <p class="eyebrow">The road ahead</p>
+
       <h2>Forge your own path. Share the victory.</h2>
+
       <p>
-        Forged Destiny Gaming is still at the beginning. We are building the foundation carefully: original games, genuine creators, a strong community, and a reputation earned through the work itself. We are not trying to become the biggest organization overnight. We are building something worth remembering.
+        Forged Destiny Gaming is still at the beginning. We are building the
+        foundation carefully: original games, genuine creators, a strong
+        community, and a reputation earned through the work itself. We are
+        not trying to become the biggest organization overnight. We are
+        building something worth remembering.
       </p>
 
       <div class="actions">
-        <a class="button primary" href="https://discord.gg/NxDS5DkhHs" target="_blank" rel="noopener noreferrer">Join the Discord</a>
-        <a class="button" href="creators.html">Meet our creators</a>
+        <a
+          class="button primary"
+          href="https://discord.gg/NxDS5DkhHs"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Join the Discord
+        </a>
+
+        <a class="button" href="/creators/">
+          Meet our creators
+        </a>
       </div>
     </section>
   </main>
@@ -425,14 +552,15 @@
   <footer class="site-footer">
     <div class="footer-inner">
       <div>
-        © 2026 Forged Destiny Gaming<br>
+        &copy; 2026 Forged Destiny Gaming<br>
         Forge your own path. Share the victory.
       </div>
 
       <div class="footer-links">
-        <a href="games.html">Games</a>
-        <a href="creators.html">Creators</a>
-        <a href="about.html">About</a>
+        <a href="/">Home</a>
+        <a href="/games/">Games</a>
+        <a href="/creators/">Creators</a>
+        <a href="/about/">About</a>
         <a href="mailto:contact@forgeddestinygaming.com">Contact</a>
       </div>
     </div>
