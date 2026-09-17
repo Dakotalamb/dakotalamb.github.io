@@ -164,6 +164,21 @@
       object-fit: cover;
     }
 
+    .creator-photo-link {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .creator-photo-link img {
+      transition: transform 180ms ease, filter 180ms ease;
+    }
+
+    .creator-photo-link:hover img {
+      transform: scale(1.025);
+      filter: brightness(1.08);
+    }
+
     .photo-placeholder {
       color: #777;
       font-size: 0.75rem;
@@ -187,6 +202,16 @@
       margin: 0;
       font-size: 1.65rem;
       line-height: 1.2;
+    }
+
+    .creator-name a {
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .creator-name a:hover,
+    .creator-name a:focus-visible {
+      color: var(--orange);
     }
 
     .creator-bio {
@@ -287,22 +312,25 @@
     <section class="page-heading">
       <p class="eyebrow">Forged Destiny Gaming</p>
       <h1>Meet our creators.</h1>
-      <p>Independent creators with their own voices, communities, and ambitions—working together under one shared banner.</p>
+      <p>Independent creators with their own voices, communities, and ambitionsâ€”working together under one shared banner.</p>
     </section>
 
     <section class="creator-grid" aria-label="Forged Destiny Gaming creators">
       <!-- CREATOR CARD: duplicate this entire article for each new creator. -->
       <article class="creator-card">
-     <div class="creator-photo">
-  <img src="DECO.png" alt="DecoTheRobot">
-</div>
+        <div class="creator-photo">
+          <a class="creator-photo-link" href="decotherobot.html" aria-label="View DecoTheRobot's media kit">
+            <img src="DECO.png" alt="DecoTheRobot">
+          </a>
+        </div>
         <div class="creator-info">
-          <p class="creator-role">Founder · Creator · Game Developer</p>
-          <h2 class="creator-name">DecoTheRobot</h2>
+          <p class="creator-role">Founder Â· Creator Â· Game Developer</p>
+          <h2 class="creator-name"><a href="decotherobot.html">DecoTheRobot</a></h2>
           <p class="creator-bio">DecoTheRobot is a content creator, livestreamer, game developer, and founder of Forged Destiny Gaming. Known for deadpan humor, chaotic multiplayer adventures, and plans that rarely survive contact with reality, Deco turns unpredictable gaming moments into genuine entertainment shared with friends and the community.<br><br>
           Beyond content creation, Deco develops original games with a focus on memorable ideas, player freedom, and experiences worth returning to. His current project, <em>No Exit Necessary</em>, is a multiplayer survival-horror game that challenges players to stop searching for an escape and instead learn how to survive, build, and thrive within an impossible world.<br><br>
           Through Forged Destiny Gaming, Deco is working to bring independent creators and developers together under a shared banner while protecting their individual voices and creative authority. His goal is simple: support original ideas, build lasting communities, and create games and content that people genuinely want to experience.</p>
           <div class="creator-links" aria-label="DecoTheRobot links">
+            <a href="decotherobot.html">Media Kit</a>
             <a href="https://www.youtube.com/@DecoTheRobot" target="_blank" rel="noopener noreferrer">YouTube</a>
             <a href="https://www.twitch.tv/decotherobot" target="_blank" rel="noopener noreferrer">Twitch</a>
             <a href="https://www.tiktok.com/@decotherobot_" target="_blank" rel="noopener noreferrer">TikTok</a>
@@ -316,10 +344,11 @@
           <span class="photo-placeholder">Creator Photo</span>
         </div>
         <div class="creator-info">
-          <p class="creator-role">Co-Founder · Leadership · Creator</p>
-          <h2 class="creator-name">Box_Beard</h2>
+          <p class="creator-role">Co-Founder Â· Leadership Â· Creator</p>
+          <h2 class="creator-name"><a href="box-beard.html">Box_Beard</a></h2>
           <p class="creator-bio">Add a short bio describing the creator's content, personality, projects, and what viewers can expect from them.</p>
           <div class="creator-links" aria-label="Box Beard links">
+            <a href="box-beard.html">Media Kit</a>
             <a href="https://www.youtube.com/@Box_Beard" target="_blank" rel="noopener noreferrer">YouTube</a>
             <a href="https://www.twitch.tv/box_beard" target="_blank" rel="noopener noreferrer">Twitch</a>
             <a href="https://www.tiktok.com/@box_beard" target="_blank" rel="noopener noreferrer">TikTok</a>
@@ -349,7 +378,7 @@
   <footer class="site-footer">
     <div class="footer-inner">
       <div>
-        © 2026 Forged Destiny Gaming<br>
+        Â© 2026 Forged Destiny Gaming<br>
         Forge your own path. Share the victory.
       </div>
       <div class="footer-links">
