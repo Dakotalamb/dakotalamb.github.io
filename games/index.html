@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="apple-touch-icon" href="favicon.png">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Explore games in development at Forged Destiny Gaming, including No Exit Necessary and future original projects.">
+
+  <meta
+    name="description"
+    content="Explore games in development at Forged Destiny Gaming, including No Exit Necessary and future original projects."
+  >
+
   <title>Games | Forged Destiny Gaming</title>
+
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/favicon.png">
 
   <style>
     :root {
@@ -19,7 +25,9 @@
       --border: #414141;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
     body {
       margin: 0;
@@ -48,12 +56,16 @@
       text-decoration: none;
     }
 
-    .brand img { width: 42px; height: 42px; object-fit: contain; }
+    .brand img {
+      width: 42px;
+      height: 42px;
+      object-fit: contain;
+    }
 
     .brand-text {
       font-size: 13px;
       font-weight: 800;
-      letter-spacing: .08em;
+      letter-spacing: 0.08em;
       line-height: 1.1;
     }
 
@@ -62,13 +74,29 @@
       margin-top: 4px;
       color: var(--orange);
       font-size: 10px;
-      letter-spacing: .3em;
+      letter-spacing: 0.3em;
     }
 
-    .nav-links { display: flex; flex-wrap: wrap; gap: 10px 20px; }
-    .nav-links a { color: var(--muted); font-size: 14px; text-decoration: none; }
-    .nav-links a:hover, .nav-links .active { color: var(--orange); }
-    .nav-links .active { font-weight: 700; }
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 20px;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-size: 14px;
+      text-decoration: none;
+    }
+
+    .nav-links a:hover,
+    .nav-links .active {
+      color: var(--orange);
+    }
+
+    .nav-links .active {
+      font-weight: 700;
+    }
 
     main {
       width: min(100% - 40px, 1050px);
@@ -81,7 +109,7 @@
       color: var(--orange);
       font-size: 13px;
       font-weight: 800;
-      letter-spacing: .18em;
+      letter-spacing: 0.18em;
       text-transform: uppercase;
     }
 
@@ -90,19 +118,37 @@
       margin: 10px 0 18px;
       font-size: clamp(44px, 8vw, 76px);
       line-height: 1.06;
-      letter-spacing: -.05em;
+      letter-spacing: -0.05em;
     }
 
-    h2 { margin: 6px 0 12px; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; }
-    h3 { margin: 0 0 8px; font-size: 19px; }
-    p { color: var(--muted); }
+    h2 {
+      margin: 6px 0 12px;
+      font-size: clamp(28px, 5vw, 42px);
+      line-height: 1.15;
+    }
 
-    .page-heading { max-width: 790px; margin-bottom: 48px; }
-    .page-heading > p:last-child { max-width: 720px; font-size: 18px; }
+    h3 {
+      margin: 0 0 8px;
+      font-size: 19px;
+    }
+
+    p {
+      color: var(--muted);
+    }
+
+    .page-heading {
+      max-width: 790px;
+      margin-bottom: 48px;
+    }
+
+    .page-heading > p:last-child {
+      max-width: 720px;
+      font-size: 18px;
+    }
 
     .game-card {
       display: grid;
-      grid-template-columns: minmax(0, 1.4fr) minmax(260px, .6fr);
+      grid-template-columns: minmax(0, 1.4fr) minmax(260px, 0.6fr);
       gap: 38px;
       margin-bottom: 28px;
       padding: clamp(28px, 5vw, 48px);
@@ -124,11 +170,14 @@
       color: var(--orange);
       font-size: 11px;
       font-weight: 800;
-      letter-spacing: .12em;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
     }
 
-    .game-summary { max-width: 650px; font-size: 17px; }
+    .game-summary {
+      max-width: 650px;
+      font-size: 17px;
+    }
 
     .feature-list {
       display: grid;
@@ -142,8 +191,15 @@
       background: #1b1d1f;
     }
 
-    .feature strong { display: block; margin-bottom: 2px; }
-    .feature span { color: var(--muted); font-size: 14px; }
+    .feature strong {
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .feature span {
+      color: var(--muted);
+      font-size: 14px;
+    }
 
     .game-aside {
       align-self: stretch;
@@ -152,11 +208,30 @@
       background: #1a1c1e;
     }
 
-    .game-aside dl { margin: 0; }
-    .game-aside div { padding: 13px 0; border-bottom: 1px solid #333638; }
-    .game-aside div:last-child { border-bottom: 0; }
-    .game-aside dt { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .1em; }
-    .game-aside dd { margin: 3px 0 0; font-weight: 700; }
+    .game-aside dl {
+      margin: 0;
+    }
+
+    .game-aside div {
+      padding: 13px 0;
+      border-bottom: 1px solid #333638;
+    }
+
+    .game-aside div:last-child {
+      border-bottom: 0;
+    }
+
+    .game-aside dt {
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .game-aside dd {
+      margin: 3px 0 0;
+      font-weight: 700;
+    }
 
     .button {
       display: inline-block;
@@ -168,8 +243,15 @@
       text-decoration: none;
     }
 
-    .button:hover, .button.primary { background: var(--orange); color: var(--bg); }
-    .button.primary:hover { background: #ff7844; }
+    .button:hover,
+    .button.primary {
+      background: var(--orange);
+      color: var(--bg);
+    }
+
+    .button.primary:hover {
+      background: #ff7844;
+    }
 
     .developer-call {
       margin-top: 70px;
@@ -178,7 +260,9 @@
       background: var(--panel);
     }
 
-    .developer-call > p { max-width: 760px; }
+    .developer-call > p {
+      max-width: 760px;
+    }
 
     .developer-form {
       display: grid;
@@ -187,11 +271,24 @@
       margin-top: 30px;
     }
 
-    .field { display: flex; flex-direction: column; gap: 7px; }
-    .field.full { grid-column: 1 / -1; }
-    label { font-size: 14px; font-weight: 700; }
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
 
-    input, select, textarea {
+    .field.full {
+      grid-column: 1 / -1;
+    }
+
+    label {
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    input,
+    select,
+    textarea {
       width: 100%;
       padding: 12px 13px;
       border: 1px solid #4b4e50;
@@ -202,10 +299,22 @@
       font: inherit;
     }
 
-    input:focus, select:focus, textarea:focus { border-color: var(--orange); }
-    textarea { min-height: 125px; resize: vertical; }
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: var(--orange);
+    }
 
-    .form-note { grid-column: 1 / -1; margin: 0; font-size: 13px; }
+    textarea {
+      min-height: 125px;
+      resize: vertical;
+    }
+
+    .form-note {
+      grid-column: 1 / -1;
+      margin: 0;
+      font-size: 13px;
+    }
 
     button {
       width: fit-content;
@@ -218,9 +327,14 @@
       cursor: pointer;
     }
 
-    button:hover { background: #ff7844; }
+    button:hover {
+      background: #ff7844;
+    }
 
-    .site-footer { border-top: 1px solid #3a3d3e; background: #17191a; }
+    .site-footer {
+      border-top: 1px solid #3a3d3e;
+      background: #17191a;
+    }
 
     .footer-inner {
       width: min(1050px, calc(100% - 36px));
@@ -233,122 +347,289 @@
       font-size: 14px;
     }
 
-    .footer-links { display: flex; flex-wrap: wrap; gap: 16px; }
-    .footer-links a { color: var(--muted); text-decoration: none; }
-    .footer-links a:hover { color: var(--orange); }
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-links a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      color: var(--orange);
+    }
 
     @media (max-width: 760px) {
-      .site-header { align-items: flex-start; flex-direction: column; }
-      main { padding-top: 50px; }
-      .game-card { grid-template-columns: 1fr; }
-      .developer-form { grid-template-columns: 1fr; }
-      .field.full, .form-note { grid-column: auto; }
-      .footer-inner { flex-direction: column; gap: 14px; }
+      .site-header {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      main {
+        padding-top: 50px;
+      }
+
+      .game-card {
+        grid-template-columns: 1fr;
+      }
+
+      .developer-form {
+        grid-template-columns: 1fr;
+      }
+
+      .field.full,
+      .form-note {
+        grid-column: auto;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        gap: 14px;
+      }
     }
   </style>
 </head>
 
 <body>
   <header class="site-header">
-    <a class="brand" href="index.html#home" aria-label="Forged Destiny Gaming home">
-      <img src="favicon.png" alt="Forged Destiny Gaming logo">
-      <div class="brand-text">FORGED DESTINY<span>GAMING</span></div>
+    <a
+      class="brand"
+      href="/"
+      aria-label="Forged Destiny Gaming home"
+    >
+      <img
+        src="/favicon.png"
+        alt="Forged Destiny Gaming logo"
+      >
+
+      <div class="brand-text">
+        FORGED DESTINY
+        <span>GAMING</span>
+      </div>
     </a>
 
     <nav class="nav-links" aria-label="Main navigation">
-      <a href="index.html#home">Home</a>
-      <a class="active" href="games.html" aria-current="page">Games</a>
-      <a href="creators.html">Creators</a>
-      <a href="about.html">About</a>
-      <a href="https://discord.gg/NxDS5DkhHs" target="_blank" rel="noopener noreferrer">Discord</a>
-      <a href="mailto:contact@forgeddestinygaming.com">Contact</a>
+      <a href="/">Home</a>
+
+      <a
+        class="active"
+        href="/games/"
+        aria-current="page"
+      >
+        Games
+      </a>
+
+      <a href="/creators/">Creators</a>
+      <a href="/about/">About</a>
+
+      <a
+        href="https://discord.gg/NxDS5DkhHs"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Discord
+      </a>
+
+      <a href="mailto:contact@forgeddestinygaming.com">
+        Contact
+      </a>
     </nav>
   </header>
 
   <main>
     <section class="page-heading">
       <p class="eyebrow">Forged Destiny Gaming</p>
+
       <h1>Games with an identity of their own.</h1>
-      <p>We support original projects built around strong ideas, memorable worlds, and reasons to keep playing long after the first session.</p>
+
+      <p>
+        We support original projects built around strong ideas, memorable
+        worlds, and reasons to keep playing long after the first session.
+      </p>
     </section>
 
     <article class="game-card" aria-labelledby="no-exit-title">
       <div>
         <span class="status">In development</span>
-        <p class="eyebrow">Multiplayer survival horror</p>
-        <h2 id="no-exit-title">No Exit Necessary</h2>
-        <p class="game-summary">
-          You are trapped in an impossible liminal world—but escaping is not the objective.
-          Explore, gather resources, build a place to survive, and learn how to live alongside
-          the anomalies hunting through the halls. The question is not how you get out. It is
-          what you build when there is no exit.
+
+        <p class="eyebrow">
+          Multiplayer survival horror
         </p>
 
-        <div class="feature-list" aria-label="No Exit Necessary features">
-          <div class="feature"><strong>Survive together</strong><span>Explore and endure a hostile world with friends.</span></div>
-          <div class="feature"><strong>Build a home</strong><span>Use gathered materials to construct and expand a functional base.</span></div>
-          <div class="feature"><strong>Discover the unknown</strong><span>Encounter strange environments, hidden systems, and dangerous anomalies.</span></div>
+        <h2 id="no-exit-title">No Exit Necessary</h2>
+
+        <p class="game-summary">
+          You are trapped in an impossible liminal world&mdash;but escaping
+          is not the objective. Explore, gather resources, build a place to
+          survive, and learn how to live alongside the anomalies hunting
+          through the halls. The question is not how you get out. It is what
+          you build when there is no exit.
+        </p>
+
+        <div
+          class="feature-list"
+          aria-label="No Exit Necessary features"
+        >
+          <div class="feature">
+            <strong>Survive together</strong>
+            <span>
+              Explore and endure a hostile world with friends.
+            </span>
+          </div>
+
+          <div class="feature">
+            <strong>Build a home</strong>
+            <span>
+              Use gathered materials to construct and expand a functional base.
+            </span>
+          </div>
+
+          <div class="feature">
+            <strong>Discover the unknown</strong>
+            <span>
+              Encounter strange environments, hidden systems, and dangerous
+              anomalies.
+            </span>
+          </div>
         </div>
 
-        <a class="button" href="https://discord.gg/NxDS5DkhHs" target="_blank" rel="noopener noreferrer">Follow development</a>
+        <a
+          class="button"
+          href="https://discord.gg/NxDS5DkhHs"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Follow development
+        </a>
       </div>
 
-      <aside class="game-aside" aria-label="No Exit Necessary details">
+      <aside
+        class="game-aside"
+        aria-label="No Exit Necessary details"
+      >
         <dl>
-          <div><dt>Status</dt><dd>In development</dd></div>
-          <div><dt>Genre</dt><dd>Survival horror</dd></div>
-          <div><dt>Focus</dt><dd>Multiplayer, crafting &amp; base building</dd></div>
-          <div><dt>Developer</dt><dd>Forged Destiny Gaming</dd></div>
+          <div>
+            <dt>Status</dt>
+            <dd>In development</dd>
+          </div>
+
+          <div>
+            <dt>Genre</dt>
+            <dd>Survival horror</dd>
+          </div>
+
+          <div>
+            <dt>Focus</dt>
+            <dd>Multiplayer, crafting &amp; base building</dd>
+          </div>
+
+          <div>
+            <dt>Developer</dt>
+            <dd>Forged Destiny Gaming</dd>
+          </div>
         </dl>
       </aside>
     </article>
 
-    <article class="game-card secondary" aria-labelledby="untitled-title">
+    <article
+      class="game-card secondary"
+      aria-labelledby="untitled-title"
+    >
       <div>
         <span class="status">Early development</span>
-        <p class="eyebrow">Second original project</p>
+
+        <p class="eyebrow">
+          Second original project
+        </p>
+
         <h2 id="untitled-title">Untitled Project</h2>
+
         <p class="game-summary">
-          Another original game is now in development under Forged Destiny Gaming.
-          Its final title and full reveal have not been announced. More information
-          will be shared when the project is ready to step into the spotlight.
+          Another original game is now in development under Forged Destiny
+          Gaming. Its final title and full reveal have not been announced.
+          More information will be shared when the project is ready to step
+          into the spotlight.
         </p>
       </div>
     </article>
 
-    <section class="developer-call" id="developer-application">
+    <section
+      class="developer-call"
+      id="developer-application"
+    >
       <p class="eyebrow">Develop with us</p>
+
       <h2>Have a game worth building?</h2>
+
       <p>
-        Forged Destiny Gaming is open to hearing from independent developers and small teams
-        working on original projects. Tell us what you are creating, where it currently stands,
-        and what you hope to gain by becoming part of FDG.
+        Forged Destiny Gaming is open to hearing from independent developers
+        and small teams working on original projects. Tell us what you are
+        creating, where it currently stands, and what you hope to gain by
+        becoming part of FDG.
       </p>
 
-      <form class="developer-form" id="developer-form">
+      <form
+        class="developer-form"
+        id="developer-form"
+      >
         <div class="field">
           <label for="developer-name">Your name *</label>
-          <input id="developer-name" name="developer-name" type="text" autocomplete="name" required>
+
+          <input
+            id="developer-name"
+            name="developer-name"
+            type="text"
+            autocomplete="name"
+            required
+          >
         </div>
 
         <div class="field">
           <label for="developer-email">Your email *</label>
-          <input id="developer-email" name="developer-email" type="email" autocomplete="email" required>
+
+          <input
+            id="developer-email"
+            name="developer-email"
+            type="email"
+            autocomplete="email"
+            required
+          >
         </div>
 
         <div class="field">
           <label for="team-name">Studio or team name</label>
-          <input id="team-name" name="team-name" type="text">
+
+          <input
+            id="team-name"
+            name="team-name"
+            type="text"
+          >
         </div>
 
         <div class="field">
           <label for="game-title">Game or project title</label>
-          <input id="game-title" name="game-title" type="text" placeholder="Untitled is perfectly fine">
+
+          <input
+            id="game-title"
+            name="game-title"
+            type="text"
+            placeholder="Untitled is perfectly fine"
+          >
         </div>
 
         <div class="field full">
-          <label for="development-stage">Current development stage *</label>
-          <select id="development-stage" name="development-stage" required>
+          <label for="development-stage">
+            Current development stage *
+          </label>
+
+          <select
+            id="development-stage"
+            name="development-stage"
+            required
+          >
             <option value="">Choose one</option>
             <option>Concept or planning</option>
             <option>Prototype</option>
@@ -359,22 +640,52 @@
         </div>
 
         <div class="field full">
-          <label for="project-pitch">Tell us about the game *</label>
-          <textarea id="project-pitch" name="project-pitch" required placeholder="What is the central idea, what makes it distinct, and who is it for?"></textarea>
+          <label for="project-pitch">
+            Tell us about the game *
+          </label>
+
+          <textarea
+            id="project-pitch"
+            name="project-pitch"
+            required
+            placeholder="What is the central idea, what makes it distinct, and who is it for?"
+          ></textarea>
         </div>
 
         <div class="field full">
-          <label for="developer-goals">What are you looking for from FDG? *</label>
-          <textarea id="developer-goals" name="developer-goals" required placeholder="Community, promotion, collaborators, playtesting, shared infrastructure, or something else?"></textarea>
+          <label for="developer-goals">
+            What are you looking for from FDG? *
+          </label>
+
+          <textarea
+            id="developer-goals"
+            name="developer-goals"
+            required
+            placeholder="Community, promotion, collaborators, playtesting, shared infrastructure, or something else?"
+          ></textarea>
         </div>
 
         <div class="field full">
-          <label for="project-link">Portfolio, build, video, or project link</label>
-          <input id="project-link" name="project-link" type="url" placeholder="https://">
+          <label for="project-link">
+            Portfolio, build, video, or project link
+          </label>
+
+          <input
+            id="project-link"
+            name="project-link"
+            type="url"
+            placeholder="https://"
+          >
         </div>
 
-        <p class="form-note">Submitting opens a prepared email in your device's email app. Review it, attach anything relevant, and press send.</p>
-        <button type="submit">Prepare developer application</button>
+        <p class="form-note">
+          Submitting opens a prepared email in your device's email app.
+          Review it, attach anything relevant, and press send.
+        </p>
+
+        <button type="submit">
+          Prepare developer application
+        </button>
       </form>
     </section>
   </main>
@@ -382,46 +693,58 @@
   <footer class="site-footer">
     <div class="footer-inner">
       <div>
-        © 2026 Forged Destiny Gaming<br>
+        &copy; 2026 Forged Destiny Gaming<br>
         Forge your own path. Share the victory.
       </div>
+
       <div class="footer-links">
-        <a href="games.html">Games</a>
-        <a href="creators.html">Creators</a>
-        <a href="about.html">About</a>
+        <a href="/">Home</a>
+        <a href="/games/">Games</a>
+        <a href="/creators/">Creators</a>
+        <a href="/about/">About</a>
         <a href="mailto:contact@forgeddestinygaming.com">Contact</a>
       </div>
     </div>
   </footer>
 
   <script>
-    document.getElementById('developer-form').addEventListener('submit', function (event) {
-      event.preventDefault();
+    document
+      .getElementById('developer-form')
+      .addEventListener('submit', function (event) {
+        event.preventDefault();
 
-      const value = (id) => document.getElementById(id).value.trim() || 'Not provided';
-      const applicantName = value('developer-name');
-      const gameTitle = value('game-title');
-      const subject = `Developer Application — ${gameTitle} — ${applicantName}`;
-      const body = [
-        'FORGED DESTINY GAMING — DEVELOPER APPLICATION',
-        '',
-        `Name: ${applicantName}`,
-        `Email: ${value('developer-email')}`,
-        `Studio or team: ${value('team-name')}`,
-        `Game or project: ${gameTitle}`,
-        `Development stage: ${value('development-stage')}`,
-        '',
-        'ABOUT THE GAME',
-        value('project-pitch'),
-        '',
-        'WHAT THEY ARE LOOKING FOR FROM FDG',
-        value('developer-goals'),
-        '',
-        `Project link: ${value('project-link')}`
-      ].join('\n');
+        const value = (id) =>
+          document.getElementById(id).value.trim() || 'Not provided';
 
-      window.location.href = `mailto:contact@forgeddestinygaming.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    });
+        const applicantName = value('developer-name');
+        const gameTitle = value('game-title');
+
+        const subject =
+          `Developer Application - ${gameTitle} - ${applicantName}`;
+
+        const body = [
+          'FORGED DESTINY GAMING - DEVELOPER APPLICATION',
+          '',
+          `Name: ${applicantName}`,
+          `Email: ${value('developer-email')}`,
+          `Studio or team: ${value('team-name')}`,
+          `Game or project: ${gameTitle}`,
+          `Development stage: ${value('development-stage')}`,
+          '',
+          'ABOUT THE GAME',
+          value('project-pitch'),
+          '',
+          'WHAT THEY ARE LOOKING FOR FROM FDG',
+          value('developer-goals'),
+          '',
+          `Project link: ${value('project-link')}`
+        ].join('\n');
+
+        window.location.href =
+          `mailto:contact@forgeddestinygaming.com` +
+          `?subject=${encodeURIComponent(subject)}` +
+          `&body=${encodeURIComponent(body)}`;
+      });
   </script>
 </body>
 </html>
