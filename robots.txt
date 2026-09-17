@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://forgeddestinygaming.com/sitemap.xml
