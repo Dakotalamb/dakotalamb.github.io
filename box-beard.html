@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Temporary official media kit for Box_Beard, co-founder, creator, and leadership member at Forged Destiny Gaming.">
+  <title>Box_Beard Media Kit | Forged Destiny Gaming</title>
+  <link rel="icon" href="favicon.png" type="image/png">
+
+  <style>
+    :root {
+      --background: #1c1f20;
+      --surface: #242728;
+      --surface-dark: #111314;
+      --text: #fff1dd;
+      --muted: #b9b9b9;
+      --orange: #ff4f1f;
+      --line: #3a3d3e;
+      --max-width: 1050px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      background: radial-gradient(circle at top, #292a2b, var(--background) 65%);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
+
+    a { color: inherit; }
+
+    .site-header {
+      width: min(var(--max-width), calc(100% - 36px));
+      margin: 0 auto;
+      min-height: 96px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 9px 12px;
+      border: 1px solid #513426;
+      background: var(--surface-dark);
+      text-decoration: none;
+    }
+
+    .brand img { width: 38px; height: 38px; object-fit: contain; }
+
+    .brand-text {
+      font-weight: 800;
+      font-size: .92rem;
+      letter-spacing: .08em;
+      line-height: 1.15;
+    }
+
+    .brand-text span {
+      display: block;
+      margin-top: 4px;
+      color: var(--orange);
+      font-size: .67rem;
+      letter-spacing: .28em;
+    }
+
+    .nav-links { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 24px; }
+    .nav-links a { color: #dedede; text-decoration: none; font-size: .94rem; }
+    .nav-links a:hover, .nav-links a.active { color: var(--orange); }
+
+    main {
+      width: min(var(--max-width), calc(100% - 36px));
+      margin: 0 auto;
+      padding: 70px 0 96px;
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--orange);
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+
+    .temporary-notice {
+      margin-bottom: 34px;
+      padding: 14px 16px;
+      border-left: 3px solid var(--orange);
+      color: var(--muted);
+      background: var(--surface-dark);
+      font-size: .88rem;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(250px, 360px) 1fr;
+      gap: clamp(34px, 7vw, 76px);
+      align-items: center;
+      margin-bottom: 70px;
+    }
+
+    .profile-placeholder {
+      aspect-ratio: 1 / 1;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--line);
+      border-bottom: 4px solid var(--orange);
+      background:
+        linear-gradient(135deg, rgba(255,79,31,.16), transparent 48%),
+        var(--surface-dark);
+    }
+
+    .profile-placeholder strong {
+      color: var(--text);
+      font-size: clamp(4rem, 12vw, 7rem);
+      letter-spacing: -.08em;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(3rem, 8vw, 5.8rem);
+      line-height: .98;
+      letter-spacing: -.055em;
+    }
+
+    .hero-tagline {
+      max-width: 650px;
+      margin: 22px 0 0;
+      color: #d8d8d8;
+      font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+    }
+
+    .hero-meta { margin: 18px 0 0; color: var(--muted); }
+    .actions { display: flex; flex-wrap: wrap; gap: 11px; margin-top: 27px; }
+
+    .button {
+      display: inline-block;
+      padding: 11px 16px;
+      border: 1px solid var(--orange);
+      color: var(--text);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .button:hover, .button.primary { color: #111; background: var(--orange); }
+    .button.primary:hover { background: #ff7148; }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-bottom: 70px;
+    }
+
+    .stat {
+      min-height: 135px;
+      padding: 22px;
+      border: 1px solid var(--line);
+      background: var(--surface);
+    }
+
+    .stat strong { display: block; font-size: 1.65rem; line-height: 1.15; }
+    .stat span { display: block; margin-top: 8px; color: var(--muted); font-size: .86rem; }
+
+    .section { padding: 46px 0; border-top: 1px solid var(--line); }
+
+    .section h2 {
+      max-width: 780px;
+      margin: 4px 0 20px;
+      font-size: clamp(2rem, 5vw, 3.15rem);
+      line-height: 1.1;
+      letter-spacing: -.03em;
+    }
+
+    .section > p { max-width: 790px; color: #d0d0d0; font-size: 1.04rem; }
+
+    .content-grid, .partner-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .info-card {
+      padding: 25px;
+      border: 1px solid var(--line);
+      border-left: 3px solid var(--orange);
+      background: var(--surface);
+    }
+
+    .info-card h3 { margin: 0 0 8px; font-size: 1.15rem; }
+    .info-card p { margin: 0; color: var(--muted); }
+
+    .game-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    .game-list span {
+      padding: 8px 11px;
+      border: 1px solid #5c4034;
+      color: #d8d8d8;
+      background: var(--surface-dark);
+      font-size: .84rem;
+    }
+
+    .standards {
+      margin: 26px 0 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 12px;
+    }
+
+    .standards li {
+      padding: 14px 16px;
+      border-left: 2px solid var(--orange);
+      color: #d0d0d0;
+      background: var(--surface-dark);
+    }
+
+    .contact-card {
+      margin-top: 25px;
+      padding: clamp(28px, 5vw, 45px);
+      border-top: 3px solid var(--orange);
+      background: var(--surface);
+    }
+
+    .contact-card h2 { margin-top: 0; }
+    .contact-card p { max-width: 720px; color: var(--muted); }
+    .fine-print { margin-top: 20px; color: #858585; font-size: .78rem; }
+
+    .site-footer { border-top: 1px solid var(--line); background: #17191a; }
+
+    .footer-inner {
+      width: min(var(--max-width), calc(100% - 36px));
+      margin: 0 auto;
+      padding: 34px 0;
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      color: var(--muted);
+      font-size: .85rem;
+    }
+
+    .footer-links { display: flex; flex-wrap: wrap; gap: 16px; }
+    .footer-links a { color: var(--muted); text-decoration: none; }
+    .footer-links a:hover { color: var(--orange); }
+
+    @media (max-width: 820px) {
+      .site-header { padding: 18px 0; align-items: flex-start; flex-direction: column; }
+      .nav-links { justify-content: flex-start; gap: 14px 19px; }
+      main { padding-top: 50px; }
+      .hero { grid-template-columns: 1fr; }
+      .profile-placeholder { width: min(100%, 430px); }
+      .stats { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 580px) {
+      .content-grid, .partner-grid { grid-template-columns: 1fr; }
+      .footer-inner { flex-direction: column; gap: 14px; }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html#home" aria-label="Forged Destiny Gaming home">
+      <img src="favicon.png" alt="Forged Destiny Gaming logo">
+      <div class="brand-text">FORGED DESTINY<span>GAMING</span></div>
+    </a>
+
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="index.html#home">Home</a>
+      <a href="games.html">Games</a>
+      <a class="active" href="creators.html">Creators</a>
+      <a href="about.html">About</a>
+      <a href="https://discord.gg/NxDS5DkhHs" target="_blank" rel="noopener noreferrer">Discord</a>
+      <a href="mailto:contact@forgeddestinygaming.com">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="temporary-notice">
+      Temporary media kit based on currently available public information. Box_Beard can replace or approve the biography, statistics, partnership preferences, and profile image before final publication.
+    </div>
+
+    <section class="hero">
+      <div class="profile-placeholder" aria-label="Box Beard profile image placeholder">
+        <strong>BB</strong>
+      </div>
+
+      <div>
+        <p class="eyebrow">Official creator media kit</p>
+        <h1>Box_Beard</h1>
+        <p class="hero-tagline">Gaming, reviews, livestreams, and honest conversation from a creator who is never afraid to have an opinion.</p>
+        <p class="hero-meta">Co-Founder &middot; Leadership &middot; Content Creator<br>Forged Destiny Gaming</p>
+
+        <div class="actions" aria-label="Box Beard links">
+          <a class="button primary" href="mailto:box_beard@forgeddestinygaming.com?subject=Partnership%20Inquiry%20for%20Box_Beard">Business inquiry</a>
+          <a class="button" href="https://www.youtube.com/@Box_Beard" target="_blank" rel="noopener noreferrer">YouTube</a>
+          <a class="button" href="https://www.twitch.tv/box_beard" target="_blank" rel="noopener noreferrer">Twitch</a>
+          <a class="button" href="https://www.tiktok.com/@box_beard" target="_blank" rel="noopener noreferrer">TikTok</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats" aria-label="Current public platform overview">
+      <article class="stat"><strong>1.68K</strong><span>YouTube subscribers shown publicly in September 2026</span></article>
+      <article class="stat"><strong>3.9K</strong><span>Videos and livestream uploads shown on the YouTube channel</span></article>
+      <article class="stat"><strong>Multi-platform</strong><span>Active presence across YouTube, Twitch, and short-form content</span></article>
+    </section>
+
+    <section class="section">
+      <p class="eyebrow">About the creator</p>
+      <h2>A long-running variety creator with something to say.</h2>
+      <p>
+        Box_Beard is a gaming creator, livestreamer, reviewer, and co-founder of Forged Destiny Gaming.
+        His public channel spans thousands of uploads covering games, reviews, occasional current events,
+        and other topics that interest him. His content is conversational and personality-led, giving viewers
+        the feeling that they are spending time with a real person rather than watching a manufactured persona.
+      </p>
+      <p>
+        Outside gaming, Box has publicly shared his interest in anime, particularly One Piece. He brings that
+        same enthusiasm for characters, stories, and strong opinions into discussions with his audience and
+        collaborations with other creators.
+      </p>
+    </section>
+
+    <section class="section">
+      <p class="eyebrow">Content focus</p>
+      <h2>Variety without losing the personality.</h2>
+
+      <div class="content-grid">
+        <article class="info-card">
+          <h3>Gaming and livestreams</h3>
+          <p>Long-form gameplay, live reactions, multiplayer sessions, and commentary across a changing selection of games.</p>
+        </article>
+        <article class="info-card">
+          <h3>Reviews and opinions</h3>
+          <p>Direct discussion of games, entertainment, and products from a creator comfortable expressing an honest perspective.</p>
+        </article>
+        <article class="info-card">
+          <h3>Creator collaborations</h3>
+          <p>Co-op sessions and group content with DecoTheRobot and other creators where conversation is as important as the game.</p>
+        </article>
+        <article class="info-card">
+          <h3>Entertainment discussion</h3>
+          <p>Anime, gaming culture, current events, and other topics that naturally fit the creator and his community.</p>
+        </article>
+      </div>
+
+      <div class="game-list" aria-label="Games recently associated with Box Beard content">
+        <span>Resident Evil Requiem</span>
+        <span>Smite</span>
+        <span>Hytale</span>
+        <span>Call of Duty: Warzone</span>
+        <span>Lethal Company</span>
+      </div>
+    </section>
+
+    <section class="section">
+      <p class="eyebrow">Forged Destiny Gaming</p>
+      <h2>Co-founder and leadership.</h2>
+      <p>
+        As a co-founder and member of FDG leadership, Box_Beard helps shape the organization beyond his own
+        channels. His role includes creator perspective, collaboration, community direction, and long-term
+        decision-making as Forged Destiny Gaming develops its first roster and supports original game projects.
+      </p>
+    </section>
+
+    <section class="section">
+      <p class="eyebrow">Potential partnerships</p>
+      <h2>Opportunities that fit the content.</h2>
+      <p>These categories are a temporary starting point and should be confirmed by Box before formal outreach.</p>
+
+      <div class="partner-grid">
+        <article class="info-card"><h3>Sponsored livestreams</h3><p>Live coverage of games, gaming products, creator tools, or entertainment releases with clear disclosure.</p></article>
+        <article class="info-card"><h3>Game coverage</h3><p>Reviews, early-access impressions, multiplayer playtests, launch coverage, and long-form gameplay.</p></article>
+        <article class="info-card"><h3>Product reviews</h3><p>Hands-on discussion of gaming hardware, software, accessories, and products relevant to the audience.</p></article>
+        <article class="info-card"><h3>Creator collaborations</h3><p>Co-op videos, livestreams, roundtable discussions, community events, and cross-platform projects.</p></article>
+      </div>
+    </section>
+
+    <section class="section">
+      <p class="eyebrow">Partnership standards</p>
+      <h2>Clear expectations and honest coverage.</h2>
+      <ul class="standards">
+        <li>Sponsored content and gifted products should be disclosed clearly.</li>
+        <li>Opportunities should match the creator's genuine interests and established content.</li>
+        <li>Opinions remain honest, including constructive criticism where appropriate.</li>
+        <li>Deliverables, usage rights, deadlines, and payment should be agreed upon before production.</li>
+      </ul>
+    </section>
+
+    <section class="contact-card">
+      <p class="eyebrow">Business contact</p>
+      <h2>Connect with Box_Beard.</h2>
+      <p>
+        For sponsorships, reviews, game coverage, collaborations, event invitations, or other professional
+        inquiries, contact Box through his Forged Destiny Gaming address.
+      </p>
+      <div class="actions">
+        <a class="button primary" href="mailto:box_beard@forgeddestinygaming.com?subject=Partnership%20Inquiry%20for%20Box_Beard">box_beard@forgeddestinygaming.com</a>
+        <a class="button" href="creators.html">Back to creators</a>
+      </div>
+      <p class="fine-print">Temporary version prepared September 2026. Subscriber and upload figures are public snapshots and should be replaced with first-party analytics supplied by Box_Beard.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        &copy; 2026 Forged Destiny Gaming<br>
+        Forge your own path. Share the victory.
+      </div>
+      <div class="footer-links">
+        <a href="games.html">Games</a>
+        <a href="creators.html">Creators</a>
+        <a href="about.html">About</a>
+        <a href="mailto:contact@forgeddestinygaming.com">Contact</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
