@@ -6,7 +6,7 @@
 
   <meta
     name="description"
-    content="Meet the creators of Forged Destiny Gaming."
+    content="Meet the creators, livestreamers, and game developers of Forged Destiny Gaming."
   >
 
   <title>Creators | Forged Destiny Gaming</title>
@@ -144,13 +144,16 @@
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 26px;
+      align-items: start;
     }
 
     .creator-card {
       overflow: hidden;
       border: 1px solid var(--line);
       background: var(--surface);
-      transition: transform 160ms ease, border-color 160ms ease;
+      transition:
+        transform 160ms ease,
+        border-color 160ms ease;
     }
 
     .creator-card:hover {
@@ -189,12 +192,24 @@
     }
 
     .creator-photo-link img {
-      transition: transform 180ms ease, filter 180ms ease;
+      transition:
+        transform 180ms ease,
+        filter 180ms ease;
     }
 
     .creator-photo-link:hover img {
       transform: scale(1.025);
       filter: brightness(1.08);
+    }
+
+    .placeholder-link {
+      display: grid;
+      place-items: center;
+      text-decoration: none;
+    }
+
+    .placeholder-link:hover {
+      background: rgba(255, 79, 31, 0.06);
     }
 
     .photo-placeholder {
@@ -203,6 +218,11 @@
       font-weight: 800;
       letter-spacing: 0.18em;
       text-transform: uppercase;
+      transition: color 160ms ease;
+    }
+
+    .placeholder-link:hover .photo-placeholder {
+      color: var(--orange);
     }
 
     .creator-info {
@@ -232,6 +252,13 @@
     .creator-name a:hover,
     .creator-name a:focus-visible {
       color: var(--orange);
+    }
+
+    .creator-alias {
+      margin: 5px 0 0;
+      color: var(--muted);
+      font-size: 1rem;
+      font-weight: 700;
     }
 
     .creator-bio {
@@ -373,7 +400,7 @@
 
       <p>
         Independent creators with their own voices, communities, and
-        ambitions working together under one shared banner.
+        ambitions, working together under one shared banner.
       </p>
     </section>
 
@@ -467,45 +494,71 @@
         </div>
       </article>
 
-      <!-- Box_Beard -->
+      <!-- Brandon Lee Bedwell / Box_Beard -->
       <article class="creator-card">
         <div class="creator-photo">
-          <!--
-            When Box_Beard provides a photo, replace the placeholder with:
-
-            <a
-              class="creator-photo-link"
-              href="/creators/box-beard/"
-              aria-label="View Box_Beard's media kit"
-            >
-              <img src="/BOX-BEARD.png" alt="Box_Beard">
-            </a>
-          -->
-
-          <span class="photo-placeholder">
-            Creator Photo
-          </span>
+          <a
+            class="creator-photo-link placeholder-link"
+            href="/creators/box-beard/"
+            aria-label="View Brandon Lee Bedwell's media kit"
+          >
+            <span class="photo-placeholder">
+              Photo coming soon
+            </span>
+          </a>
         </div>
 
         <div class="creator-info">
           <p class="creator-role">
-            Co-Founder &middot; Leadership &middot; Creator
+            Co-Founder &middot; Leadership &middot; Creator &middot; Aspiring Game Developer
           </p>
 
           <h2 class="creator-name">
             <a href="/creators/box-beard/">
-              Box_Beard
+              Brandon Lee Bedwell
             </a>
           </h2>
 
+          <p class="creator-alias">
+            aka Box_Beard
+          </p>
+
           <p class="creator-bio">
-            Add a short bio describing the creator's content, personality,
-            projects, and what viewers can expect from them.
+            Brandon is a family man, content creator, livestreamer, and
+            aspiring game developer with Forged Destiny Gaming. &ldquo;Odd
+            Jobs Brandon&rdquo; has done it all. After working in a wide
+            variety of industries, Brandon has found purpose and passion in
+            game development.
+            <br><br>
+
+            Known as &ldquo;Box Beard,&rdquo; he pushes the limits against
+            industry standards and aims to avoid populist ideology without
+            embracing contrarian or antagonistic qualities. &ldquo;True
+            free-thinking comes from a healthy combination of accepting data
+            and thinking outside of the box.&rdquo;
+            <br><br>
+
+            Brandon works alongside Deco, the founder of Forged Destiny
+            Gaming, to help develop <em>No Exit Necessary</em>, as well as
+            his working title, <em>Tri Ursa</em>. <em>No Exit Necessary</em>
+            is a Backrooms-inspired survival-horror game with unique building
+            mechanics and original entities. Give up on escape as you thrive
+            your way through the Backrooms.
+            <br><br>
+
+            Brandon&rsquo;s main personal project is <em>Tri Ursa</em>, a
+            long-term project inspired by <em>Resident Evil</em>,
+            <em>Outlast</em>, and <em>Dead Space</em>. It offers a unique
+            approach to action-horror gaming involving a skilled camper who
+            uses a variety of equipment to face a strange zombie outbreak at
+            a water treatment plant. The game is in the early stages of
+            concept art and will receive various updates on where development
+            is heading.
           </p>
 
           <div
             class="creator-links"
-            aria-label="Box Beard links"
+            aria-label="Brandon Lee Bedwell and Box Beard links"
           >
             <a href="/creators/box-beard/">
               Media Kit
@@ -529,62 +582,6 @@
 
             <a
               href="https://www.tiktok.com/@box_beard"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              TikTok
-            </a>
-          </div>
-        </div>
-      </article>
-
-      <!--
-        BLANK CREATOR TEMPLATE:
-        Duplicate this entire article whenever a new creator joins.
-      -->
-      <article class="creator-card">
-        <div class="creator-photo">
-          <span class="photo-placeholder">
-            Creator Photo
-          </span>
-        </div>
-
-        <div class="creator-info">
-          <p class="creator-role">
-            Founding Creator
-          </p>
-
-          <h2 class="creator-name">
-            Creator Name
-          </h2>
-
-          <p class="creator-bio">
-            Creator bio goes here. Keep it to two or three sentences so
-            every profile remains easy to scan.
-          </p>
-
-          <div
-            class="creator-links"
-            aria-label="Creator links"
-          >
-            <a
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              YouTube
-            </a>
-
-            <a
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Twitch
-            </a>
-
-            <a
-              href="#"
               target="_blank"
               rel="noopener noreferrer"
             >
