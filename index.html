@@ -32,6 +32,7 @@
       --orange-light: #ff7844;
       --ivory: #fff3df;
       --muted: #b8b8b5;
+      --line: #3a3d3e;
     }
 
     * {
@@ -296,7 +297,7 @@
     }
 
     .site-footer {
-      border-top: 1px solid #3a3d3e;
+      border-top: 1px solid var(--line);
       background: #17191a;
     }
 
@@ -571,7 +572,10 @@
         Forge your own path. Share the victory.
       </div>
 
-      <div class="footer-links">
+      <nav
+        class="footer-links"
+        aria-label="Footer navigation"
+      >
         <a href="/">Home</a>
         <a href="/games/">Games</a>
         <a href="/creators/">Creators</a>
@@ -584,10 +588,18 @@
           Creator Hub
         </a>
 
+        <a href="/privacy/">
+          Privacy
+        </a>
+
+        <a href="/terms/">
+          Terms
+        </a>
+
         <a href="mailto:contact@forgeddestinygaming.com">
           Contact
         </a>
-      </div>
+      </nav>
     </div>
   </footer>
 </body>
