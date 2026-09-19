@@ -19,6 +19,7 @@
       --bg: #151719;
       --panel: #232629;
       --orange: #ff5a1f;
+      --orange-light: #ff7844;
       --ivory: #fff3df;
       --muted: #b8b8b5;
       --border: #414141;
@@ -79,7 +80,8 @@
     .nav-links {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px 20px;
+      align-items: center;
+      gap: 18px;
     }
 
     .nav-links a {
@@ -95,6 +97,29 @@
 
     .nav-links .active {
       font-weight: 700;
+    }
+
+    .nav-links .hub-link {
+      padding: 8px 13px;
+      border: 1px solid var(--orange);
+      background: var(--orange);
+      color: var(--bg);
+      font-size: 0.75rem;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      box-shadow: 0 0 18px rgba(255, 90, 31, 0.16);
+      transition:
+        background 160ms ease,
+        box-shadow 160ms ease,
+        transform 160ms ease;
+    }
+
+    .nav-links .hub-link:hover {
+      background: var(--orange-light);
+      color: var(--bg);
+      box-shadow: 0 0 24px rgba(255, 90, 31, 0.32);
+      transform: translateY(-1px);
     }
 
     main {
@@ -356,6 +381,11 @@
       color: var(--orange);
     }
 
+    .footer-links .footer-hub {
+      color: var(--orange);
+      font-weight: 800;
+    }
+
     @media (max-width: 760px) {
       .site-header {
         align-items: flex-start;
@@ -429,6 +459,15 @@
 
       <a href="mailto:contact@forgeddestinygaming.com">
         Contact
+      </a>
+
+      <a
+        class="hub-link"
+        href="https://hub.forgeddestinygaming.com"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Creator Hub ↗
       </a>
     </nav>
   </header>
@@ -762,6 +801,18 @@
         <a href="/games/">Games</a>
         <a href="/creators/">Creators</a>
         <a href="/about/">About</a>
+
+        <a
+          class="footer-hub"
+          href="https://hub.forgeddestinygaming.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Creator Hub
+        </a>
+
+        <a href="/privacy/">Privacy</a>
+        <a href="/terms/">Terms</a>
         <a href="mailto:contact@forgeddestinygaming.com">Contact</a>
       </div>
     </div>
