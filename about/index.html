@@ -22,6 +22,7 @@
       --text: #fff1dd;
       --muted: #b9b9b9;
       --orange: #ff4f1f;
+      --orange-light: #ff7548;
       --line: #3a3d3e;
       --max-width: 1050px;
     }
@@ -91,8 +92,9 @@
     .nav-links {
       display: flex;
       flex-wrap: wrap;
+      align-items: center;
       justify-content: flex-end;
-      gap: 24px;
+      gap: 18px;
     }
 
     .nav-links a {
@@ -104,6 +106,29 @@
     .nav-links a:hover,
     .nav-links a.active {
       color: var(--orange);
+    }
+
+    .nav-links .hub-link {
+      padding: 8px 13px;
+      border: 1px solid var(--orange);
+      background: var(--orange);
+      color: var(--surface-dark);
+      font-size: 0.75rem;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      box-shadow: 0 0 18px rgba(255, 79, 31, 0.16);
+      transition:
+        background 160ms ease,
+        box-shadow 160ms ease,
+        transform 160ms ease;
+    }
+
+    .nav-links .hub-link:hover {
+      background: var(--orange-light);
+      color: var(--surface-dark);
+      box-shadow: 0 0 24px rgba(255, 79, 31, 0.32);
+      transform: translateY(-1px);
     }
 
     main {
@@ -149,14 +174,16 @@
     }
 
     .statement h2,
-    .info-card h2 {
+    .info-card h2,
+    .hub-section h2 {
       margin: 4px 0 12px;
       font-size: 1.65rem;
       line-height: 1.2;
     }
 
     .statement p,
-    .info-card p {
+    .info-card p,
+    .hub-section p {
       margin: 0;
       color: #d0d0d0;
     }
@@ -172,6 +199,48 @@
       padding: 30px;
       border: 1px solid var(--line);
       background: var(--surface);
+    }
+
+    .hub-section {
+      margin: 58px 0;
+      padding: 38px;
+      border: 1px solid #65402f;
+      border-left: 3px solid var(--orange);
+      background:
+        linear-gradient(
+          135deg,
+          rgba(255, 79, 31, 0.11),
+          transparent 48%
+        ),
+        var(--surface-dark);
+    }
+
+    .hub-section p {
+      max-width: 790px;
+    }
+
+    .hub-features {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .hub-feature {
+      padding: 18px;
+      border: 1px solid var(--line);
+      background: rgba(36, 39, 40, 0.75);
+    }
+
+    .hub-feature strong {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--text);
+    }
+
+    .hub-feature span {
+      color: var(--muted);
+      font-size: 0.9rem;
     }
 
     .principles {
@@ -232,9 +301,12 @@
     .actions {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
       gap: 12px;
       margin-top: 26px;
+    }
+
+    .closing .actions {
+      justify-content: center;
     }
 
     .button {
@@ -287,6 +359,11 @@
       color: var(--orange);
     }
 
+    .footer-links .footer-hub {
+      color: var(--orange);
+      font-weight: 800;
+    }
+
     @media (max-width: 760px) {
       .site-header {
         padding: 18px 0;
@@ -296,14 +373,15 @@
 
       .nav-links {
         justify-content: flex-start;
-        gap: 14px 19px;
+        gap: 14px 16px;
       }
 
       main {
         padding-top: 56px;
       }
 
-      .info-grid {
+      .info-grid,
+      .hub-features {
         grid-template-columns: 1fr;
       }
 
@@ -312,6 +390,7 @@
         gap: 8px;
       }
 
+      .hub-section,
       .closing {
         padding: 30px 22px;
       }
@@ -366,6 +445,13 @@
       <a href="mailto:contact@forgeddestinygaming.com">
         Contact
       </a>
+
+      <a
+        class="hub-link"
+        href="https://hub.forgeddestinygaming.com"
+      >
+        Creator Hub ↗
+      </a>
     </nav>
   </header>
 
@@ -393,9 +479,9 @@
       <p>
         Our mission is to connect independent developers, creators, players,
         and collaborators around memorable projects. We provide a shared
-        identity, website, community, moderation, promotion, and room for
-        collaboration while allowing every project and creator to keep its
-        own personality.
+        identity, website, community, moderation, promotion, organizational
+        tools, and room for collaboration while allowing every project and
+        creator to keep its own personality.
       </p>
     </section>
 
@@ -436,10 +522,10 @@
 
         <p>
           FDG currently provides the shared domain, project pages, Discord
-          organization, moderation, community access, and promotional
-          support. Developers bring their games, maintain ownership, and
-          publish their work through their own accounts unless a separate
-          agreement says otherwise.
+          organization, moderation, community access, event planning, and
+          promotional support. Developers bring their games, maintain
+          ownership, and publish their work through their own accounts unless
+          a separate agreement says otherwise.
         </p>
       </article>
 
@@ -455,6 +541,55 @@
           sustainable, and centered on the quality of the experience.
         </p>
       </article>
+    </section>
+
+    <section class="hub-section">
+      <p class="eyebrow">The Creator Hub</p>
+
+      <h2>Collaboration needs more than another group chat.</h2>
+
+      <p>
+        The FDG Creator Hub is our dedicated workspace for creators and
+        developers. It provides one clear place to organize schedules,
+        collaborations, playtests, private team conversations, event details,
+        and public announcements. Official events can also appear
+        automatically on the main Forged Destiny Gaming website.
+      </p>
+
+      <div
+        class="hub-features"
+        aria-label="Creator Hub features"
+      >
+        <div class="hub-feature">
+          <strong>Plan together</strong>
+          <span>
+            Create team events, streams, collaborations, and playtests.
+          </span>
+        </div>
+
+        <div class="hub-feature">
+          <strong>Keep details clear</strong>
+          <span>
+            Track games, mods, Crowd Control, private setup notes, and RSVPs.
+          </span>
+        </div>
+
+        <div class="hub-feature">
+          <strong>Publish automatically</strong>
+          <span>
+            Send approved FDG events directly to the public website.
+          </span>
+        </div>
+      </div>
+
+      <div class="actions">
+        <a
+          class="button primary"
+          href="https://hub.forgeddestinygaming.com"
+        >
+          Open the Creator Hub
+        </a>
+      </div>
     </section>
 
     <section class="principles">
@@ -527,9 +662,9 @@
       <p>
         Forged Destiny Gaming is still at the beginning. We are building the
         foundation carefully: original games, genuine creators, a strong
-        community, and a reputation earned through the work itself. We are
-        not trying to become the biggest organization overnight. We are
-        building something worth remembering.
+        community, useful infrastructure, and a reputation earned through the
+        work itself. We are not trying to become the biggest organization
+        overnight. We are building something worth remembering.
       </p>
 
       <div class="actions">
@@ -561,7 +696,17 @@
         <a href="/games/">Games</a>
         <a href="/creators/">Creators</a>
         <a href="/about/">About</a>
-        <a href="mailto:contact@forgeddestinygaming.com">Contact</a>
+
+        <a
+          class="footer-hub"
+          href="https://hub.forgeddestinygaming.com"
+        >
+          Creator Hub
+        </a>
+
+        <a href="mailto:contact@forgeddestinygaming.com">
+          Contact
+        </a>
       </div>
     </div>
   </footer>
