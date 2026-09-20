@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Create a free stream schedule, share a public creator calendar, organize collaborations and teams, collect RSVPs, and display upcoming events on Twitch with Forge Creator Hub.">
+  <link rel="canonical" href="https://forgeddestinygaming.com/creator-hub/">
+  <meta property="og:title" content="Free Stream Schedule & Collaboration Tools | Forge Creator Hub">
+  <meta property="og:description" content="Plan streams, organize creator collaborations, collect RSVPs, and give viewers one schedule link that updates everywhere.">
+  <meta property="og:url" content="https://forgeddestinygaming.com/creator-hub/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://forgeddestinygaming.com/logogo.png">
+  <title>Free Stream Schedule &amp; Collaboration Tools | Forge Creator Hub</title>
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/favicon.png">
+
+  <style>
+    :root{--bg:#151719;--surface:#232629;--dark:#111314;--orange:#ff5a1f;--orange-light:#ff7844;--ivory:#fff3df;--muted:#b9b9b9;--line:#3a3d3e;--max:1050px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ivory);background:radial-gradient(circle at top,#292a2b,var(--bg) 62%);font-family:Inter,Arial,sans-serif;line-height:1.65}a{color:inherit}
+    .site-header{width:min(var(--max),calc(100% - 36px));min-height:96px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:28px;border-bottom:1px solid var(--line)}
+    .brand{display:inline-flex;align-items:center;gap:12px;padding:9px 12px;border:1px solid #513426;background:var(--dark);text-decoration:none}.brand img{width:38px;height:38px;object-fit:contain}.brand-text{font-weight:800;font-size:.92rem;letter-spacing:.08em;line-height:1.15}.brand-text span{display:block;margin-top:4px;color:var(--orange);font-size:.67rem;letter-spacing:.28em}
+    .nav-links{display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-end;gap:18px}.nav-links a{color:#dedede;text-decoration:none;font-size:.94rem}.nav-links a:hover{color:var(--orange)}.nav-links .hub-link{padding:8px 13px;border:1px solid var(--orange);background:var(--orange);color:var(--dark);font-size:.75rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase;box-shadow:0 0 18px rgba(255,90,31,.18)}.nav-links .hub-link:hover{background:var(--orange-light);color:var(--dark)}
+    main{width:min(var(--max),calc(100% - 36px));margin:auto;padding:74px 0 96px}.eyebrow{margin:0 0 10px;color:var(--orange);font-size:.78rem;font-weight:900;letter-spacing:.18em;text-transform:uppercase}
+    .hero{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(280px,.75fr);align-items:center;gap:58px;padding-bottom:76px}.hero h1{margin:0;font-size:clamp(3rem,7vw,5.7rem);line-height:.98;letter-spacing:-.055em}.hero .lead{max-width:690px;margin:25px 0 0;color:#d5d5d5;font-size:1.15rem}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:29px}.button{display:inline-block;padding:13px 19px;border:1px solid var(--orange);color:var(--ivory);font-weight:800;text-decoration:none}.button:hover{background:var(--orange);color:var(--dark)}.button.primary{background:var(--orange);color:var(--dark)}.button.primary:hover{background:var(--orange-light)}
+    .schedule-preview{padding:24px;border:1px solid #5e3a2b;background:linear-gradient(145deg,rgba(255,90,31,.11),transparent 48%),var(--dark);box-shadow:18px 18px 0 rgba(0,0,0,.16)}.preview-label{color:var(--orange);font-size:.7rem;font-weight:900;letter-spacing:.17em;text-transform:uppercase}.preview-title{margin:9px 0 18px;font-size:1.45rem}.preview-event{padding:17px;border:1px solid var(--line);border-left:3px solid var(--orange);background:#1d2021}.preview-event strong{display:block;margin:5px 0}.preview-event small{color:var(--muted)}
+    .section-heading{max-width:760px;margin:0 0 30px}.section-heading h2{margin:0;font-size:clamp(2rem,5vw,3.5rem);line-height:1.05;letter-spacing:-.035em}.section-heading p:last-child{margin:16px 0 0;color:var(--muted)}
+    .feature-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-bottom:84px}.feature{padding:26px;border:1px solid var(--line);background:var(--surface)}.feature-number{color:var(--orange);font-size:.72rem;font-weight:900;letter-spacing:.14em}.feature h3{margin:10px 0 8px;font-size:1.28rem}.feature p{margin:0;color:#cecece;font-size:.95rem}
+    .workflow{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;margin-bottom:84px;border:1px solid var(--line);background:var(--surface)}.step{padding:27px;border-right:1px solid var(--line)}.step:last-child{border-right:0}.step strong{display:block;color:var(--orange);font-size:.76rem;letter-spacing:.12em;text-transform:uppercase}.step h3{margin:8px 0}.step p{margin:0;color:var(--muted);font-size:.92rem}
+    .guide{margin-bottom:84px}.guide-nav{display:flex;flex-wrap:wrap;gap:9px;margin:22px 0 30px}.guide-nav a{padding:8px 11px;border:1px solid var(--line);color:var(--muted);font-size:.82rem;text-decoration:none}.guide-nav a:hover{border-color:var(--orange);color:var(--ivory)}.guide-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.guide-card{padding:28px;border:1px solid var(--line);background:var(--surface);scroll-margin-top:20px}.guide-card h3{margin:4px 0 10px;font-size:1.35rem}.guide-card p{margin:0;color:#d0d0d0}.guide-card ul{margin:14px 0 0;padding-left:20px;color:#d0d0d0}.guide-card li{margin:7px 0}.term{color:var(--ivory);font-weight:800}
+    .callout{display:flex;align-items:center;justify-content:space-between;gap:30px;margin-bottom:84px;padding:36px;border:1px solid #65402f;border-left:4px solid var(--orange);background:linear-gradient(135deg,rgba(255,90,31,.12),transparent 58%),var(--dark)}.callout h2{margin:0 0 8px;font-size:clamp(1.8rem,4vw,2.7rem)}.callout p{max-width:680px;margin:0;color:#d0d0d0}.callout .button{flex:0 0 auto}
+    .faq{max-width:900px;margin:auto}.faq h2{margin:0 0 25px;font-size:clamp(2.1rem,5vw,3.5rem);letter-spacing:-.035em}.faq details{border-top:1px solid var(--line);background:rgba(35,38,41,.55)}.faq details:last-of-type{border-bottom:1px solid var(--line)}.faq summary{position:relative;padding:21px 52px 21px 20px;font-weight:800;cursor:pointer;list-style:none}.faq summary::-webkit-details-marker{display:none}.faq summary::after{content:'+';position:absolute;right:20px;color:var(--orange);font-size:1.35rem}.faq details[open] summary::after{content:'–'}.answer{padding:0 20px 23px;color:#d0d0d0}.answer p{margin:0 0 10px}.answer p:last-child{margin-bottom:0}.answer a{color:var(--orange)}
+    .final-cta{margin-top:76px;padding:44px 28px;border:1px solid #65402f;background:var(--dark);text-align:center}.final-cta h2{margin:0;font-size:clamp(2rem,5vw,3.4rem)}.final-cta p{max-width:660px;margin:13px auto 0;color:var(--muted)}.final-cta .actions{justify-content:center}
+    .site-footer{border-top:1px solid var(--line);background:#17191a}.footer-inner{width:min(var(--max),calc(100% - 36px));margin:auto;padding:34px 0;display:flex;justify-content:space-between;gap:30px;color:var(--muted);font-size:.85rem}.footer-links{display:flex;flex-wrap:wrap;gap:16px}.footer-links a{color:var(--muted);text-decoration:none}.footer-links a:hover,.footer-links .footer-hub{color:var(--orange)}
+    @media(max-width:850px){.hero{grid-template-columns:1fr}.feature-grid{grid-template-columns:1fr 1fr}.workflow{grid-template-columns:1fr 1fr}.step:nth-child(2){border-right:0}.step:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+    @media(max-width:620px){.site-header{padding:18px 0;align-items:flex-start;flex-direction:column}.nav-links{justify-content:flex-start;gap:14px 16px}main{padding-top:52px}.feature-grid,.guide-grid,.workflow{grid-template-columns:1fr}.step{border-right:0;border-bottom:1px solid var(--line)}.step:last-child{border-bottom:0}.callout{align-items:stretch;flex-direction:column}.callout .button{text-align:center}.footer-inner{flex-direction:column;gap:14px}}
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"SoftwareApplication",
+    "name":"Forge Creator Hub",
+    "applicationCategory":"BusinessApplication",
+    "operatingSystem":"Web",
+    "url":"https://hub.forgeddestinygaming.com/",
+    "description":"A free web-based stream scheduling and creator collaboration platform with public calendars, private teams, RSVPs, reminders, and Twitch schedule display tools.",
+    "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},
+    "publisher":{"@type":"Organization","name":"Forged Destiny Gaming","url":"https://forgeddestinygaming.com/"}
+  }
+  </script>
+</head>
+
+<body>
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="Forged Destiny Gaming home"><img src="/favicon.png" alt="Forged Destiny Gaming logo"><div class="brand-text">FORGED DESTINY<span>GAMING</span></div></a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="/">Home</a><a href="/games/">Games</a><a href="/creators/">Creators</a><a href="/about/">About</a><a href="https://discord.gg/NxDS5DkhHs" target="_blank" rel="noopener noreferrer">Discord</a><a href="mailto:contact@forgeddestinygaming.com">Contact</a><a class="hub-link" href="https://hub.forgeddestinygaming.com/">Open Creator Hub ↗</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Free tools for streamers and creators</p>
+        <h1>One schedule.<br>Updated everywhere.</h1>
+        <p class="lead">Forge Creator Hub is a free stream schedule and collaboration platform. Plan upcoming streams, create private teams, find collaborators, collect RSVPs, and give viewers one clean calendar link—including a schedule panel for Twitch.</p>
+        <div class="actions"><a class="button primary" href="https://hub.forgeddestinygaming.com/auth/discord">Start free with Discord</a><a class="button" href="#how-it-works">See how it works</a></div>
+      </div>
+      <aside class="schedule-preview" aria-label="Example creator schedule">
+        <span class="preview-label">Upcoming stream</span><h2 class="preview-title">Your schedule, without another weekly graphic.</h2>
+        <div class="preview-event"><small>FRIDAY · 9:00 PM</small><strong>Community Game Night</strong><small>Local time shown automatically · RSVP available</small></div>
+      </aside>
+    </section>
+
+    <section aria-labelledby="features-title">
+      <div class="section-heading"><p class="eyebrow">Built for how creators actually work</p><h2 id="features-title">Less schedule chaos. More time creating.</h2><p>Change an event once and your public calendar, shared link, team workspace, and connected Twitch panel stay useful without rebuilding a graphic every week.</p></div>
+      <div class="feature-grid">
+        <article class="feature"><span class="feature-number">01</span><h3>Shareable creator calendar</h3><p>Give viewers a clean personal schedule link with upcoming streams, collaborations, game links, and recordings.</p></article>
+        <article class="feature"><span class="feature-number">02</span><h3>Stream and event planning</h3><p>Create one-time, weekly, or multi-day events with automatic viewer-local time conversion.</p></article>
+        <article class="feature"><span class="feature-number">03</span><h3>Creator collaboration board</h3><p>List open collaboration spots so other creators can find events that need participants.</p></article>
+        <article class="feature"><span class="feature-number">04</span><h3>Private creator teams</h3><p>Organize members, moderators, team chat, invite-only workspaces, events, and private setup details.</p></article>
+        <article class="feature"><span class="feature-number">05</span><h3>RSVPs and capacity limits</h3><p>See who is going, maybe attending, or unavailable—and stop new Going responses when the event is full.</p></article>
+        <article class="feature"><span class="feature-number">06</span><h3>Twitch schedule panel</h3><p>Display upcoming Hub events directly on Twitch so viewers can see what is next without leaving your channel.</p></article>
+      </div>
+    </section>
+
+    <section id="how-it-works" aria-labelledby="workflow-title">
+      <div class="section-heading"><p class="eyebrow">How it works</p><h2 id="workflow-title">From idea to shared event in minutes.</h2></div>
+      <div class="workflow">
+        <article class="step"><strong>Step 1</strong><h3>Sign in</h3><p>Use Discord to create your Hub account—no separate password required.</p></article>
+        <article class="step"><strong>Step 2</strong><h3>Set your profile</h3><p>Add your bio, creator links, time zone, and public calendar identity.</p></article>
+        <article class="step"><strong>Step 3</strong><h3>Create events</h3><p>Add the game, time, visibility, links, setup details, and collaboration options.</p></article>
+        <article class="step"><strong>Step 4</strong><h3>Share once</h3><p>Post your public calendar URL anywhere your viewers already follow you.</p></article>
+      </div>
+    </section>
+
+    <section class="guide" aria-labelledby="guide-title">
+      <div class="section-heading"><p class="eyebrow">Tool guide</p><h2 id="guide-title">What every section and toggle does.</h2><p>Use this as the quick-reference guide while creating events and organizing your team.</p></div>
+      <nav class="guide-nav" aria-label="Creator Hub guide sections"><a href="#event-basics">Event basics</a><a href="#visibility">Visibility</a><a href="#collaboration">Collaboration</a><a href="#links-notes">Links &amp; notes</a><a href="#teams">Teams</a><a href="#sharing">Sharing</a></nav>
+      <div class="guide-grid">
+        <article class="guide-card" id="event-basics"><p class="eyebrow">Event basics</p><h3>Type, status, time, and capacity</h3><ul><li><span class="term">One-time:</span> a single stream or event.</li><li><span class="term">Weekly:</span> a recurring weekly schedule entry.</li><li><span class="term">Multi-day:</span> an event lasting across more than one date.</li><li><span class="term">Confirmed, Tentative, Cancelled:</span> tells viewers the event's current status.</li><li><span class="term">Available spots:</span> limits how many people can RSVP Going. Maybe and Cannot Attend remain available.</li></ul></article>
+        <article class="guide-card" id="visibility"><p class="eyebrow">Visibility</p><h3>Choose who can see an event</h3><ul><li><span class="term">Public:</span> discoverable on public Hub schedules and pages.</li><li><span class="term">Unlisted schedule:</span> available through your shared creator calendar or direct link without being promoted as a public Hub event.</li><li><span class="term">Private team planning:</span> restricted to the event owner and authorized members of the selected team.</li></ul></article>
+        <article class="guide-card" id="collaboration"><p class="eyebrow">Collaboration &amp; RSVPs</p><h3>Control participation</h3><ul><li><span class="term">List open spots under Collaborations:</span> advertises the event as seeking creators.</li><li><span class="term">Allow people outside the selected team to RSVP:</span> lets signed-in non-members respond to that team event. Leave it off for team-only participation.</li><li><span class="term">Going / Maybe / Cannot Attend:</span> records each creator's response and keeps planning clear.</li><li><span class="term">Crowd Control enabled:</span> tells participants and viewers that the stream uses Crowd Control.</li></ul></article>
+        <article class="guide-card" id="links-notes"><p class="eyebrow">Links &amp; notes</p><h3>Put information in the right place</h3><ul><li><span class="term">Game/store link:</span> sends viewers to the game or store page.</li><li><span class="term">Stream link:</span> sends viewers to where the event will be live.</li><li><span class="term">Recording/VOD link:</span> can be added after the event for replay viewing.</li><li><span class="term">Public mods or setup:</span> lists modpacks or viewer-safe setup information.</li><li><span class="term">Private team setup:</span> holds team-only codes, voice-channel notes, and recording details. Do not store passwords or sensitive personal data.</li></ul></article>
+        <article class="guide-card" id="teams"><p class="eyebrow">Teams</p><h3>Invite-only workspaces</h3><p>Teams provide a private place for permanent creator groups to manage members, roles, chat, events, and internal notes. New members enter through a team invitation link. Owners and moderators manage the workspace. Joining a team does not automatically make every team event public.</p></article>
+        <article class="guide-card" id="sharing"><p class="eyebrow">Sharing &amp; publishing</p><h3>Update once, display everywhere</h3><p>Your creator profile includes a shareable calendar for viewers. Public events can include downloadable calendar files and viewer-local times. Official FDG team moderators can also use <span class="term">Publish this official FDG event</span> to place approved public events on the main FDG website. The Twitch extension displays connected upcoming events on a creator's channel.</p></article>
+      </div>
+    </section>
+
+    <aside class="callout"><div><h2>Your viewers should never have to hunt for your schedule.</h2><p>Put the same public calendar link in Twitch, Discord, YouTube, TikTok, Kick, Beacons, or your own website. When plans change, update the Hub event instead of replacing links and graphics everywhere.</p></div><a class="button primary" href="https://hub.forgeddestinygaming.com/auth/discord">Create your calendar</a></aside>
+
+    <section class="faq" id="faq" aria-labelledby="faq-title">
+      <p class="eyebrow">Frequently asked questions</p><h2 id="faq-title">Forge Creator Hub FAQ</h2>
+      <details><summary>Is Forge Creator Hub free?</summary><div class="answer"><p>Yes. The Hub's current scheduling, public calendar, team, collaboration, and RSVP tools are free to use.</p></div></details>
+      <details><summary>Do I need to be an FDG creator?</summary><div class="answer"><p>No. Independent creators can use the Hub and create their own schedules and teams. Official FDG publishing controls are reserved for authorized members of the official FDG team.</p></div></details>
+      <details><summary>Why does the Hub use Discord sign-in?</summary><div class="answer"><p>Discord provides a familiar, secure sign-in without requiring another password. The Hub requests the account information needed to identify your profile; it never receives your Discord password. See the <a href="/privacy/">Privacy Policy</a> for details.</p></div></details>
+      <details><summary>What is the difference between Public, Unlisted, and Private?</summary><div class="answer"><p>Public events may appear in public Hub areas. Unlisted events are intended for your shared schedule or people with the link. Private team events are restricted to the owner and authorized team members.</p></div></details>
+      <details><summary>Can people outside my team RSVP?</summary><div class="answer"><p>Only when you enable <strong>Allow people outside the selected team to RSVP</strong>. Leave it disabled when participation should remain limited to your team. Personal events are open to signed-in users.</p></div></details>
+      <details><summary>What happens when an event reaches its RSVP limit?</summary><div class="answer"><p>Once the number of Going responses reaches the available-spots limit, additional users cannot select Going. They can still respond Maybe or Cannot Attend.</p></div></details>
+      <details><summary>How do collaboration listings work?</summary><div class="answer"><p>Enable <strong>List open spots under Collaborations</strong> on an event when you want other eligible creators to find it. Team access and RSVP rules still apply, so private opportunities do not become publicly joinable simply because the toggle is enabled.</p></div></details>
+      <details><summary>Does the calendar show the correct time for every viewer?</summary><div class="answer"><p>Yes. Event times are converted for the viewer's local time zone, reducing confusion when creators and audiences live in different regions.</p></div></details>
+      <details><summary>Can I add the event to a personal calendar?</summary><div class="answer"><p>Publicly viewable events can provide a downloadable calendar file, allowing viewers or participants to save the event in a compatible calendar application.</p></div></details>
+      <details><summary>What should go in public mods versus private setup?</summary><div class="answer"><p>Use public mods or setup for information viewers and prospective collaborators may safely see, such as a modpack name. Use private team setup for internal coordination such as voice-channel and recording notes. Never store passwords, payment details, or sensitive personal information there.</p></div></details>
+      <details><summary>Can I add the recording after the stream?</summary><div class="answer"><p>Yes. Edit the event afterward and add its Recording/VOD link so the event can direct viewers to the replay.</p></div></details>
+      <details><summary>How do teams stay private?</summary><div class="answer"><p>People join private team workspaces using team invitation links. Team roles control management access, while private events, setup notes, chat, and internal details are shown only to authorized users.</p></div></details>
+      <details><summary>How do reminder emails work?</summary><div class="answer"><p>When reminder delivery is enabled and a user has opted in, the Hub can send an operational reminder on the day of an event. Account and email preferences remain under the user's control.</p></div></details>
+      <details><summary>How does the Twitch extension work?</summary><div class="answer"><p>The Forge Creator Hub panel displays a creator's connected upcoming schedule directly on their Twitch channel and links viewers to full event details. Extension availability depends on Twitch's review and release status.</p></div></details>
+      <details><summary>Where can I report a problem or ask for help?</summary><div class="answer"><p>Email <a href="mailto:contact@forgeddestinygaming.com">contact@forgeddestinygaming.com</a> with the affected page, what you expected to happen, and what happened instead.</p></div></details>
+    </section>
+
+    <section class="final-cta"><p class="eyebrow">Ready when you are</p><h2>Make the schedule once.</h2><p>Give your team and viewers one reliable place to see what is happening next.</p><div class="actions"><a class="button primary" href="https://hub.forgeddestinygaming.com/auth/discord">Start free with Discord</a><a class="button" href="https://hub.forgeddestinygaming.com/">View public events</a></div></section>
+  </main>
+
+  <footer class="site-footer"><div class="footer-inner"><div>&copy; 2026 Forged Destiny Gaming<br>Forge your own path. Share the victory.</div><div class="footer-links"><a href="/">Home</a><a href="/games/">Games</a><a href="/creators/">Creators</a><a href="/about/">About</a><a class="footer-hub" href="https://hub.forgeddestinygaming.com/">Creator Hub</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="mailto:contact@forgeddestinygaming.com">Contact</a></div></div></footer>
+</body>
+</html>
