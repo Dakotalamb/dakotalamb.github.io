@@ -1,3 +1,6 @@
+---
+nav: legal
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,14 +33,7 @@
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Privacy Policy","url":"https://forgeddestinygaming.com/privacy/","description":"Privacy Policy for Forged Destiny Gaming and the Forge Creator Hub.","isPartOf":{"@id":"https://forgeddestinygaming.com/#website"},"about":{"@id":"https://forgeddestinygaming.com/#organization"},"dateModified":"2026-09-21"}</script>
 </head>
 <body>
-  <header class="site-header">
-    <a class="brand" href="/" aria-label="Forged Destiny Gaming home"><img src="/favicon.png" alt="Forged Destiny Gaming logo"><div class="brand-text">FORGED DESTINY<span>GAMING</span></div></a>
-    <nav class="nav-links" aria-label="Main navigation">
-      <a href="/">Home</a><a href="/games/">Games</a><a href="/creators/">Creators</a><a href="/about/">About</a>
-      <a href="https://discord.gg/NxDS5DkhHs" target="_blank" rel="noopener noreferrer">Discord</a><a href="mailto:contact@forgeddestinygaming.com">Contact</a>
-      <a class="hub-link" href="/creator-hub/">Creator Hub</a>
-    </nav>
-  </header>
+  {% include header.html %}
   <main>
     <section>
       <p class="eyebrow">Legal &amp; transparency</p>
@@ -145,6 +141,6 @@
 
     <aside class="notice"><p>This Privacy Policy should be read together with the <a href="/terms/">Forged Destiny Gaming Terms of Use</a>.</p></aside>
   </main>
-  <footer class="site-footer"><div class="footer-inner"><div>&copy; 2026 Forged Destiny Gaming<br>Forge your own path. Share the victory.</div><div class="footer-links"><a href="/">Home</a><a href="/games/">Games</a><a href="/creators/">Creators</a><a href="/about/">About</a><a class="footer-hub" href="/creator-hub/">Creator Hub</a><a href="/press/">Press Kit</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="mailto:contact@forgeddestinygaming.com">Contact</a></div></div></footer>
+  {% include footer.html %}
 </body>
 </html>

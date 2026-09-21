@@ -1,3 +1,6 @@
+---
+nav: about
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -337,22 +340,7 @@
 </head>
 
 <body>
-  <header class="site-header">
-    <a class="brand" href="/" aria-label="Forged Destiny Gaming home">
-      <img src="/favicon.png" alt="Forged Destiny Gaming logo">
-      <div class="brand-text">FORGED DESTINY<span>GAMING</span></div>
-    </a>
-
-    <nav class="nav-links" aria-label="Main navigation">
-      <a href="/">Home</a>
-      <a href="/games/">Games</a>
-      <a href="/creators/">Creators</a>
-      <a class="active" href="/about/" aria-current="page">About</a>
-      <a href="https://discord.gg/NxDS5DkhHs" target="_blank" rel="noopener noreferrer">Discord</a>
-      <a href="mailto:contact@forgeddestinygaming.com">Contact</a>
-      <a class="hub-link" href="/creator-hub/">Creator Hub</a>
-    </nav>
-  </header>
+  {% include header.html %}
 
   <main>
     <section class="hero">
@@ -461,23 +449,6 @@
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <div>
-        © 2026 Forged Destiny Gaming<br>
-        Forge your own path. Share the victory.
-      </div>
-
-      <div class="footer-links">
-        <a href="/games/">Games</a>
-        <a href="/creators/">Creators</a>
-        <a href="/about/">About</a>
-        <a href="/creator-hub/">Creator Hub</a>
-        <a href="/press/">Press Kit</a><a href="/privacy/">Privacy</a>
-        <a href="/terms/">Terms</a>
-        <a href="mailto:contact@forgeddestinygaming.com">Contact</a>
-      </div>
-    </div>
-  </footer>
+  {% include footer.html %}
 </body>
 </html>

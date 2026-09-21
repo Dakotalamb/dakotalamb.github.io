@@ -1,0 +1,18 @@
+title: Forged Destiny Gaming
+tagline: Forge your own path. Share the victory.
+copyright_year: 2026
+url: https://forgeddestinygaming.com
+creator_hub_url: https://hub.forgeddestinygaming.com/
+discord_url: https://discord.gg/NxDS5DkhHs
+contact_email: contact@forgeddestinygaming.com
+
+# GitHub Pages builds these shared includes automatically.
+# Change navigation in _includes/header.html.
+# Change the site footer in _includes/footer.html.
+include:
+  - _includes
+
+exclude:
+  - README.md
+  - UPLOAD-INSTRUCTIONS.txt
+

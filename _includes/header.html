@@ -1,0 +1,17 @@
+<header class="site-header">
+  <a class="brand" href="/" aria-label="{{ site.title }} home">
+    <img src="/favicon.png" alt="">
+    <div class="brand-text">FORGED DESTINY<span>GAMING</span></div>
+  </a>
+
+  <nav class="nav-links" aria-label="Main navigation">
+    <a href="/"{% if page.nav == "home" %} class="active" aria-current="page"{% endif %}>Home</a>
+    <a href="/games/"{% if page.nav == "games" %} class="active" aria-current="page"{% endif %}>Games</a>
+    <a href="/creators/"{% if page.nav == "creators" %} class="active" aria-current="page"{% endif %}>Creators</a>
+    <a href="/about/"{% if page.nav == "about" %} class="active" aria-current="page"{% endif %}>About</a>
+    <a href="{{ site.discord_url }}" target="_blank" rel="noopener noreferrer">Discord</a>
+    <a href="mailto:{{ site.contact_email }}">Contact</a>
+    <a class="hub-link{% if page.nav == "hub" %} active{% endif %}" href="/creator-hub/"{% if page.nav == "hub" %} aria-current="page"{% endif %}>Creator Hub ↗</a>
+  </nav>
+</header>
+
