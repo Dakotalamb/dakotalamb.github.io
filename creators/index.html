@@ -181,7 +181,14 @@ nav: creators
       align-items: start;
     }
 
+    .creator-column {
+      display: flex;
+      flex-direction: column;
+      gap: 26px;
+    }
+
     .creator-card {
+      width: 100%;
       overflow: hidden;
       border: 1px solid var(--line);
       background: var(--surface);
@@ -219,8 +226,12 @@ nav: creators
       object-fit: cover;
     }
 
+    .creator-card.box-beard-card .creator-photo {
+      aspect-ratio: 4 / 5;
+    }
+
     .creator-photo img.box-beard-photo {
-      object-fit: contain;
+      object-fit: cover;
       object-position: center;
       background: #071d0d;
     }
@@ -380,8 +391,18 @@ nav: creators
       }
 
       .creator-grid {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
       }
+
+      .creator-column {
+        display: contents;
+      }
+
+      .founder-card { order: 1; }
+      .cofounder-card { order: 2; }
+      .garian-card { order: 3; }
+      .chaotic-card { order: 4; }
 
       .footer-inner {
         flex-direction: column;
@@ -429,8 +450,9 @@ nav: creators
       class="creator-grid"
       aria-label="Forged Destiny Gaming creators"
     >
+      <div class="creator-column">
       <!-- DecoTheRobot -->
-      <article class="creator-card">
+      <article class="creator-card founder-card">
         <div class="creator-photo">
           <a
             class="creator-photo-link"
@@ -515,8 +537,38 @@ nav: creators
         </div>
       </article>
 
+      <!-- GarianTheBarbarian -->
+      <article class="creator-card garian-card">
+        <div class="creator-photo">
+          <a class="creator-photo-link" href="/creators/garian-the-barbarian/" aria-label="View GarianTheBarbarian's creator profile">
+            <img src="/GARIAN-CAPY.webp" alt="GarianTheBarbarian's capybarian mascot wearing a Viking helmet">
+          </a>
+        </div>
+
+        <div class="creator-info">
+          <p class="creator-role">Founding Creator &middot; Gaming &middot; Music</p>
+          <h2 class="creator-name"><a href="/creators/garian-the-barbarian/">GarianTheBarbarian</a></h2>
+          <p class="creator-bio">
+            Just a little capybarian making his way across the field of battle. Garian is a Twitch Affiliate, gaming creator, musician, and community builder whose content ranges from chaotic co-op adventures to expansive worlds in <em>Minecraft</em> and <em>Fallout</em>.
+            <br><br>
+            As a Founding Creator with Forged Destiny Gaming, he brings together gaming, music, and a genuine drive to build friendships through collaboration. His featured games include <em>Lethal Company</em>, <em>PEAK</em>, <em>Minecraft</em>, <em>Fallout</em>, and <em>Helldivers 2</em>.
+          </p>
+
+          <div class="creator-links" aria-label="GarianTheBarbarian links">
+            <a href="/creators/garian-the-barbarian/">Creator Profile</a>
+            <a href="https://www.twitch.tv/GarianTheBarbarian" target="_blank" rel="noopener noreferrer">Twitch</a>
+            <a href="https://www.youtube.com/@GarianTheBarbarian" target="_blank" rel="noopener noreferrer">YouTube</a>
+            <a href="https://www.tiktok.com/@GarianTheBarbarian" target="_blank" rel="noopener noreferrer">TikTok</a>
+            <a href="https://open.spotify.com/artist/7pbG8hFUT1ST49SNyjf31B" target="_blank" rel="noopener noreferrer">Spotify</a>
+          </div>
+        </div>
+      </article>
+      </div>
+
+      <div class="creator-column">
+
      <!-- Brandon Lee Bedwell / Box_Beard -->
-<article class="creator-card">
+<article class="creator-card box-beard-card cofounder-card">
   <div class="creator-photo">
     <a
       class="creator-photo-link"
@@ -525,7 +577,7 @@ nav: creators
     >
       <img
         class="box-beard-photo"
-        src="/BB%20box.png"
+        src="/BB%20box.png?v=2"
         alt="Brandon Lee Bedwell, also known as Box_Beard"
       >
     </a>
@@ -614,35 +666,8 @@ nav: creators
         </div>
       </article>
 
-      <!-- GarianTheBarbarian -->
-      <article class="creator-card">
-        <div class="creator-photo">
-          <a class="creator-photo-link" href="/creators/garian-the-barbarian/" aria-label="View GarianTheBarbarian's creator profile">
-            <img src="/GARIAN-CAPY.webp" alt="GarianTheBarbarian's capybarian mascot wearing a Viking helmet">
-          </a>
-        </div>
-
-        <div class="creator-info">
-          <p class="creator-role">Founding Creator &middot; Gaming &middot; Music</p>
-          <h2 class="creator-name"><a href="/creators/garian-the-barbarian/">GarianTheBarbarian</a></h2>
-          <p class="creator-bio">
-            Just a little capybarian making his way across the field of battle. Garian is a Twitch Affiliate, gaming creator, musician, and community builder whose content ranges from chaotic co-op adventures to expansive worlds in <em>Minecraft</em> and <em>Fallout</em>.
-            <br><br>
-            As a Founding Creator with Forged Destiny Gaming, he brings together gaming, music, and a genuine drive to build friendships through collaboration. His featured games include <em>Lethal Company</em>, <em>PEAK</em>, <em>Minecraft</em>, <em>Fallout</em>, and <em>Helldivers 2</em>.
-          </p>
-
-          <div class="creator-links" aria-label="GarianTheBarbarian links">
-            <a href="/creators/garian-the-barbarian/">Creator Profile</a>
-            <a href="https://www.twitch.tv/GarianTheBarbarian" target="_blank" rel="noopener noreferrer">Twitch</a>
-            <a href="https://www.youtube.com/@GarianTheBarbarian" target="_blank" rel="noopener noreferrer">YouTube</a>
-            <a href="https://www.tiktok.com/@GarianTheBarbarian" target="_blank" rel="noopener noreferrer">TikTok</a>
-            <a href="https://open.spotify.com/artist/7pbG8hFUT1ST49SNyjf31B" target="_blank" rel="noopener noreferrer">Spotify</a>
-          </div>
-        </div>
-      </article>
-
       <!-- ChaoticGemstones -->
-      <article class="creator-card">
+      <article class="creator-card chaotic-card">
         <div class="creator-photo">
           <a class="creator-photo-link placeholder-link" href="/creators/chaoticgemstones/" aria-label="View ChaoticGemstones' creator profile">
             <span class="photo-placeholder">CG</span>
@@ -658,6 +683,7 @@ nav: creators
           </div>
         </div>
       </article>
+      </div>
     </section>
   </main>
 
