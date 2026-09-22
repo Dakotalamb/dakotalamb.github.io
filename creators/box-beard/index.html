@@ -190,7 +190,7 @@ nav: creators
     }
 
     .profile-photo {
-      aspect-ratio: 1 / 1;
+      aspect-ratio: 4 / 5;
       display: grid;
       place-items: center;
       overflow: hidden;
@@ -203,7 +203,7 @@ nav: creators
       width: 100%;
       height: 100%;
       display: block;
-      object-fit: contain;
+      object-fit: cover;
       object-position: center;
     }
 
@@ -460,6 +460,8 @@ nav: creators
         gap: 14px;
       }
     }
+    /* Creator palette; shared header and footer retain FDG orange. */
+    main { --orange: #f20b3f; --orange-light: #ff4068; }
   </style>
 </head>
 
@@ -469,7 +471,7 @@ nav: creators
   <main>
     <section class="hero">
       <div class="profile-photo">
-        <img src="/BB%20box.png" alt="Brandon Lee Bedwell, also known as Box_Beard">
+        <img src="/BB%20box.png?v=2" alt="Brandon Lee Bedwell, also known as Box_Beard">
       </div>
 
       <div>
