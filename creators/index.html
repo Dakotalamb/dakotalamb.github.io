@@ -202,6 +202,18 @@ nav: creators
       border-color: #6f412e;
     }
 
+    .creator-card.cozy-card {
+      --orange: #ff5ca8;
+    }
+
+    .creator-card.cozy-card:hover {
+      border-color: #a765d7;
+    }
+
+    .creator-card.cozy-card .creator-photo {
+      background: linear-gradient(135deg, rgba(255,92,168,.22), rgba(126,66,180,.18)), #111314;
+    }
+
     .creator-photo {
       position: relative;
       width: 100%;
@@ -403,6 +415,7 @@ nav: creators
       .cofounder-card { order: 2; }
       .garian-card { order: 3; }
       .chaotic-card { order: 4; }
+      .cozy-card { order: 5; }
 
       .footer-inner {
         flex-direction: column;
@@ -424,7 +437,8 @@ nav: creators
         {"@type":"ListItem","position":1,"url":"https://forgeddestinygaming.com/creators/decotherobot/","item":{"@type":"Person","name":"DecoTheRobot","jobTitle":"Founder, Content Creator and Game Developer","url":"https://forgeddestinygaming.com/creators/decotherobot/","sameAs":["https://www.youtube.com/@DecoTheRobot","https://www.twitch.tv/decotherobot","https://www.tiktok.com/@decotherobot_"]}},
         {"@type":"ListItem","position":2,"url":"https://forgeddestinygaming.com/creators/box-beard/","item":{"@type":"Person","name":"Brandon Lee Bedwell","alternateName":"Box_Beard","jobTitle":"Co-Founder, Content Creator and Aspiring Game Developer","url":"https://forgeddestinygaming.com/creators/box-beard/","sameAs":["https://www.youtube.com/@Box_Beard","https://www.twitch.tv/box_beard","https://www.tiktok.com/@box_beard"]}},
         {"@type":"ListItem","position":3,"url":"https://forgeddestinygaming.com/creators/garian-the-barbarian/","item":{"@type":"Person","name":"GarianTheBarbarian","alternateName":"Garian the Barbarian","jobTitle":"Founding Creator, Gaming Creator and Musician","url":"https://forgeddestinygaming.com/creators/garian-the-barbarian/","sameAs":["https://www.twitch.tv/GarianTheBarbarian","https://www.youtube.com/@GarianTheBarbarian","https://www.tiktok.com/@GarianTheBarbarian","https://www.instagram.com/GarianTheBarbarian/","https://open.spotify.com/artist/7pbG8hFUT1ST49SNyjf31B"]}},
-        {"@type":"ListItem","position":4,"url":"https://forgeddestinygaming.com/creators/chaoticgemstones/","item":{"@type":"Person","name":"ChaoticGemstones","pronouns":"she/they","jobTitle":"Founding Creator, Gaming Creator and Artist","image":"https://forgeddestinygaming.com/Gem.png","url":"https://forgeddestinygaming.com/creators/chaoticgemstones/","sameAs":["https://www.twitch.tv/chaoticgemstones"]}}
+        {"@type":"ListItem","position":4,"url":"https://forgeddestinygaming.com/creators/chaoticgemstones/","item":{"@type":"Person","name":"ChaoticGemstones","pronouns":"she/they","jobTitle":"Founding Creator, Gaming Creator and Artist","image":"https://forgeddestinygaming.com/Gem.png","url":"https://forgeddestinygaming.com/creators/chaoticgemstones/","sameAs":["https://www.twitch.tv/chaoticgemstones"]}},
+        {"@type":"ListItem","position":5,"url":"https://forgeddestinygaming.com/creators/cozynekoht/","item":{"@type":"Person","name":"Cozy","alternateName":"CozyNekoHT","pronouns":"she/her","jobTitle":"Founding Creator and KawaiiGoth Neko Half-Tuber","image":"https://forgeddestinygaming.com/cozy.png","url":"https://forgeddestinygaming.com/creators/cozynekoht/","sameAs":["https://www.twitch.tv/cozynekoht","https://kick.com/cozynekoht","https://www.youtube.com/@CozyNekoHT","https://www.tiktok.com/@cozynekoht","https://www.instagram.com/cozynekoht/","https://linktr.ee/cozynekoht"]}}
       ]
     }
   }
@@ -560,6 +574,27 @@ nav: creators
             <a href="https://www.youtube.com/@GarianTheBarbarian" target="_blank" rel="noopener noreferrer">YouTube</a>
             <a href="https://www.tiktok.com/@GarianTheBarbarian" target="_blank" rel="noopener noreferrer">TikTok</a>
             <a href="https://open.spotify.com/artist/7pbG8hFUT1ST49SNyjf31B" target="_blank" rel="noopener noreferrer">Spotify</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Cozy / CozyNekoHT -->
+      <article class="creator-card cozy-card">
+        <div class="creator-photo">
+          <a class="creator-photo-link" href="/creators/cozynekoht/" aria-label="View Cozy's creator profile">
+            <img src="/cozy.png" alt="Cozy, the KawaiiGoth Neko Half-Tuber">
+          </a>
+        </div>
+        <div class="creator-info">
+          <p class="creator-role">Founding Creator &middot; Half-Tuber &middot; 18+ Gaming</p>
+          <h2 class="creator-name"><a href="/creators/cozynekoht/">Cozy</a></h2>
+          <p class="creator-alias">aka CozyNekoHT</p>
+          <p class="creator-bio">Cozy is a Puerto Rican KawaiiGoth Neko Half-Tuber who blends PNGTuber and IRL content across Twitch and Kick. A foul-mouthed Fortnite creator, Sanrio enthusiast, and horror manga and anime fan, she brings equal parts cute style, dark humor, and chaotic energy to every stream.</p>
+          <div class="creator-links" aria-label="Cozy links">
+            <a href="/creators/cozynekoht/">Creator Profile</a>
+            <a href="https://www.twitch.tv/cozynekoht" target="_blank" rel="noopener noreferrer">Twitch</a>
+            <a href="https://kick.com/cozynekoht" target="_blank" rel="noopener noreferrer">Kick</a>
+            <a href="https://linktr.ee/cozynekoht" target="_blank" rel="noopener noreferrer">Linktree</a>
           </div>
         </div>
       </article>
