@@ -1,238 +1,367 @@
 ---
-nav: home
+nav: creators
 ---
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="apple-touch-icon" href="favicon.png">
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Forged Destiny Gaming brings creators, players, and game developers together to make memorable content and original games.">
-  <title>Forged Destiny Gaming</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Meet the gaming creators, livestreamers, musicians, and indie game developers of Forged Destiny Gaming, including DecoTheRobot, Box_Beard, and GarianTheBarbarian."
+  >
+  <link rel="canonical" href="https://forgeddestinygaming.com/creators/">
+  <meta property="og:title" content="Gaming Creators & Indie Game Developers | Forged Destiny Gaming">
+  <meta property="og:description" content="Meet the independent creators, livestreamers, and game developers building content and original games under the FDG banner.">
+  <meta property="og:url" content="https://forgeddestinygaming.com/creators/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://forgeddestinygaming.com/logogo.png">
+
+  <title>Gaming Creators &amp; Indie Game Developers | Forged Destiny Gaming</title>
+
+  <link rel="icon" href="/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="/favicon.png">
 
   <style>
     :root {
-      --bg: #151719;
-      --panel: #232629;
-      --orange: #ff5a1f;
-      --ivory: #fff3df;
-      --muted: #b8b8b5;
+      --background: #1c1f20;
+      --surface: #242728;
+      --surface-dark: #111314;
+      --text: #fff1dd;
+      --muted: #b9b9b9;
+      --orange: #ff4f1f;
+      --orange-light: #ff7548;
+      --line: #3a3d3e;
+      --max-width: 1050px;
     }
 
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       margin: 0;
-      color: var(--ivory);
-      background: radial-gradient(circle at top, #292a2b, var(--bg) 65%);
-      font-family: Inter, Arial, sans-serif;
+      background: var(--background);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
       line-height: 1.6;
     }
 
-    main {
-      width: min(100% - 40px, 900px);
-      margin: auto;
-      padding: 30px 0 70px;
+    a {
+      color: inherit;
     }
 
     .site-header {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      padding-bottom: 24px;
-      border-bottom: 1px solid #383838;
-    }
-
-    .brand-card {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 7px 14px 7px 7px;
-      border: 1px solid #4b3830;
-      background: #191b1d;
-      color: var(--ivory);
-      text-decoration: none;
-    }
-
-    .brand-card img {
-      width: 42px;
-      height: 42px;
-      object-fit: contain;
-    }
-
-    .brand-card span {
-      display: flex;
-      flex-direction: column;
-      line-height: 1.1;
-    }
-
-    .brand-card strong {
-      font-size: 13px;
-      letter-spacing: .08em;
-    }
-
-    .brand-card small {
-      margin-top: 4px;
-      color: var(--orange);
-      font-size: 10px;
-      font-weight: 800;
-      letter-spacing: .3em;
-    }
-
-    .brand-card:hover { border-color: var(--orange); }
-
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px 20px;
-    }
-
-    nav a {
-      color: var(--muted);
-      font-size: 14px;
-      text-decoration: none;
-    }
-
-    nav a:hover { color: var(--orange); }
-    nav .discord { color: var(--orange); font-weight: 700; }
-
-    nav .hub-link {
-      padding: 8px 13px;
-      border: 1px solid var(--orange);
-      background: var(--orange);
-      color: var(--bg);
-      font-size: 12px;
-      font-weight: 900;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-    }
-
-    nav .hub-link:hover { background: #ff7844; color: var(--bg); }
-
-    section { scroll-margin-top: 25px; }
-
-    .announcement {
+      width: min(var(--max-width), calc(100% - 36px));
+      margin: 0 auto;
+      min-height: 96px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 28px;
-      margin-top: 30px;
-      padding: 24px 26px;
-      border: 1px solid #4b3830;
-      border-left: 3px solid var(--orange);
-      background: #191b1d;
+      border-bottom: 1px solid var(--line);
     }
 
-    .announcement-copy { flex: 1; }
-
-    .announcement h2 {
-      margin: 5px 0 7px;
-      font-size: clamp(22px, 4vw, 30px);
-      line-height: 1.2;
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 9px 12px;
+      border: 1px solid #513426;
+      background: var(--surface-dark);
+      text-decoration: none;
     }
 
-    .announcement p {
-      margin: 0;
-      max-width: 620px;
+    .brand img {
+      width: 38px;
+      height: 38px;
+      object-fit: contain;
     }
 
-    .announcement .button {
-      flex: 0 0 auto;
-      white-space: nowrap;
+    .brand-text {
+      font-weight: 800;
+      font-size: 0.92rem;
+      letter-spacing: 0.08em;
+      line-height: 1.15;
     }
 
-    .hero {
-      padding: 75px 0 80px;
-      text-align: center;
-    }
-
-    .hero-logo {
+    .brand-text span {
       display: block;
-      width: min(310px, 75%);
-      height: auto;
-      margin: 0 auto 32px;
+      margin-top: 4px;
+      color: var(--orange);
+      font-size: 0.67rem;
+      letter-spacing: 0.28em;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 18px;
+    }
+
+    .nav-links a {
+      color: #dedede;
+      text-decoration: none;
+      font-size: 0.94rem;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--orange);
+    }
+
+    .nav-links .hub-link {
+      padding: 8px 13px;
+      border: 1px solid var(--orange);
+      background: var(--orange);
+      color: var(--surface-dark);
+      font-size: 0.75rem;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      box-shadow: 0 0 18px rgba(255, 79, 31, 0.16);
+      transition:
+        background 160ms ease,
+        box-shadow 160ms ease,
+        transform 160ms ease;
+    }
+
+    .nav-links .hub-link:hover {
+      background: var(--orange-light);
+      color: var(--surface-dark);
+      box-shadow: 0 0 24px rgba(255, 79, 31, 0.32);
+      transform: translateY(-1px);
+    }
+
+    main {
+      width: min(var(--max-width), calc(100% - 36px));
+      margin: 0 auto;
+      padding: 78px 0 96px;
+    }
+
+    .page-heading {
+      max-width: 720px;
+      margin-bottom: 48px;
     }
 
     .eyebrow {
+      margin: 0 0 10px;
       color: var(--orange);
-      font-size: 13px;
+      font-size: 0.8rem;
       font-weight: 800;
-      letter-spacing: .18em;
+      letter-spacing: 0.18em;
       text-transform: uppercase;
     }
 
     h1 {
-      max-width: 750px;
-      margin: 12px auto;
-      font-size: clamp(42px, 8vw, 76px);
-      line-height: 1.08;
-      letter-spacing: -.05em;
+      margin: 0;
+      font-size: clamp(2.5rem, 7vw, 5rem);
+      line-height: 1.02;
+      letter-spacing: -0.04em;
     }
 
-    h2 { margin: 8px 0; font-size: 28px; }
-
-    p {
-      max-width: 680px;
-      color: var(--muted);
+    .page-heading p:last-child {
+      margin: 22px 0 0;
+      max-width: 650px;
+      color: #d0d0d0;
+      font-size: 1.08rem;
     }
 
-    .hero p {
-      margin-left: auto;
-      margin-right: auto;
+    .creator-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 26px;
+      align-items: start;
     }
 
-    .intro { font-size: 18px; }
-
-    .actions {
+    .creator-column {
       display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 30px;
+      flex-direction: column;
+      gap: 26px;
     }
 
-    .hero .actions { justify-content: center; }
+    .creator-card {
+      width: 100%;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: var(--surface);
+      transition:
+        transform 160ms ease,
+        border-color 160ms ease;
+    }
 
-    .button {
-      display: inline-block;
-      padding: 13px 20px;
-      border: 1px solid var(--orange);
-      color: var(--ivory);
-      font-weight: 700;
+    .creator-card:hover {
+      transform: translateY(-3px);
+      border-color: #6f412e;
+    }
+
+    .creator-photo {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      background:
+        linear-gradient(
+          135deg,
+          rgba(255, 79, 31, 0.15),
+          transparent 48%
+        ),
+        var(--surface-dark);
+      border-bottom: 3px solid var(--orange);
+    }
+
+    .creator-photo img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    .creator-card.box-beard-card .creator-photo {
+      aspect-ratio: 4 / 5;
+    }
+
+    .creator-photo img.box-beard-photo {
+      object-fit: cover;
+      object-position: center;
+      background: #071d0d;
+    }
+
+    .creator-photo img.axiom-photo {
+      object-fit: contain;
+      background: #000;
+    }
+
+    .creator-photo img.knights-photo {
+      object-fit: contain;
+      background: #090909;
+    }
+
+    .creator-photo-link {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .creator-photo-link img {
+      transition:
+        transform 180ms ease,
+        filter 180ms ease;
+    }
+
+    .creator-photo-link:hover img {
+      transform: scale(1.025);
+      filter: brightness(1.08);
+    }
+
+    .placeholder-link {
+      display: grid;
+      place-items: center;
       text-decoration: none;
     }
 
-    .button:hover { background: var(--orange); color: var(--bg); }
-    .button.primary { background: var(--orange); color: var(--bg); }
-    .button.primary:hover { background: #ff7844; }
-
-    .card {
-      margin-bottom: 20px;
-      padding: 30px;
-      border: 1px solid #414141;
-      border-left: 3px solid var(--orange);
-      background: var(--panel);
+    .placeholder-link:hover {
+      background: rgba(255, 79, 31, 0.06);
     }
 
-    .card p { margin-bottom: 0; }
+    .photo-placeholder {
+      color: #777;
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      transition: color 160ms ease;
+    }
+
+    .placeholder-link:hover .photo-placeholder {
+      color: var(--orange);
+    }
+
+    .creator-info {
+      padding: 26px;
+    }
+
+    .creator-role {
+      margin: 0 0 4px;
+      color: var(--orange);
+      font-size: 0.74rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .creator-name {
+      margin: 0;
+      font-size: 1.65rem;
+      line-height: 1.2;
+    }
+
+    .creator-name a {
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .creator-name a:hover,
+    .creator-name a:focus-visible {
+      color: var(--orange);
+    }
+
+    .creator-alias {
+      margin: 5px 0 0;
+      color: var(--muted);
+      font-size: 1rem;
+      font-weight: 700;
+    }
+
+    .creator-bio {
+      margin: 14px 0 22px;
+      color: #d0d0d0;
+    }
+
+    .creator-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .creator-links a {
+      padding: 8px 12px;
+      border: 1px solid #6f412e;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 700;
+    }
+
+    .creator-links a:hover {
+      border-color: var(--orange);
+      background: var(--orange);
+      color: #111;
+    }
 
     .site-footer {
-      border-top: 1px solid #3a3d3e;
+      border-top: 1px solid var(--line);
       background: #17191a;
     }
 
     .footer-inner {
-      width: min(1050px, calc(100% - 36px));
+      width: min(var(--max-width), calc(100% - 36px));
       margin: 0 auto;
       padding: 34px 0;
       display: flex;
       justify-content: space-between;
       gap: 30px;
       color: var(--muted);
-      font-size: 14px;
+      font-size: 0.85rem;
     }
 
     .footer-links {
@@ -246,20 +375,47 @@ nav: home
       text-decoration: none;
     }
 
-    .footer-links a:hover { color: var(--orange); }
+    .footer-links a:hover {
+      color: var(--orange);
+    }
 
-    @media (max-width: 600px) {
-      .hero { padding: 55px 0; }
-      .card { padding: 22px; }
+    .footer-links .footer-hub {
+      color: var(--orange);
+      font-weight: 800;
+    }
 
-      .announcement {
-        align-items: stretch;
+    @media (max-width: 760px) {
+      .site-header {
+        padding: 18px 0;
+        align-items: flex-start;
         flex-direction: column;
-        gap: 18px;
-        padding: 22px;
       }
 
-      .announcement .button { text-align: center; }
+      .nav-links {
+        justify-content: flex-start;
+        gap: 14px 19px;
+      }
+
+      main {
+        padding-top: 56px;
+      }
+
+      .creator-grid {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .creator-column {
+        display: contents;
+      }
+
+      .founder-card { order: 1; }
+      .cofounder-card { order: 2; }
+      .garian-card { order: 3; }
+      .chaotic-card { order: 4; }
+      .cozy-card { order: 5; }
+      .axiom-card { order: 6; }
+      .knights-card { order: 7; }
 
       .footer-inner {
         flex-direction: column;
@@ -267,74 +423,342 @@ nav: home
       }
     }
   </style>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"CollectionPage",
+    "name":"Forged Destiny Gaming Creators",
+    "url":"https://forgeddestinygaming.com/creators/",
+    "description":"Gaming creators, livestreamers, and indie game developers working together under Forged Destiny Gaming.",
+    "isPartOf":{"@id":"https://forgeddestinygaming.com/#website"},
+    "mainEntity":{
+      "@type":"ItemList",
+      "itemListElement":[
+        {"@type":"ListItem","position":1,"url":"https://forgeddestinygaming.com/creators/decotherobot/","item":{"@type":"Person","name":"DecoTheRobot","jobTitle":"Founder, Content Creator and Game Developer","url":"https://forgeddestinygaming.com/creators/decotherobot/","sameAs":["https://www.youtube.com/@DecoTheRobot","https://www.twitch.tv/decotherobot","https://www.tiktok.com/@decotherobot_"]}},
+        {"@type":"ListItem","position":2,"url":"https://forgeddestinygaming.com/creators/box-beard/","item":{"@type":"Person","name":"Brandon Lee Bedwell","alternateName":"Box_Beard","jobTitle":"Co-Founder, Content Creator and Aspiring Game Developer","url":"https://forgeddestinygaming.com/creators/box-beard/","sameAs":["https://www.youtube.com/@Box_Beard","https://www.twitch.tv/box_beard","https://www.tiktok.com/@box_beard"]}},
+        {"@type":"ListItem","position":3,"url":"https://forgeddestinygaming.com/creators/garian-the-barbarian/","item":{"@type":"Person","name":"GarianTheBarbarian","alternateName":"Garian the Barbarian","jobTitle":"Founding Creator, Gaming Creator and Musician","url":"https://forgeddestinygaming.com/creators/garian-the-barbarian/","sameAs":["https://www.twitch.tv/GarianTheBarbarian","https://www.youtube.com/@GarianTheBarbarian","https://www.tiktok.com/@GarianTheBarbarian","https://www.instagram.com/GarianTheBarbarian/","https://open.spotify.com/artist/7pbG8hFUT1ST49SNyjf31B"]}},
+        {"@type":"ListItem","position":4,"url":"https://forgeddestinygaming.com/creators/chaoticgemstones/","item":{"@type":"Person","name":"ChaoticGemstones","pronouns":"she/they","jobTitle":"Founding Creator, Gaming Creator and Artist","image":"https://forgeddestinygaming.com/Gem.png","url":"https://forgeddestinygaming.com/creators/chaoticgemstones/","sameAs":["https://www.twitch.tv/chaoticgemstones"]}},
+        {"@type":"ListItem","position":5,"url":"https://forgeddestinygaming.com/creators/cozynekoht/","item":{"@type":"Person","name":"Cozy","alternateName":"CozyNekoHT","pronouns":"she/her","jobTitle":"Founding Creator and KawaiiGoth Neko Half-Tuber","image":"https://forgeddestinygaming.com/cozy.png","url":"https://forgeddestinygaming.com/creators/cozynekoht/","sameAs":["https://www.twitch.tv/cozynekoht","https://kick.com/cozynekoht","https://www.youtube.com/@CozyNekoHT","https://www.tiktok.com/@cozynekoht","https://www.instagram.com/cozynekoht/","https://linktr.ee/cozynekoht"]}},
+        {"@type":"ListItem","position":6,"url":"https://forgeddestinygaming.com/creators/axiom-the-space-dragon/","item":{"@type":"Person","name":"Axiom The Space Dragon","alternateName":"AxiomTheSpaceDragon","pronouns":"he/him","jobTitle":"Founding Creator, Gaming and Conversation Creator","image":"https://forgeddestinygaming.com/Axiom.png","url":"https://forgeddestinygaming.com/creators/axiom-the-space-dragon/","sameAs":["https://www.twitch.tv/axiomthespacedragon","https://www.youtube.com/@AxiomTheSpaceDragon","https://www.tiktok.com/@axiomthespacedragon"]}},
+        {"@type":"ListItem","position":7,"url":"https://forgeddestinygaming.com/creators/knights-of-the-bar-table/","item":{"@type":"Person","name":"KnightsOfTheBarTable","jobTitle":"Founding Creator","image":"https://forgeddestinygaming.com/Knights.png","url":"https://forgeddestinygaming.com/creators/knights-of-the-bar-table/","sameAs":["https://www.twitch.tv/knightsofthebartable"]}}
+      ]
+    }
+  }
+  </script>
 </head>
 
 <body>
+  {% include header.html %}
+
   <main>
-    {% include header.html %}
+    <section class="page-heading">
+      <p class="eyebrow">Forged Destiny Gaming</p>
 
-    <aside class="announcement" aria-labelledby="creator-call-title">
-      <div class="announcement-copy">
-        <div class="eyebrow">Founding creator applications</div>
-        <h2 id="creator-call-title">Join our first creator roster.</h2>
-        <p>
-          Forged Destiny Gaming is selecting eight creators to join us from the
-          beginning. You keep full control of your channels and content—there is
-          no exclusivity and no required posting schedule.
-        </p>
-      </div>
-      <a
-        class="button primary"
-        href="https://docs.google.com/forms/d/e/1FAIpQLScuPxF7qDzVZMR8FjXOhKLvPp3Qv4o7qzVFVt1GRz0PTo04zA/viewform"
-        target="_blank"
-        rel="noopener noreferrer"
-      >Apply to join</a>
-    </aside>
+      <h1>Meet our creators.</h1>
 
-    <section class="hero" id="home">
-      <img class="hero-logo" src="logogo.png" alt="Forged Destiny Gaming logo">
-      <div class="eyebrow">Forge your own path. Share the victory.</div>
-      <h1>Games are better built together.</h1>
-      <p class="intro">
-        Forged Destiny Gaming brings creators, players, and game developers
-        together to make memorable content and original games.
-      </p>
-      <div class="actions">
-        <a class="button primary" href="https://discord.gg/NxDS5DkhHs" target="_blank" rel="noopener noreferrer">Join the Discord</a>
-        <a class="button" href="/games/">Explore our games</a>
-      </div>
-    </section>
-
-    <section class="card" id="games">
-      <div class="eyebrow">In development</div>
-      <h2>No Exit Necessary</h2>
       <p>
-        A multiplayer survival-horror game built to play with friends.
-        Explore the unfamiliar, gather what you need, and make a place to survive.
-        More details are coming as development continues.
+        Independent creators with their own voices, communities, and
+        ambitions, working together under one shared banner.
       </p>
     </section>
 
-    <section class="card" id="creators">
-      <div class="eyebrow">Our community</div>
-      <h2>Creators &amp; players</h2>
-      <p>
-        We make content, play together, and share the victories along the way.
-        Meet the creators working together under the Forged Destiny Gaming banner.
-      </p>
-      <div class="actions">
-        <a class="button" href="/creators/">Meet our creators</a>
-      </div>
-    </section>
+    <section
+      class="creator-grid"
+      aria-label="Forged Destiny Gaming creators"
+    >
+      <div class="creator-column">
+      <!-- DecoTheRobot -->
+      <article class="creator-card founder-card">
+        <div class="creator-photo">
+          <a
+            class="creator-photo-link"
+            href="/creators/decotherobot/"
+            aria-label="View DecoTheRobot's media kit"
+          >
+            <img
+              src="/DECO.png"
+              alt="DecoTheRobot"
+            >
+          </a>
+        </div>
 
-    <section class="card" id="about">
-      <div class="eyebrow">About FDG</div>
-      <h2>Forge your own path</h2>
-      <p>
-        Forged Destiny Gaming is an independent game collective and creator
-        organization supporting original games, content creators, and collaborative
-        projects. This is only the beginning.
-      </p>
+        <div class="creator-info">
+          <p class="creator-role">
+            Founder &middot; Creator &middot; Game Developer
+          </p>
+
+          <h2 class="creator-name">
+            <a href="/creators/decotherobot/">
+              DecoTheRobot
+            </a>
+          </h2>
+
+          <p class="creator-bio">
+            DecoTheRobot is a content creator, livestreamer, game developer,
+            and founder of Forged Destiny Gaming. Known for deadpan humor,
+            chaotic multiplayer adventures, and plans that rarely survive
+            contact with reality, Deco turns unpredictable gaming moments
+            into genuine entertainment shared with friends and the community.
+            <br><br>
+
+            Beyond content creation, Deco develops original games with a
+            focus on memorable ideas, player freedom, and experiences worth
+            returning to. His current project,
+            <em>No Exit Necessary</em>, is a multiplayer survival-horror game
+            that challenges players to stop searching for an escape and
+            instead learn how to survive, build, and thrive within an
+            impossible world.
+            <br><br>
+
+            Through Forged Destiny Gaming, Deco is working to bring
+            independent creators and developers together under a shared
+            banner while protecting their individual voices and creative
+            authority. His goal is simple: support original ideas, build
+            lasting communities, and create games and content that people
+            genuinely want to experience.
+          </p>
+
+          <div
+            class="creator-links"
+            aria-label="DecoTheRobot links"
+          >
+            <a href="/creators/decotherobot/">
+              Media Kit
+            </a>
+
+            <a
+              href="https://www.youtube.com/@DecoTheRobot"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              YouTube
+            </a>
+
+            <a
+              href="https://www.twitch.tv/decotherobot"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Twitch
+            </a>
+
+            <a
+              href="https://www.tiktok.com/@decotherobot_"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              TikTok
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- GarianTheBarbarian -->
+      <article class="creator-card garian-card">
+        <div class="creator-photo">
+          <a class="creator-photo-link" href="/creators/garian-the-barbarian/" aria-label="View GarianTheBarbarian's creator profile">
+            <img src="/GARIAN-CAPY.webp" alt="GarianTheBarbarian's capybarian mascot wearing a Viking helmet">
+          </a>
+        </div>
+
+        <div class="creator-info">
+          <p class="creator-role">Founding Creator &middot; Gaming &middot; Music</p>
+          <h2 class="creator-name"><a href="/creators/garian-the-barbarian/">GarianTheBarbarian</a></h2>
+          <p class="creator-bio">
+            Just a little capybarian making his way across the field of battle. Garian is a Twitch Affiliate, gaming creator, musician, and community builder whose content ranges from chaotic co-op adventures to expansive worlds in <em>Minecraft</em> and <em>Fallout</em>.
+            <br><br>
+            As a Founding Creator with Forged Destiny Gaming, he brings together gaming, music, and a genuine drive to build friendships through collaboration. His featured games include <em>Lethal Company</em>, <em>PEAK</em>, <em>Minecraft</em>, <em>Fallout</em>, and <em>Helldivers 2</em>.
+          </p>
+
+          <div class="creator-links" aria-label="GarianTheBarbarian links">
+            <a href="/creators/garian-the-barbarian/">Creator Profile</a>
+            <a href="https://www.twitch.tv/GarianTheBarbarian" target="_blank" rel="noopener noreferrer">Twitch</a>
+            <a href="https://www.youtube.com/@GarianTheBarbarian" target="_blank" rel="noopener noreferrer">YouTube</a>
+            <a href="https://www.tiktok.com/@GarianTheBarbarian" target="_blank" rel="noopener noreferrer">TikTok</a>
+            <a href="https://open.spotify.com/artist/7pbG8hFUT1ST49SNyjf31B" target="_blank" rel="noopener noreferrer">Spotify</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Cozy / CozyNekoHT -->
+      <article class="creator-card cozy-card">
+        <div class="creator-photo">
+          <a class="creator-photo-link" href="/creators/cozynekoht/" aria-label="View Cozy's creator profile">
+            <img src="/cozy.png" alt="Cozy, the KawaiiGoth Neko Half-Tuber">
+          </a>
+        </div>
+        <div class="creator-info">
+          <p class="creator-role">Founding Creator &middot; Half-Tuber &middot; 18+ Gaming</p>
+          <h2 class="creator-name"><a href="/creators/cozynekoht/">Cozy</a></h2>
+          <p class="creator-alias">aka CozyNekoHT</p>
+          <p class="creator-bio">Cozy is a KawaiiGoth Neko Half-Tuber who blends PNGTuber &amp; IRL content across Twitch &amp; Kick. Foul mouthed as a sailor, a Sanrio enthusiast <em>keroppi is her fave</em>, a Horror Manga &amp; Anime Fan <em>talk about junji ito or one piece &amp; she's hooked</em>, she brings equal parts cute style, dark humor &amp; chaotic gremlin energy to every stream. She doesn't have a set schedule but she brings her all into every single stream. Consider checking out her Linktree below for all socials!<br><br><strong>Leukemia Warrior 🪖🧡 (09.11.24)</strong></p>
+          <div class="creator-links" aria-label="Cozy links">
+            <a href="/creators/cozynekoht/">Creator Profile</a>
+            <a href="https://www.twitch.tv/cozynekoht" target="_blank" rel="noopener noreferrer">Twitch</a>
+            <a href="https://kick.com/cozynekoht" target="_blank" rel="noopener noreferrer">Kick</a>
+            <a href="https://linktr.ee/cozynekoht" target="_blank" rel="noopener noreferrer">Linktree</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- KnightsOfTheBarTable -->
+      <article class="creator-card knights-card">
+        <div class="creator-photo">
+          <a class="creator-photo-link" href="/creators/knights-of-the-bar-table/" aria-label="View KnightsOfTheBarTable's creator profile">
+            <img class="knights-photo" src="/Knights.png" alt="KnightsOfTheBarTable Twitch profile">
+          </a>
+        </div>
+        <div class="creator-info">
+          <p class="creator-role">Founding Creator &middot; Gaming &middot; Talks</p>
+          <h2 class="creator-name"><a href="/creators/knights-of-the-bar-table/">KnightsOfTheBarTable</a></h2>
+          <p class="creator-bio">KnightsOfTheBarTable is a gaming and conversation creator building toward a stable, full-time creative career. His interests reach beyond gameplay into online D&amp;D, cooking, food reviews, renovation projects, and collaborative community content.</p>
+          <div class="creator-links" aria-label="KnightsOfTheBarTable links">
+            <a href="/creators/knights-of-the-bar-table/">Creator Profile</a>
+            <a href="https://www.twitch.tv/knightsofthebartable" target="_blank" rel="noopener noreferrer">Twitch</a>
+          </div>
+        </div>
+      </article>
+      </div>
+
+      <div class="creator-column">
+
+     <!-- Brandon Lee Bedwell / Box_Beard -->
+<article class="creator-card box-beard-card cofounder-card">
+  <div class="creator-photo">
+    <a
+      class="creator-photo-link"
+      href="/creators/box-beard/"
+      aria-label="View Brandon Lee Bedwell's media kit"
+    >
+      <img
+        class="box-beard-photo"
+        src="/BB%20box.png?v=2"
+        alt="Brandon Lee Bedwell, also known as Box_Beard"
+      >
+    </a>
+  </div>
+
+  <div class="creator-info">
+    <p class="creator-role">
+      Co-Founder &middot; Leadership &middot; Creator &middot; Aspiring Game Developer
+    </p>
+
+          <h2 class="creator-name">
+            <a href="/creators/box-beard/">
+              Brandon Lee Bedwell
+            </a>
+          </h2>
+
+          <p class="creator-alias">
+            aka Box_Beard
+          </p>
+
+          <p class="creator-bio">
+            Brandon is a family man, content creator, livestreamer, and
+            aspiring game developer with Forged Destiny Gaming. &ldquo;Odd
+            Jobs Brandon&rdquo; has done it all. After working in a wide
+            variety of industries, Brandon has found purpose and passion in
+            game development.
+            <br><br>
+
+            Known as &ldquo;Box Beard,&rdquo; he pushes the limits against
+            industry standards and aims to avoid populist ideology without
+            embracing contrarian or antagonistic qualities. &ldquo;True
+            free-thinking comes from a healthy combination of accepting data
+            and thinking outside of the box.&rdquo;
+            <br><br>
+
+            Brandon works alongside Deco, the founder of Forged Destiny
+            Gaming, to help develop <em>No Exit Necessary</em>, as well as
+            his working title, <em>Tri Ursa</em>. <em>No Exit Necessary</em>
+            is a Backrooms-inspired survival-horror game with unique building
+            mechanics and original entities. Give up on escape as you thrive
+            your way through the Backrooms.
+            <br><br>
+
+            Brandon&rsquo;s main personal project is <em>Tri Ursa</em>, a
+            long-term project inspired by <em>Resident Evil</em>,
+            <em>Outlast</em>, and <em>Dead Space</em>. It offers a unique
+            approach to action-horror gaming involving a skilled camper who
+            uses a variety of equipment to face a strange zombie outbreak at
+            a water treatment plant. The game is in the early stages of
+            concept art and will receive various updates on where development
+            is heading.
+          </p>
+
+          <div
+            class="creator-links"
+            aria-label="Brandon Lee Bedwell and Box Beard links"
+          >
+            <a href="/creators/box-beard/">
+              Media Kit
+            </a>
+
+            <a
+              href="https://www.youtube.com/@Box_Beard"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              YouTube
+            </a>
+
+            <a
+              href="https://www.twitch.tv/box_beard"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Twitch
+            </a>
+
+            <a
+              href="https://www.tiktok.com/@box_beard"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              TikTok
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- ChaoticGemstones -->
+      <article class="creator-card chaotic-card">
+        <div class="creator-photo">
+          <a class="creator-photo-link" href="/creators/chaoticgemstones/" aria-label="View ChaoticGemstones' creator profile">
+            <img src="/Gem.png" alt="ChaoticGemstones profile picture">
+          </a>
+        </div>
+        <div class="creator-info">
+          <p class="creator-role">Founding Creator &middot; Gaming &middot; Art</p>
+          <h2 class="creator-name"><a href="/creators/chaoticgemstones/">ChaoticGemstones</a></h2>
+          <p class="creator-bio">ChaoticGemstones is a gaming and art creator who thrives on friendslop-style adventures, creative projects, and collaboration. She enjoys bringing friends and communities together through shared chaos, memorable stories, and welcoming spaces. Featured content includes <em>Baldur's Gate 3</em>, the <em>Saints Row</em> series, and art.</p>
+          <div class="creator-links" aria-label="ChaoticGemstones links">
+            <a href="/creators/chaoticgemstones/">Creator Profile</a>
+            <a href="https://www.twitch.tv/chaoticgemstones" target="_blank" rel="noopener noreferrer">Twitch</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- AxiomTheSpaceDragon -->
+      <article class="creator-card axiom-card">
+        <div class="creator-photo">
+          <a class="creator-photo-link" href="/creators/axiom-the-space-dragon/" aria-label="View AxiomTheSpaceDragon's creator profile">
+            <img class="axiom-photo" src="/Axiom.png" alt="AxiomTheSpaceDragon Twitch profile">
+          </a>
+        </div>
+        <div class="creator-info">
+          <p class="creator-role">Founding Creator &middot; Gaming &middot; Conversation</p>
+          <h2 class="creator-name"><a href="/creators/axiom-the-space-dragon/">Axiom The Space Dragon</a></h2>
+          <p class="creator-bio">Axiom is the proud owner of Axiom&rsquo;s BathHouse, a cursed hotel resort that turns people into monsters. With a passion for media and yapping, he uses entertainment as an excuse to strike up a conversation with anyone about anything. His content highlights single-player favorites including <em>The Legend of Zelda</em>, <em>Resident Evil</em>, <em>Metal Gear Solid</em>, <em>Pok&eacute;mon</em>, <em>Elden Ring</em>, and <em>Yakuza</em>.</p>
+          <div class="creator-links" aria-label="AxiomTheSpaceDragon links">
+            <a href="/creators/axiom-the-space-dragon/">Creator Profile</a>
+            <a href="https://www.twitch.tv/axiomthespacedragon" target="_blank" rel="noopener noreferrer">Twitch</a>
+            <a href="https://www.youtube.com/@AxiomTheSpaceDragon" target="_blank" rel="noopener noreferrer">YouTube</a>
+            <a href="https://www.tiktok.com/@axiomthespacedragon" target="_blank" rel="noopener noreferrer">TikTok</a>
+          </div>
+        </div>
+      </article>
+      </div>
     </section>
   </main>
 
