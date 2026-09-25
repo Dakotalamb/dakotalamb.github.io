@@ -206,9 +206,8 @@ nav: creators
     .creator-photo {
       position: relative;
       width: 100%;
-      aspect-ratio: 4 / 3;
-      display: grid;
-      place-items: center;
+      aspect-ratio: auto;
+      display: block;
       overflow: hidden;
       background:
         linear-gradient(
@@ -221,13 +220,11 @@ nav: creators
     }
 
     .creator-photo img {
-      width: auto !important;
+      width: 100% !important;
       height: auto !important;
-      max-width: 100%;
-      max-height: 100%;
+      max-width: none;
+      max-height: none;
       display: block;
-      object-fit: contain;
-      object-position: center;
       background: #0d0f10;
     }
 
@@ -255,9 +252,8 @@ nav: creators
 
     .creator-photo-link {
       width: 100%;
-      height: 100%;
-      display: grid;
-      place-items: center;
+      height: auto;
+      display: block;
       overflow: hidden;
       background: #0d0f10;
     }
