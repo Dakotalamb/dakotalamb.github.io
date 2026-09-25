@@ -177,18 +177,19 @@ nav: creators
     .creator-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 26px;
-      align-items: start;
+      gap: 22px;
+      align-items: stretch;
     }
 
     .creator-column {
-      display: flex;
-      flex-direction: column;
-      gap: 26px;
+      display: contents;
     }
 
     .creator-card {
       width: 100%;
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
       overflow: hidden;
       border: 1px solid var(--line);
       background: var(--surface);
@@ -205,7 +206,7 @@ nav: creators
     .creator-photo {
       position: relative;
       width: 100%;
-      aspect-ratio: 16 / 10;
+      aspect-ratio: 4 / 3;
       display: grid;
       place-items: center;
       overflow: hidden;
@@ -226,18 +227,13 @@ nav: creators
       object-fit: cover;
     }
 
-    .creator-card.box-beard-card .creator-photo {
-      aspect-ratio: 4 / 5;
-    }
-
     .creator-photo img.box-beard-photo {
       object-fit: cover;
-      object-position: center;
+      object-position: center 32%;
       background: #071d0d;
     }
 
     .creator-card.axiom-card .creator-photo {
-      aspect-ratio: 557 / 612;
       background: #000;
     }
 
@@ -294,7 +290,10 @@ nav: creators
     }
 
     .creator-info {
-      padding: 26px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 22px;
     }
 
     .creator-role {
@@ -332,22 +331,40 @@ nav: creators
     .creator-bio {
       margin: 14px 0 22px;
       color: #d0d0d0;
+      display: -webkit-box;
+      overflow: hidden;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 5;
+      line-clamp: 5;
     }
 
     .creator-links {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
+      gap: 8px;
+      margin-top: auto;
+    }
+
+    .creator-links a:nth-child(n + 4) {
+      display: none;
     }
 
     .creator-links a {
-      padding: 8px 12px;
+      padding: 7px 10px;
       border: 1px solid #6f412e;
       color: var(--text);
       text-decoration: none;
       font-size: 0.82rem;
       font-weight: 700;
     }
+
+    .founder-card { order: 1; }
+    .cofounder-card { order: 2; }
+    .garian-card { order: 3; }
+    .chaotic-card { order: 4; }
+    .cozy-card { order: 5; }
+    .axiom-card { order: 6; }
+    .knights-card { order: 7; }
 
     .creator-links a:hover {
       border-color: var(--orange);
