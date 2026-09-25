@@ -1,46 +1,9 @@
-FDG SHARED HEADER AND FOOTER CONVERSION
-=======================================
+COMPLETE FORGED DESTINY GAMING MAIN WEBSITE
 
-This is the one-time conversion of the current Forged Destiny Gaming website
-to GitHub Pages' built-in Jekyll processing.
+1. Unzip this package.
+2. Open the FDG-main-website-complete folder.
+3. Upload everything inside that folder to the root of the main forgeddestinygaming.com GitHub repository.
+4. Replace files when GitHub asks.
+5. Keep the corrected Axiom.png in the repository root. This package intentionally does not replace it.
 
-UPLOAD
-------
-1. Open the root of the forgeddestinygaming.com GitHub repository.
-2. Upload the CONTENTS of this folder, not the outer folder itself.
-3. Keep every included folder and filename exactly as provided.
-4. Replace matching index.html files when GitHub asks.
-5. Do not delete existing image files or other assets from the repository.
-6. If the repository contains a file named .nojekyll, delete that one file;
-   it disables the shared-template build.
-7. Commit the upload and allow GitHub Pages a few minutes to rebuild.
-
-SHARED FILES
-------------
-Edit these from now on instead of changing every page:
-
-  _includes/header.html  = navigation and site header
-  _includes/footer.html  = footer and policy links
-  _config.yml            = email, Discord, Hub URL, year, name, and tagline
-
-PAGE-SPECIFIC CONTENT
----------------------
-Each page still has its own index.html file. The short block at the very top,
-between --- lines, tells the shared header which navigation item is active.
-
-Example:
-
-  ---
-  nav: games
-  ---
-
-Do not remove that block or the include lines:
-
-  {% include header.html %}
-  {% include footer.html %}
-
-IMPORTANT
----------
-The public URLs do not change. GitHub Pages builds the shared header and footer
-into the finished HTML automatically. Visitors do not need JavaScript for them.
-
+This is the public main website, not the Creator Hub application.

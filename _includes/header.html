@@ -21,6 +21,10 @@
     <a href="/about/"{% if page.nav == "about" %} class="active" aria-current="page"{% endif %}>About</a>
     <a href="{{ site.discord_url }}" target="_blank" rel="noopener noreferrer">Discord</a>
     <a href="mailto:{{ site.contact_email }}">Contact</a>
-    <a class="hub-link{% if page.nav == "hub" %} active{% endif %}" href="/creator-hub/"{% if page.nav == "hub" %} aria-current="page"{% endif %}>Creator Hub ↗</a>
+    {% if page.nav == "hub" %}
+    <a class="hub-link active" href="{{ site.creator_hub_url }}">Open Hub ↗</a>
+    {% else %}
+    <a class="hub-link" href="/creator-hub/">Creator Hub ↗</a>
+    {% endif %}
   </nav>
 </header>
