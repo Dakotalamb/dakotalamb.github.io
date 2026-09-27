@@ -1,0 +1,66 @@
+---
+permalink: /business-manager/
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <title>FDG Business Analytics Manager</title>
+  <link rel="icon" href="/favicon.png" type="image/png">
+  <style>
+    :root{--bg:#151719;--panel:#232629;--deep:#101214;--orange:#ff5a1f;--ivory:#fff3df;--muted:#b8b8b5;--line:#3b3e40;--green:#73d39a}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ivory);font-family:Arial,Helvetica,sans-serif;line-height:1.5}.shell{width:min(1100px,calc(100% - 32px));margin:auto;padding:42px 0 70px}.top{display:flex;align-items:center;justify-content:space-between;gap:22px;padding-bottom:25px;border-bottom:1px solid var(--line)}.brand{display:flex;align-items:center;gap:13px}.brand img{width:46px;height:46px}.brand strong{display:block;letter-spacing:.08em}.brand span{display:block;color:var(--orange);font-size:.72rem;font-weight:900;letter-spacing:.18em}.back{color:var(--muted)}.eyebrow{margin:0;color:var(--orange);font-size:.75rem;font-weight:900;letter-spacing:.18em;text-transform:uppercase}h1{margin:8px 0 10px;font-size:clamp(2rem,5vw,3.8rem);line-height:1}p{color:var(--muted)}.notice{margin:26px 0;padding:18px 20px;border-left:3px solid var(--orange);background:var(--deep)}.layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(300px,.75fr);gap:22px}.panel{padding:25px;border:1px solid var(--line);background:var(--panel)}.fields{display:grid;grid-template-columns:1fr 1fr;gap:16px}.field.full{grid-column:1/-1}label{display:block;margin-bottom:6px;color:#d8d8d4;font-size:.8rem;font-weight:800}input{width:100%;padding:12px;border:1px solid #54585b;background:#141618;color:var(--ivory);font:inherit}input:focus{outline:2px solid var(--orange);outline-offset:1px}.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}button{padding:11px 15px;border:1px solid var(--orange);background:var(--orange);color:#111;font:inherit;font-weight:900;cursor:pointer}button.secondary{background:transparent;color:var(--ivory)}button:hover{filter:brightness(1.12)}.status{min-height:24px;margin-top:14px;color:var(--green);font-weight:800}.preview-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}.preview{min-height:100px;padding:14px;border:1px solid var(--line);background:#191b1d}.preview small{display:block;color:var(--muted);font-size:.65rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase}.preview strong{display:block;margin-top:8px;line-height:1.15}.instructions{margin-top:22px;padding:22px;border:1px solid #513426;background:var(--deep)}.instructions ol{margin-bottom:0;padding-left:20px;color:#d5d5d2}.privacy{color:var(--orange);font-weight:800}@media(max-width:800px){.layout{grid-template-columns:1fr}.fields{grid-template-columns:1fr}.field.full{grid-column:auto}.top{align-items:flex-start;flex-direction:column}}@media(max-width:480px){.preview-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <header class="top"><div class="brand"><img src="/favicon.png" alt=""><div><strong>FORGED DESTINY GAMING</strong><span>BUSINESS ANALYTICS MANAGER</span></div></div><a class="back" href="/business/">View business page ↗</a></header>
+    <section><p class="eyebrow">Unlisted publishing helper</p><h1>Update the public headline numbers.</h1><p>This no-index page does not send or store creator submissions. Enter only combined, verified totals that are safe to publish.</p></section>
+    <div class="notice"><strong>How this works:</strong> your draft stays in this browser. When ready, download the updated <code>business-data.json</code> file and upload it to the root of the FDG website.</div>
+    <div class="layout">
+      <form class="panel" id="managerForm">
+        <div class="fields">
+          <div class="field"><label for="reportingPeriod">Reporting period</label><input id="reportingPeriod" name="reportingPeriod" placeholder="September 2026"></div>
+          <div class="field"><label for="lastUpdated">Public last-updated label</label><input id="lastUpdated" name="lastUpdated" placeholder="September 30, 2026"></div>
+          <div class="field"><label for="totalMonthlyViews">Total monthly views</label><input id="totalMonthlyViews" name="totalMonthlyViews" placeholder="425,000+"></div>
+          <div class="field"><label for="totalContentPublished">Total content published</label><input id="totalContentPublished" name="totalContentPublished" placeholder="84 posts & streams"></div>
+          <div class="field"><label for="combinedFollowers">Combined followers</label><input id="combinedFollowers" name="combinedFollowers" placeholder="18,500+"></div>
+          <div class="field"><label for="averageLivestreamReach">Average livestream reach</label><input id="averageLivestreamReach" name="averageLivestreamReach" placeholder="1,200 viewers / month"></div>
+          <div class="field"><label for="highestPerformingPost">Highest-performing post</label><input id="highestPerformingPost" name="highestPerformingPost" placeholder="Creator · Platform"></div>
+          <div class="field"><label for="highestPerformingViews">Highest-performing post views</label><input id="highestPerformingViews" name="highestPerformingViews" placeholder="80,000 views"></div>
+          <div class="field full"><label for="platformsRepresented">Platforms represented</label><input id="platformsRepresented" name="platformsRepresented" placeholder="Twitch, YouTube, TikTok, Instagram, Kick and Facebook"></div>
+        </div>
+        <div class="actions"><button type="submit">Save Draft</button><button type="button" class="secondary" id="downloadButton">Download Public Data</button><button type="button" class="secondary" id="reloadButton">Reload Live Data</button></div><div class="status" id="status" role="status" aria-live="polite"></div>
+      </form>
+      <aside class="panel"><p class="eyebrow">Public preview</p><div class="preview-grid">
+        <div class="preview"><small>Total monthly views</small><strong data-preview="totalMonthlyViews">—</strong></div>
+        <div class="preview"><small>Content published</small><strong data-preview="totalContentPublished">—</strong></div>
+        <div class="preview"><small>Combined followers</small><strong data-preview="combinedFollowers">—</strong></div>
+        <div class="preview"><small>Average livestream reach</small><strong data-preview="averageLivestreamReach">—</strong></div>
+        <div class="preview"><small>Highest-performing post</small><strong data-preview="highestPerformingPost">—</strong></div>
+        <div class="preview"><small>Platforms</small><strong data-preview="platformsRepresented">—</strong></div>
+      </div><div class="instructions"><strong>Monthly update:</strong><ol><li>Verify the private creator submissions.</li><li>Enter combined public totals here.</li><li>Select <strong>Download Public Data</strong>.</li><li>Upload the downloaded file to the website root, replacing the old one.</li></ol></div><p class="privacy">Never enter creator emails, raw screenshots, private analytics, or individual confidential figures here.</p></aside>
+    </div>
+  </main>
+  <script>
+    (function(){
+      const form=document.getElementById('managerForm');
+      const status=document.getElementById('status');
+      const names=['reportingPeriod','lastUpdated','totalMonthlyViews','totalContentPublished','combinedFollowers','highestPerformingPost','highestPerformingViews','platformsRepresented','averageLivestreamReach'];
+      function values(){const data={};names.forEach(function(name){data[name]=form.elements[name].value.trim();});return data;}
+      function display(){const data=values();document.querySelectorAll('[data-preview]').forEach(function(el){el.textContent=data[el.dataset.preview]||'—';});}
+      function fill(data){names.forEach(function(name){form.elements[name].value=typeof data[name]==='string'?data[name]:'';});display();}
+      async function loadLive(){
+        status.textContent='Loading current public data…';
+        try{const response=await fetch('/business-data.json?time='+Date.now(),{cache:'no-store'});if(!response.ok)throw new Error();const data=await response.json();fill(data);localStorage.setItem('fdgBusinessAnalyticsDraft',JSON.stringify(data));status.textContent='Current public data loaded.';}catch(error){status.textContent='Could not load the live file. Your saved browser draft is unchanged.';}
+      }
+      names.forEach(function(name){form.elements[name].addEventListener('input',display);});
+      form.addEventListener('submit',function(event){event.preventDefault();localStorage.setItem('fdgBusinessAnalyticsDraft',JSON.stringify(values()));status.textContent='Draft saved in this browser.';});
+      document.getElementById('downloadButton').addEventListener('click',function(){const data=values();localStorage.setItem('fdgBusinessAnalyticsDraft',JSON.stringify(data));const blob=new Blob([JSON.stringify(data,null,2)+'\n'],{type:'application/json'});const url=URL.createObjectURL(blob);const link=document.createElement('a');link.href=url;link.download='business-data.json';document.body.appendChild(link);link.click();link.remove();URL.revokeObjectURL(url);status.textContent='business-data.json downloaded and ready to upload.';});
+      document.getElementById('reloadButton').addEventListener('click',loadLive);
+      const draft=localStorage.getItem('fdgBusinessAnalyticsDraft');if(draft){try{fill(JSON.parse(draft));status.textContent='Saved browser draft restored.';}catch(error){loadLive();}}else{loadLive();}
+    }());
+  </script>
+</body>
+</html>

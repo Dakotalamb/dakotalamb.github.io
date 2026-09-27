@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /business-manager/
 
 Sitemap: https://forgeddestinygaming.com/sitemap.xml
