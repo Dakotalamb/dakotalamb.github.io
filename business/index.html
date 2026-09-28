@@ -28,7 +28,7 @@ nav: business
       <aside class="hero-card"><p class="eyebrow">One conversation</p><strong>A growing network of distinct creators.</strong><p>Reach the FDG creator roster through a coordinated partnership while keeping campaigns authentic to each community.</p></aside>
     </section>
 
-    <section class="section" aria-labelledby="performance-title"><p class="eyebrow">Verified network performance</p><h2 id="performance-title">Combined creator reach.</h2><p class="section-intro">These public figures summarize verified monthly submissions from the FDG creator roster. Individual creators&rsquo; raw reports remain private.</p>
+    <section class="section" aria-labelledby="performance-title"><p class="eyebrow">Network performance</p><h2 id="performance-title">Combined creator reach.</h2><p class="section-intro">These public figures summarize approved monthly submissions from the FDG creator roster. Individual creators&rsquo; raw reports remain private.</p>
       <div class="stats">
         <div class="stat"><span class="stat-label">Total monthly views</span><span class="stat-value" id="totalMonthlyViews">Being compiled</span></div>
         <div class="stat"><span class="stat-label">Content published</span><span class="stat-value" id="totalContentPublished">Being compiled</span></div>
@@ -37,7 +37,7 @@ nav: business
         <div class="stat"><span class="stat-label">Platforms represented</span><span class="stat-value" id="platformsRepresented">Twitch, YouTube, TikTok, Instagram, Kick and Facebook</span></div>
         <div class="stat"><span class="stat-label">Average livestream reach</span><span class="stat-value" id="averageLivestreamReach">Being compiled</span></div>
       </div>
-      <p class="report-meta"><span id="reportingPeriod">First report in progress</span><span id="lastUpdated"></span></p>
+      <p class="report-meta"><span id="reportingPeriod">First report in progress</span><span id="lastUpdated"></span><span id="reportSource"></span></p>
       <p class="privacy-note"><strong>Privacy standard:</strong> FDG publishes only polished, combined performance totals. Raw creator submissions, private channel analytics, contact details, and supporting screenshots are never displayed here.</p>
     </section>
 
@@ -67,14 +67,79 @@ nav: business
   {% include footer.html %}
   <script>
     (async function(){
-      try{
-        const response=await fetch('/business-data.json',{cache:'no-store'});
-        if(!response.ok)throw new Error('Analytics unavailable');
-        const data=await response.json();
+      const hubEndpoint='https://hub.forgeddestinygaming.com/api/public/business-analytics';
+      const numberFormat=new Intl.NumberFormat('en-US');
+
+      function setText(id,value){
+        const element=document.getElementById(id);
+        if(element&&value!==undefined&&value!==null&&String(value).trim())element.textContent=String(value).trim();
+      }
+
+      function formatNumber(value){
+        const number=Number(value);
+        return Number.isFinite(number)?numberFormat.format(number):'—';
+      }
+
+      function formatMonth(value){
+        const match=String(value||'').match(/^(\d{4})-(\d{2})$/);
+        if(!match)return value||'Latest approved report';
+        return new Intl.DateTimeFormat('en-US',{month:'long',year:'numeric',timeZone:'UTC'}).format(new Date(Date.UTC(Number(match[1]),Number(match[2])-1,1)));
+      }
+
+      function formatDate(value){
+        const date=new Date(value);
+        if(Number.isNaN(date.getTime()))return value||'';
+        return new Intl.DateTimeFormat('en-US',{month:'short',day:'numeric',year:'numeric'}).format(date);
+      }
+
+      function renderHub(data){
+        if(!data||!data.totals)throw new Error('Hub returned no approved analytics');
+        const totals=data.totals;
+        setText('totalMonthlyViews',formatNumber(totals.monthly_views));
+        setText('totalContentPublished',formatNumber(totals.content_published));
+        setText('combinedFollowers',formatNumber(totals.combined_followers));
+        setText('averageLivestreamReach',formatNumber(totals.average_livestream_reach));
+        setText('platformsRepresented',Array.isArray(totals.platforms_represented)&&totals.platforms_represented.length?totals.platforms_represented.join(', '):'—');
+        setText('reportingPeriod',formatMonth(data.reporting_period)+' · '+formatNumber(data.creators_reported)+' creator'+(Number(data.creators_reported)===1?'':'s')+' reported');
+        if(data.last_updated)setText('lastUpdated',' · Last updated '+formatDate(data.last_updated));
+        setText('reportSource',' · '+(data.all_figures_independently_verified?'Independently verified':'Creator-reported figures'));
+
+        const post=totals.highest_performing_post;
+        const postElement=document.getElementById('highestPerformingPost');
+        if(post&&postElement){
+          postElement.textContent='';
+          const label=post.creator||'Top creator post';
+          if(post.url){
+            const link=document.createElement('a');
+            link.href=post.url;
+            link.target='_blank';
+            link.rel='noopener noreferrer';
+            link.textContent=label;
+            postElement.appendChild(link);
+          }else postElement.textContent=label;
+          setText('highestPerformingViews',formatNumber(post.views)+' views');
+        }
+      }
+
+      function renderFallback(data){
         const fields=['totalMonthlyViews','totalContentPublished','combinedFollowers','highestPerformingPost','highestPerformingViews','platformsRepresented','averageLivestreamReach','reportingPeriod'];
-        fields.forEach(function(field){if(typeof data[field]==='string'&&data[field].trim()){document.getElementById(field).textContent=data[field].trim();}});
-        if(data.lastUpdated&&data.lastUpdated.trim()){document.getElementById('lastUpdated').textContent=' · Last updated '+data.lastUpdated.trim();}
-      }catch(error){console.warn('FDG business analytics could not be loaded.',error);}
+        fields.forEach(function(field){setText(field,data[field]);});
+        if(data.lastUpdated)setText('lastUpdated',' · Last updated '+data.lastUpdated);
+        setText('reportSource',' · Published site data');
+      }
+
+      try{
+        const response=await fetch(hubEndpoint,{cache:'no-store',headers:{Accept:'application/json'}});
+        if(!response.ok)throw new Error('Hub analytics request failed: '+response.status);
+        renderHub(await response.json());
+      }catch(hubError){
+        console.warn('Live Hub analytics unavailable; using published fallback.',hubError);
+        try{
+          const response=await fetch('/business-data.json',{cache:'no-store'});
+          if(!response.ok)throw new Error('Fallback analytics unavailable');
+          renderFallback(await response.json());
+        }catch(fallbackError){console.warn('FDG business analytics could not be loaded.',fallbackError);}
+      }
     }());
   </script>
 </body>
