@@ -1,9 +1,5 @@
-COMPLETE FORGED DESTINY GAMING MAIN WEBSITE
+Update for the MAIN website: forgeddestinygaming.com
 
-1. Unzip this package.
-2. Open the FDG-main-website-complete folder.
-3. Upload everything inside that folder to the root of the main forgeddestinygaming.com GitHub repository.
-4. Replace files when GitHub asks.
-5. Keep the corrected Axiom.png in the repository root. This package intentionally does not replace it.
+Replace only index.html and _includes/footer.html in your GitHub Pages repository. The index is based on the latest supplied homepage spacing fix. This patch adds six official social links to the shared footer and homepage organization sameAs data. Discord identity and the Business Inquiries link are preserved. No Hub or Twitch Extension files are included.
 
-This is the public main website, not the Creator Hub application.
+After GitHub Pages finishes rebuilding, check the footer on desktop and mobile. Each social link opens a new tab.
