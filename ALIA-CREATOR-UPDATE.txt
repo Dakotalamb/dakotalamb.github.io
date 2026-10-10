@@ -1,0 +1,11 @@
+Alia Atlas creator update
+
+Upload these files to the root of the Forged Destiny Gaming website repository while preserving their folders.
+
+Included changes:
+- Adds Alia.png.
+- Adds /creators/alia-atlas/.
+- Adds Alia to the main creators directory.
+- Adds Alia to the business roster and public press roster.
+- Adds the profile URL to sitemap.xml.
+- Keeps Alia's personal contact email private and uses her FDG email for public business inquiries.
