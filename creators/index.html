@@ -9,7 +9,7 @@ nav: creators
 
   <meta
     name="description"
-    content="Meet the gaming creators, livestreamers, musicians, artists, and indie game developers of Forged Destiny Gaming, including Alia Atlas and the FDG Founding Creator roster."
+    content="Meet the gaming creators, livestreamers, musicians, artists, and indie game developers of Forged Destiny Gaming, including Alia Atlas, SativaVibez420, and the official FDG creator roster."
   >
   <link rel="canonical" href="https://forgeddestinygaming.com/creators/">
   <meta property="og:title" content="Gaming Creators & Indie Game Developers | Forged Destiny Gaming">
@@ -369,6 +369,10 @@ nav: creators
     .axiom-card { order: 6; }
     .knights-card { order: 7; }
     .alia-card { order: 8; }
+    .sativa-card { order: 9; }
+
+    .sativa-card .creator-links a:nth-child(n + 4) { display: inline-block; }
+    .sativa-card .creator-bio { display: block; overflow: visible; }
 
     .creator-links a:hover {
       border-color: var(--orange);
@@ -445,6 +449,7 @@ nav: creators
       .axiom-card { order: 6; }
       .knights-card { order: 7; }
       .alia-card { order: 8; }
+    .sativa-card { order: 9; }
 
       .footer-inner {
         flex-direction: column;
@@ -452,29 +457,192 @@ nav: creators
       }
     }
   </style>
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"CollectionPage",
-    "name":"Forged Destiny Gaming Creators",
-    "url":"https://forgeddestinygaming.com/creators/",
-    "description":"Gaming creators, livestreamers, and indie game developers working together under Forged Destiny Gaming.",
-    "isPartOf":{"@id":"https://forgeddestinygaming.com/#website"},
-    "mainEntity":{
-      "@type":"ItemList",
-      "itemListElement":[
-        {"@type":"ListItem","position":1,"url":"https://forgeddestinygaming.com/creators/decotherobot/","item":{"@type":"Person","name":"DecoTheRobot","jobTitle":"Founder, Content Creator and Game Developer","url":"https://forgeddestinygaming.com/creators/decotherobot/","sameAs":["https://www.youtube.com/@DecoTheRobot","https://www.twitch.tv/decotherobot","https://www.tiktok.com/@decotherobot_"]}},
-        {"@type":"ListItem","position":2,"url":"https://forgeddestinygaming.com/creators/box-beard/","item":{"@type":"Person","name":"Brandon Lee Bedwell","alternateName":"Box_Beard","jobTitle":"Co-Founder, Content Creator and Aspiring Game Developer","url":"https://forgeddestinygaming.com/creators/box-beard/","sameAs":["https://www.youtube.com/@Box_Beard","https://www.twitch.tv/box_beard","https://www.tiktok.com/@box_beard"]}},
-        {"@type":"ListItem","position":3,"url":"https://forgeddestinygaming.com/creators/garian-the-barbarian/","item":{"@type":"Person","name":"GarianTheBarbarian","alternateName":"Garian the Barbarian","jobTitle":"Founding Creator, Gaming Creator and Musician","url":"https://forgeddestinygaming.com/creators/garian-the-barbarian/","sameAs":["https://www.twitch.tv/GarianTheBarbarian","https://www.youtube.com/@GarianTheBarbarian","https://www.tiktok.com/@GarianTheBarbarian","https://www.instagram.com/GarianTheBarbarian/","https://open.spotify.com/artist/7pbG8hFUT1ST49SNyjf31B"]}},
-        {"@type":"ListItem","position":4,"url":"https://forgeddestinygaming.com/creators/chaoticgemstones/","item":{"@type":"Person","name":"ChaoticGemstones","pronouns":"she/they","jobTitle":"Founding Creator, Gaming Creator and Artist","image":"https://forgeddestinygaming.com/Gem.png","url":"https://forgeddestinygaming.com/creators/chaoticgemstones/","sameAs":["https://www.twitch.tv/chaoticgemstones"]}},
-        {"@type":"ListItem","position":5,"url":"https://forgeddestinygaming.com/creators/cozynekoht/","item":{"@type":"Person","name":"Cozy","alternateName":"CozyNekoHT","pronouns":"she/her","jobTitle":"Founding Creator and KawaiiGoth Neko Half-Tuber","image":"https://forgeddestinygaming.com/cozy.png","url":"https://forgeddestinygaming.com/creators/cozynekoht/","sameAs":["https://www.twitch.tv/cozynekoht","https://kick.com/cozynekoht","https://www.youtube.com/@CozyNekoHT","https://www.tiktok.com/@cozynekoht","https://www.instagram.com/cozynekoht/","https://linktr.ee/cozynekoht"]}},
-        {"@type":"ListItem","position":6,"url":"https://forgeddestinygaming.com/creators/axiom-the-space-dragon/","item":{"@type":"Person","name":"Axiom The Space Dragon","alternateName":"AxiomTheSpaceDragon","pronouns":"he/him","jobTitle":"Founding Creator, Gaming and Conversation Creator","image":"https://forgeddestinygaming.com/Axiom.png?v=3","url":"https://forgeddestinygaming.com/creators/axiom-the-space-dragon/","sameAs":["https://www.twitch.tv/axiomthespacedragon","https://www.youtube.com/@AxiomTheSpaceDragon","https://www.tiktok.com/@axiomthespacedragon"]}},
-        {"@type":"ListItem","position":7,"url":"https://forgeddestinygaming.com/creators/knights-of-the-bar-table/","item":{"@type":"Person","name":"Knights of the Bar Table","alternateName":"KnightsOfTheBarTable","jobTitle":"Founding Creator, Gaming Creator","image":"https://forgeddestinygaming.com/Knight.PNG","url":"https://forgeddestinygaming.com/creators/knights-of-the-bar-table/","sameAs":["https://youtube.com/@knightsofthebartable1381"]}},
-        {"@type":"ListItem","position":8,"url":"https://forgeddestinygaming.com/creators/alia-atlas/","item":{"@type":"Person","name":"Alia Atlas","alternateName":["Ali","Lia","Aliaatlas"],"pronouns":"she/her","jobTitle":"Founding Creator and Gaming Creator","image":"https://forgeddestinygaming.com/Alia.png","url":"https://forgeddestinygaming.com/creators/alia-atlas/","sameAs":["https://www.twitch.tv/aliaatlas"]}}
-      ]
-    }
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Forged Destiny Gaming Creators",
+  "url": "https://forgeddestinygaming.com/creators/",
+  "description": "Gaming creators, livestreamers, and indie game developers working together under Forged Destiny Gaming.",
+  "isPartOf": {
+    "@id": "https://forgeddestinygaming.com/#website"
+  },
+  "mainEntity": {
+    "@type": "ItemList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "url": "https://forgeddestinygaming.com/creators/decotherobot/",
+        "item": {
+          "@type": "Person",
+          "name": "DecoTheRobot",
+          "jobTitle": "Founder, Content Creator and Game Developer",
+          "url": "https://forgeddestinygaming.com/creators/decotherobot/",
+          "sameAs": [
+            "https://www.youtube.com/@DecoTheRobot",
+            "https://www.twitch.tv/decotherobot",
+            "https://www.tiktok.com/@decotherobot_"
+          ]
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "url": "https://forgeddestinygaming.com/creators/box-beard/",
+        "item": {
+          "@type": "Person",
+          "name": "Brandon Lee Bedwell",
+          "alternateName": "Box_Beard",
+          "jobTitle": "Co-Founder, Content Creator and Aspiring Game Developer",
+          "url": "https://forgeddestinygaming.com/creators/box-beard/",
+          "sameAs": [
+            "https://www.youtube.com/@Box_Beard",
+            "https://www.twitch.tv/box_beard",
+            "https://www.tiktok.com/@box_beard"
+          ]
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "url": "https://forgeddestinygaming.com/creators/garian-the-barbarian/",
+        "item": {
+          "@type": "Person",
+          "name": "GarianTheBarbarian",
+          "alternateName": "Garian the Barbarian",
+          "jobTitle": "Founding Creator, Gaming Creator and Musician",
+          "url": "https://forgeddestinygaming.com/creators/garian-the-barbarian/",
+          "sameAs": [
+            "https://www.twitch.tv/GarianTheBarbarian",
+            "https://www.youtube.com/@GarianTheBarbarian",
+            "https://www.tiktok.com/@GarianTheBarbarian",
+            "https://www.instagram.com/GarianTheBarbarian/",
+            "https://open.spotify.com/artist/7pbG8hFUT1ST49SNyjf31B"
+          ]
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "url": "https://forgeddestinygaming.com/creators/chaoticgemstones/",
+        "item": {
+          "@type": "Person",
+          "name": "ChaoticGemstones",
+          "pronouns": "she/they",
+          "jobTitle": "Founding Creator, Gaming Creator and Artist",
+          "image": "https://forgeddestinygaming.com/Gem.png",
+          "url": "https://forgeddestinygaming.com/creators/chaoticgemstones/",
+          "sameAs": [
+            "https://www.twitch.tv/chaoticgemstones"
+          ]
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "url": "https://forgeddestinygaming.com/creators/cozynekoht/",
+        "item": {
+          "@type": "Person",
+          "name": "Cozy",
+          "alternateName": "CozyNekoHT",
+          "pronouns": "she/her",
+          "jobTitle": "Founding Creator and KawaiiGoth Neko Half-Tuber",
+          "image": "https://forgeddestinygaming.com/cozy.png",
+          "url": "https://forgeddestinygaming.com/creators/cozynekoht/",
+          "sameAs": [
+            "https://www.twitch.tv/cozynekoht",
+            "https://kick.com/cozynekoht",
+            "https://www.youtube.com/@CozyNekoHT",
+            "https://www.tiktok.com/@cozynekoht",
+            "https://www.instagram.com/cozynekoht/",
+            "https://linktr.ee/cozynekoht"
+          ]
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "url": "https://forgeddestinygaming.com/creators/axiom-the-space-dragon/",
+        "item": {
+          "@type": "Person",
+          "name": "Axiom The Space Dragon",
+          "alternateName": "AxiomTheSpaceDragon",
+          "pronouns": "he/him",
+          "jobTitle": "Founding Creator, Gaming and Conversation Creator",
+          "image": "https://forgeddestinygaming.com/Axiom.png?v=3",
+          "url": "https://forgeddestinygaming.com/creators/axiom-the-space-dragon/",
+          "sameAs": [
+            "https://www.twitch.tv/axiomthespacedragon",
+            "https://www.youtube.com/@AxiomTheSpaceDragon",
+            "https://www.tiktok.com/@axiomthespacedragon"
+          ]
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 7,
+        "url": "https://forgeddestinygaming.com/creators/knights-of-the-bar-table/",
+        "item": {
+          "@type": "Person",
+          "name": "Knights of the Bar Table",
+          "alternateName": "KnightsOfTheBarTable",
+          "jobTitle": "Founding Creator, Gaming Creator",
+          "image": "https://forgeddestinygaming.com/Knight.PNG",
+          "url": "https://forgeddestinygaming.com/creators/knights-of-the-bar-table/",
+          "sameAs": [
+            "https://youtube.com/@knightsofthebartable1381"
+          ]
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 8,
+        "url": "https://forgeddestinygaming.com/creators/alia-atlas/",
+        "item": {
+          "@type": "Person",
+          "name": "Alia Atlas",
+          "alternateName": [
+            "Ali",
+            "Lia",
+            "Aliaatlas"
+          ],
+          "pronouns": "she/her",
+          "jobTitle": "Founding Creator and Gaming Creator",
+          "image": "https://forgeddestinygaming.com/Alia.png",
+          "url": "https://forgeddestinygaming.com/creators/alia-atlas/",
+          "sameAs": [
+            "https://www.twitch.tv/aliaatlas"
+          ]
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 9,
+        "url": "https://forgeddestinygaming.com/creators/sativavibez420/",
+        "item": {
+          "@type": "Person",
+          "name": "Sativa",
+          "alternateName": "SativaVibez420",
+          "jobTitle": "Official FDG Creator",
+          "url": "https://forgeddestinygaming.com/creators/sativavibez420/",
+          "description": "Hello! My name is Sativa, but you might catch my real name when streaming with friends! 🤫 Variety gamer! ❤️",
+          "memberOf": {
+            "@type": "Organization",
+            "name": "Forged Destiny Gaming",
+            "url": "https://forgeddestinygaming.com/"
+          },
+          "sameAs": [
+            "https://www.twitch.tv/sativavibez420",
+            "https://www.youtube.com/@SativaVibez420",
+            "https://www.instagram.com/sativavibez420_official/",
+            "https://www.tiktok.com/@sayivavibez420"
+          ],
+          "image": "https://forgeddestinygaming.com/sativa.png"
+        }
+      }
+    ]
   }
-  </script>
+}</script>
 </head>
 
 <body>
@@ -805,6 +973,22 @@ nav: creators
             <a href="/creators/alia-atlas/">Creator Profile</a>
             <a href="https://www.twitch.tv/aliaatlas" target="_blank" rel="noopener noreferrer">Twitch</a>
           </div>
+        </div>
+      </article>
+
+      <!-- Sativa / SativaVibez420 -->
+      <article class="creator-card sativa-card">
+        <div class="creator-photo"><a class="creator-photo-link" href="/creators/sativavibez420/" aria-label="View Sativa's creator profile"><img src="/sativa.png" alt="Sativa’s illustrated avatar with red hair, horns, flowers, and butterflies"></a></div>
+        <div class="creator-info">
+          <p class="creator-role">Official FDG Creator &middot; Variety Gaming</p>
+          <h2 class="creator-name"><a href="/creators/sativavibez420/">Sativa &mdash; SativaVibez420</a></h2>
+          <p class="creator-bio">Hello! My name is Sativa, but you might catch my real name when streaming with friends! 🤫 Variety gamer! ❤️</p>
+          <p><strong>Creates:</strong> Co-op horror, cozy games, shooters, RPGs, and story-driven games.</p>
+          <p><strong>Favorite games:</strong> Apex Legends, PEAK, and League of Legends.</p>
+          <div class="creator-links" aria-label="Sativa links"><a href="https://www.twitch.tv/sativavibez420" target="_blank" rel="noopener noreferrer">Twitch</a>
+<a href="https://www.youtube.com/@SativaVibez420" target="_blank" rel="noopener noreferrer">YouTube</a>
+<a href="https://www.instagram.com/sativavibez420_official/" target="_blank" rel="noopener noreferrer">Instagram</a>
+<a href="https://www.tiktok.com/@sayivavibez420" target="_blank" rel="noopener noreferrer">TikTok</a></div>
         </div>
       </article>
       </div>

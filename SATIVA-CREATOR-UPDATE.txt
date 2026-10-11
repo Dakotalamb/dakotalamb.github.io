@@ -1,0 +1,14 @@
+Sativa official FDG creator update — main website only
+
+Upload the included creators/, business/, press/, and sitemap.xml files to the root of the MAIN FDG website repository, preserving folder paths. This is a files-only patch; it has not been deployed.
+
+Adds Sativa — SativaVibez420 to the directory as creator 9, after Alia Atlas; adds her individual profile, business/press roster entries, structured data, social metadata, and sitemap URL.
+Uses the supplied biography, content categories, favorite games, and four exact social URLs. Instagram is correctly labeled. No accomplishments, personal email, or unconfirmed achievements are published.
+All four of her socials are visible on the directory and profile. The supplied portrait is included at /sativa.png and used in the directory, profile, structured data, and social previews.
+Preserves the corrected Alia creator build, all eight existing creator cards, their order, existing natural image sizing, and shared header/footer includes. Includes the five changed website files and sativa.png. Hub/FDGcast/analytics files are excluded.
+
+Comparison and validation:
+Reviewed the available main-site source revisions and content of prior creator, image sizing, brand, business, press, SEO, sitemap, homepage, and footer patches. The corrected FDG-Alia-Atlas-creator-update is the newest available version of the files changed here.
+Verified the eight pre-existing creator articles are unchanged; JSON-LD is valid with nine creator positions; all supplied social links and labels match; sitemap XML is valid and retains every prior URL. Browser rendering and the deployed site were unavailable for verification.
+
+Email setup: The profile links to SativaVibez420@forgeddestinygaming.com. Configure and test forwarding through the domain email provider before uploading the profile. Website files cannot create or activate a forwarding rule. The destination email supplied privately is deliberately excluded from these public repository files.
