@@ -305,6 +305,11 @@ nav: home
         gap: 14px;
       }
     }
+  
+    .creator-tools-actions { display: flex; flex-direction: column; gap: 12px; flex: 0 0 auto; }
+    .creator-tools-actions .button { text-align: center; }
+    .announcement .roster-status { margin-top: 12px; font-size: .82rem; color: var(--muted); }
+    @media (max-width: 760px) { .creator-tools-promo { flex-direction: column; align-items: stretch; } .creator-tools-actions { width: 100%; } .creator-tools-actions .button { white-space: normal; } }
   </style>
 </head>
 
@@ -312,22 +317,18 @@ nav: home
   <main>
     {% include header.html %}
 
-    <aside class="announcement" aria-labelledby="creator-call-title">
+
+    <aside class="announcement creator-tools-promo" aria-labelledby="creator-tools-title">
       <div class="announcement-copy">
-        <div class="eyebrow">Founding creator applications</div>
-        <h2 id="creator-call-title">Join our first creator roster.</h2>
-        <p>
-          Forged Destiny Gaming is selecting eight creators to join us from the
-          beginning. You keep full control of your channels and content—there is
-          no exclusivity and no required posting schedule.
-        </p>
+        <div class="eyebrow">Built for creators</div>
+        <h2 id="creator-tools-title">Your streaming tools. Together in OBS.</h2>
+        <p>FDGCast brings Twitch, YouTube, and Kick chat, multistream controls, and audio alerts into your streaming workspace. Free core tools, with optional Supporter overlays.</p>
+        <p class="roster-status">Our founding creator roster is complete. Applications are now closed.</p>
       </div>
-      <a
-        class="button primary"
-        href="https://docs.google.com/forms/d/e/1FAIpQLScuPxF7qDzVZMR8FjXOhKLvPp3Qv4o7qzVFVt1GRz0PTo04zA/viewform"
-        target="_blank"
-        rel="noopener noreferrer"
-      >Apply to join</a>
+      <div class="creator-tools-actions">
+        <a class="button primary" href="https://hub.forgeddestinygaming.com/fdgcast">Explore FDGCast Preview</a>
+        <a class="button" href="https://hub.forgeddestinygaming.com/">Plan streams in the Hub</a>
+      </div>
     </aside>
 
     <section class="hero" id="home">
@@ -390,5 +391,6 @@ nav: home
   </main>
 
   {% include footer.html %}
+
 </body>
 </html>

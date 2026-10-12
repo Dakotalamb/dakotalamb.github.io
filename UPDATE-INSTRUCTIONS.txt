@@ -1,0 +1,14 @@
+FDG main website — closed applications, creator tools and Sativa profile button
+
+Upload index.html and creators/index.html to the MAIN WEBSITE repository root, preserving folders. These files are for forgeddestinygaming.com, not the Heroku Hub. Commit/deploy through your normal main-site process.
+
+Changes:
+- Replaces the homepage founding-creator application promotion with FDGCast Preview and a secondary Forge Creator Hub link.
+- Says the founding creator roster is complete and applications are closed.
+- Adds Sativa’s missing Creator Profile button before Twitch, YouTube, Instagram and TikTok.
+- Preserves the latest CassKitsune directory update and all ten creator cards.
+- Preserves current live homepage sections, styles and existing Jekyll header/footer includes.
+
+The original Google Form itself is not changed by these website files. To reject submissions through an old direct form link too, turn off Accepting responses in Google Forms.
+
+No live deployment was performed here. Browser visual QA was unavailable; HTML, links, metadata, mobile layout rules and retained content were checked.
