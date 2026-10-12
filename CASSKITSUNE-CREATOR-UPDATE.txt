@@ -1,0 +1,11 @@
+CassKitsune — main FDG website creator update
+
+Upload contents to the main website repository root, preserving folders. Apply after the latest Sativa and Creator Backgrounds updates. This files-only patch has not been deployed.
+
+Adds the tenth creator after Sativa, their individual profile, business and press roster entries, sitemap, JSON-LD, social previews, and supplied original cass.png artwork. Uses CassKitsune as the display name and casskitusne as the Twitch handle. TikTok: @cassthekitsune. No YouTube, Instagram, or other unavailable accounts are listed.
+Public role: Official Founding Creator. Pronouns: She/They.
+Purple, lavender, and gold page background/panels match the artwork. All existing creator profiles and background themes remain untouched.
+
+Configure and test CassKitsune@forgeddestinygaming.com forwarding in the domain email settings before uploading the profile. Destination provided privately is deliberately excluded from public repository files. Website source cannot create an email forwarding rule.
+
+Verification: Prior nine creator cards and schema entries preserved, creator 10 ordering, exact bio/socials/pronouns/contact, valid JSON-LD and sitemap, all previous sitemap URLs retained, original image bytes and ZIP integrity. Browser rendering/live deployment have not been verified.
