@@ -1,0 +1,19 @@
+FDG creator background update — all nine creator profiles
+
+Upload the creators/ folder into the main FDG website repository, keeping the existing folder paths. This patch has not been deployed.
+Apply after the latest FDG-Sativa-creator-update.zip, which supplies her image, directory, roster, and sitemap updates. This archive includes the latest expanded Sativa profile, with her existing theme unchanged.
+
+Adds layered background gradients and gently tinted content panels matched to each existing creator palette:
+Deco: aqua/teal and slate.
+Box_Beard: crimson, deep rose, and charcoal.
+Garian: gold, warm brown, and purple.
+ChaoticGemstones: violet and deep plum.
+Cozy: pink, magenta, and navy.
+Axiom: red/plum and cosmic purple.
+Knights: burgundy, warm brown, and gold.
+Alia: pond green and woodland green.
+Sativa: retains rose-red, pink, leafy green, and charcoal.
+
+Compared saved profile revisions against the newer September 28 connected main-site snapshot. Preserves Knights' updated profile and Knight.PNG asset reference, latest Deco/Box brand palettes, and Alia's latest page.
+For the eight updated pages, only one CSS style block is added. Their content, contacts, links, metadata, image sizing, navigation includes, and responsive rules are unchanged. Sativa is copied byte-for-byte from her latest completed profile.
+Verification: Confirmed only CSS additions for eight pages, exact preservation of Sativa, nine expected profile paths, valid existing JSON-LD, and ZIP integrity. Browser rendering and live deployment were unavailable for verification.
