@@ -28,17 +28,17 @@ nav: business
       <aside class="hero-card"><p class="eyebrow">One conversation</p><strong>A growing network of distinct creators.</strong><p>Reach the FDG creator roster through a coordinated partnership while keeping campaigns authentic to each community.</p></aside>
     </section>
 
-    <section class="section" aria-labelledby="performance-title"><p class="eyebrow">Verified network performance</p><h2 id="performance-title">Combined creator reach.</h2><p class="section-intro">These public figures summarize verified monthly submissions from the FDG creator roster. Individual creators&rsquo; raw reports remain private.</p>
+    <section class="section" aria-labelledby="performance-title"><p class="eyebrow">Approved network performance</p><h2 id="performance-title">Combined creator reach.</h2><p class="section-intro">These public totals accumulate approved monthly submissions from the FDG creator roster. Individual creators&rsquo; raw reports remain private.</p>
       <div class="stats">
-        <div class="stat"><span class="stat-label">Total monthly views</span><span class="stat-value" id="totalMonthlyViews">Being compiled</span></div>
-        <div class="stat"><span class="stat-label">Content published</span><span class="stat-value" id="totalContentPublished">Being compiled</span></div>
-        <div class="stat"><span class="stat-label">Combined followers</span><span class="stat-value" id="combinedFollowers">Being compiled</span></div>
-        <div class="stat"><span class="stat-label">Highest-performing post</span><span class="stat-value" id="highestPerformingPost">Being verified</span><span class="stat-detail" id="highestPerformingViews"></span></div>
-        <div class="stat"><span class="stat-label">Platforms represented</span><span class="stat-value" id="platformsRepresented">Twitch, YouTube, TikTok, Instagram, Kick and Facebook</span></div>
-        <div class="stat"><span class="stat-label">Average livestream reach</span><span class="stat-value" id="averageLivestreamReach">Being compiled</span></div>
+        <div class="stat"><span class="stat-label">Total reported views</span><span class="stat-value" id="totalMonthlyViews">Loading reports…</span></div>
+        <div class="stat"><span class="stat-label">Content published</span><span class="stat-value" id="totalContentPublished">Loading reports…</span></div>
+        <div class="stat"><span class="stat-label">Combined followers</span><span class="stat-value" id="combinedFollowers">Loading reports…</span></div>
+        <div class="stat"><span class="stat-label">Highest-performing post</span><span class="stat-value" id="highestPerformingPost">Loading reports…</span><span class="stat-detail" id="highestPerformingViews"></span></div>
+        <div class="stat"><span class="stat-label">Platforms represented</span><span class="stat-value" id="platformsRepresented">Loading reports…</span></div>
+        <div class="stat"><span class="stat-label">Average reported livestream reach</span><span class="stat-value" id="averageLivestreamReach">Loading reports…</span></div>
       </div>
-      <p class="report-meta"><span id="reportingPeriod">First report in progress</span><span id="lastUpdated"></span></p>
-      <p class="privacy-note"><strong>Privacy standard:</strong> FDG publishes only polished, combined performance totals. Raw creator submissions, private channel analytics, contact details, and supporting screenshots are never displayed here.</p>
+      <p class="report-meta" role="status" aria-live="polite"><span id="reportingPeriod">Loading approved Hub reports…</span><span id="lastUpdated"></span></p>
+      <p class="report-meta" id="reportMethod">Views and published content add across approved months. Followers use the latest reported approved month-end snapshot per creator and platform; platform audiences can overlap. Livestream reach is the unweighted mean of submitted monthly averages, not a per-stream average.</p><p class="privacy-note"><strong>Privacy standard:</strong> FDG publishes only polished, combined performance totals. Raw creator submissions, private channel analytics, contact details, and supporting screenshots are never displayed here.</p>
     </section>
 
     <section class="section"><p class="eyebrow">Ways to work together</p><h2>Partnerships we accept.</h2><div class="partnerships">
@@ -68,17 +68,6 @@ nav: business
     </section>
   </main>
   {% include footer.html %}
-  <script>
-    (async function(){
-      try{
-        const response=await fetch('/business-data.json',{cache:'no-store'});
-        if(!response.ok)throw new Error('Analytics unavailable');
-        const data=await response.json();
-        const fields=['totalMonthlyViews','totalContentPublished','combinedFollowers','highestPerformingPost','highestPerformingViews','platformsRepresented','averageLivestreamReach','reportingPeriod'];
-        fields.forEach(function(field){if(typeof data[field]==='string'&&data[field].trim()){document.getElementById(field).textContent=data[field].trim();}});
-        if(data.lastUpdated&&data.lastUpdated.trim()){document.getElementById('lastUpdated').textContent=' · Last updated '+data.lastUpdated.trim();}
-      }catch(error){console.warn('FDG business analytics could not be loaded.',error);}
-    }());
-  </script>
+  <script src="/business/performance.js?v=1" defer></script>
 </body>
 </html>
