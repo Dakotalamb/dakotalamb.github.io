@@ -121,7 +121,7 @@ nav: legal
 
     <section class="policy-section" id="cookies">
       <h2>9. Cookies and website visit counting</h2>
-      <p>The Creator Hub uses an essential session cookie for sign-in, security, and account continuity. Public website visit counting uses a random browser marker and last page activity time in local storage. It counts one arrival per browser visit, rather than each page opened. A new visit starts when a page is opened after 30 minutes without a tracked page navigation. The main website and Hub are counted separately; this is not a count of unique people.</p>
+      <p>The Creator Hub uses an essential session cookie for sign-in, security, and account continuity. Public website visit counting uses a random browser marker and last page activity time in local storage. It counts once per browser visit to each section, rather than each page opened. Entering the main website, Hub or FDGCast counts once in that section. A new section visit starts when a page is opened after 30 minutes without a tracked page navigation there. The main website, Hub and FDGCast sections are counted separately; the combined total adds these section visits and is not a count of unique people.</p>
       <p>The Hub receives a random visit marker and the entry page path, without query strings or fragments. It stores a hash of the marker to prevent duplicate counts. These hashes expire after 24 hours and are removed by daily maintenance. Aggregate daily visit counts and entry-page categories are retained for approximately 13 months. Traffic records are not linked to creator accounts. Older page-view totals remain separately labeled and are not converted into visits.</p>
       <p>The counter respects browser Do Not Track and Global Privacy Control signals and skips counting when local storage is unavailable. Clearing site storage removes the marker; otherwise it is replaced on the next visit after the inactivity window. We do not use this counter for advertising or offsite behavioral tracking. Authentication and referral attribution are separate from these aggregate traffic counts.</p>
     </section>
@@ -144,6 +144,6 @@ nav: legal
     <aside class="notice"><p>This Privacy Policy should be read together with the <a href="/terms/">Forged Destiny Gaming Terms of Use</a>.</p></aside>
   </main>
   {% include footer.html %}
-<script src="/assets/website-visits.js?v=2" defer></script>
+<script src="/assets/website-visits.js?v=3" defer></script>
 </body>
 </html>

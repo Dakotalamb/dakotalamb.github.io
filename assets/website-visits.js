@@ -5,10 +5,13 @@
  if(!main&&!hub)return;
  const path=location.pathname;
  if(!main&&!(/^\/(?:fdgcast(?:\/[a-z0-9-]+)?|discover|supporter|business|newsletter|sign-in|privacy|data-and-cookies)?$/.test(path)||/^\/(?:creators|e|t|r)\/[a-zA-Z0-9_-]+$/.test(path)))return;
- const key='fdg-arrival-visit-v2',windowMs=30*60*1000;
+ const section=/^\/fdgcast(?:\/|$)/.test(path)?'fdgcast':main?'main':'hub';
+ const key='fdg-arrival-visit-v2:'+section,windowMs=30*60*1000;
  async function count(){
   const now=Date.now();let state;
-  try{state=JSON.parse(localStorage.getItem(key)||'null');}catch{return;}
+  try{state=JSON.parse(localStorage.getItem(key)||'null');
+   if(!state){const old=JSON.parse(localStorage.getItem('fdg-arrival-visit-v2')||'null');if(old&&typeof old.entry==='string'){const oldSection=/^\/fdgcast(?:\/|$)/.test(old.entry)?'fdgcast':main?'main':'hub';if(oldSection===section)state=old;}}
+  }catch{return;}
   if(!state||typeof state.id!=='string'||!Number.isFinite(state.lastSeen)||now-state.lastSeen>=windowMs||now<state.lastSeen){
    if(!crypto?.getRandomValues)return;
    state={id:Array.from(crypto.getRandomValues(new Uint8Array(16)),n=>n.toString(16).padStart(2,'0')).join(''),lastSeen:now,counted:false,entry:path};
