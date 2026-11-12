@@ -1,7 +1,9 @@
+<link rel="stylesheet" href="/assets/seasonal-branding.css?v=1">
+<script src="/assets/seasonal-branding.js?v=1" defer></script>
 <header class="site-header">
   {% if page.nav == "home" %}
   <a class="brand-card" href="/" aria-label="{{ site.title }} home">
-    <img src="/favicon.png" alt="">
+    <img src="/favicon.png" data-seasonal-logo alt="">
     <span>
       <strong>FORGED DESTINY</strong>
       <small>GAMING</small>
@@ -9,7 +11,7 @@
   </a>
   {% else %}
   <a class="brand" href="/" aria-label="{{ site.title }} home">
-    <img src="/favicon.png" alt="">
+    <img src="/favicon.png" data-seasonal-logo alt="">
     <div class="brand-text">FORGED DESTINY<span>GAMING</span></div>
   </a>
   {% endif %}

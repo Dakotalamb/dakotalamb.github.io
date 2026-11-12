@@ -1,0 +1,16 @@
+{
+  "enabled": true,
+  "timeZone": "America/New_York",
+  "override": "auto",
+  "themes": [
+    {
+      "id": "halloween",
+      "label": "Halloween",
+      "enabled": true,
+      "start": "10-01",
+      "end": "10-31",
+      "priority": 10,
+      "src": "/assets/seasonal/fdg-halloween.png"
+    }
+  ]
+}
