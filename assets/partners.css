@@ -5,3 +5,18 @@
 @keyframes fdg-sponsor-enter{from{opacity:0}to{opacity:1}}
 .website-ad [data-sponsor-slide]:not([hidden]){animation:fdg-sponsor-enter .35s ease-out}
 @media(prefers-reduced-motion:reduce){.website-ad [data-sponsor-slide]:not([hidden]){animation:none}}
+
+.website-ad{box-sizing:border-box;padding:20px 24px;border:1px solid #955036;border-left:4px solid #ff531f;border-radius:8px;background:radial-gradient(ellipse at 100% 0%,#77331855,transparent 65%),linear-gradient(115deg,#30221d,#1b2023 70%);box-shadow:0 10px 26px #0002}
+.website-ad .sponsor-feature-label{display:flex;gap:10px;align-items:center;margin:0 0 14px;font-size:.8rem}
+.website-ad .sponsor-feature-label span{display:inline;margin:0}
+.website-ad .sponsor-feature-badge{padding:4px 8px;border-radius:3px;background:#ff531f;color:#140b07;text-transform:uppercase;font-size:.66rem;font-weight:900;letter-spacing:.08em}
+.website-ad .sponsor-feature-partner{font-weight:800;color:#fff0de}
+.website-ad [data-sponsor-slide]>.sponsor-feature-body{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:18px 24px;align-items:center}
+.website-ad .sponsor-feature-body img{grid-column:1/-1;margin:0;height:140px;border-radius:4px;object-fit:contain}
+.website-ad .sponsor-feature-copy{display:flex;flex-direction:column;gap:9px;margin:0}
+.website-ad .sponsor-feature-title{margin:0;font-size:clamp(1.2rem,2.2vw,1.65rem);line-height:1.24}
+.website-ad .sponsor-feature-description{margin:0;font-size:.92rem;line-height:1.6;color:#ded8d0}
+.website-ad .sponsor-feature-cta{display:inline-flex;align-items:center;justify-content:center;margin:0;padding:12px 17px;border:1px solid #ff7b49;border-radius:4px;background:#ff531f;color:#140b07;font-size:.85rem;font-weight:900;white-space:nowrap}
+.website-ad .sponsor-feature-body:hover .sponsor-feature-title{color:#ffb18d}.website-ad .sponsor-feature-body:hover .sponsor-feature-cta{background:#ff754a}
+.website-ad .sponsor-rotation-controls{margin-top:16px;padding-top:10px;border-top:1px solid #79432d}
+@media(max-width:600px){.website-ad{padding:16px 18px}.website-ad [data-sponsor-slide]>.sponsor-feature-body{grid-template-columns:1fr;gap:14px}.website-ad .sponsor-feature-body img{height:110px}.website-ad .sponsor-feature-cta{justify-self:start}.website-ad .sponsor-feature-description{font-size:.85rem}}
