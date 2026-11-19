@@ -1,0 +1,5 @@
+{
+  "src/home-feed.js": "71240e21065ca60615525eece3975fd414360120b46282e31c93244f4abfcca9",
+  "views/partials/feed-event.ejs": "fc5722eda0cc60b4315613e80cc2487a2886fdbbf80871521bb0b213be8e209b",
+  "test/home-feed.js": "0278a21adc2083031647ad91f4c569d567b54571a11732a2f68d03cc9bb3088d"
+}

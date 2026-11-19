@@ -1,0 +1,25 @@
+Forge Creator Hub — Event Owner Invitation Fix
+
+Apply this small patch AFTER the Event Feed and Mobile Polish update.
+Upload these files to the existing HUB repository root, preserving folders,
+then deploy normally to Heroku app fdg-creator-calendar.
+No main website update, database command or migration is needed.
+Nothing has been deployed for you.
+
+The feed previously classified every pending participant record as an invitation,
+even when the current user owned the event. Generated multi-day event/activity
+participant records could trigger the same behavior.
+
+Ownership now takes precedence in invitation classification, query priority and
+card labels. Owned events stay in the normal personal feed, display Your event,
+and offer the existing management/details link without self-response controls.
+Genuine invitations to other people's events are unchanged. Participant rows,
+responses, reminder preferences and event ownership are not modified.
+
+PASSED: home-feed suite and event-watch suite, plus source syntax check.
+Regression coverage includes owner participant records for ordinary events,
+multi-day parents and child activities, rendered owner labels, no self-response
+forms, retained participant data, and existing genuine-invitation behavior.
+
+After deployment, refresh Home while signed in as the event owner. Your events
+should no longer appear under Invitations awaiting your response.

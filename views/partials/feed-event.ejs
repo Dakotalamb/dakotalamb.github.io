@@ -1,0 +1,14 @@
+<article class="feed-event" data-feed-event="<%= event.slug %>">
+ <div class="feed-identity"><a href="/creators/<%= event.owner_slug %>"><img src="<%= event.owner_avatar_url||'/image-placeholder.svg' %>" alt="" width="40" height="40" loading="lazy"><strong><%= event.owner_name %></strong></a><span><%= event.is_host?'Your event':event.is_invitation?'Invited you':event.followed_creator?'Following':'Public event' %></span></div>
+ <h2><a href="/e/<%= event.slug %>"><%= event.title %></a></h2>
+ <p class="feed-when"><time data-date="<%= new Date(event.starts_at).toISOString() %>"><%= new Date(event.starts_at).toISOString().slice(0,16).replace('T',' ') %> UTC</time><% if(event.game_name){ %><span> · <%= event.game_name %></span><% } %></p>
+ <% if(event.description){ %><p class="feed-excerpt"><%= event.description.slice(0,240) %></p><% } %>
+ <% if(event.response_kind){ const kind=event.response_kind; const value=kind==='invitation'?event.invitation_response:kind==='creator'?event.creator_response:event.watch_response; %>
+ <form method="post" action="/e/<%= event.slug %>/<%= kind==='invitation'?'participants/respond':kind==='watch'?'watch-rsvp':'rsvp' %>" data-feed-response>
+  <input type="hidden" name="feed_response" value="1"><input type="hidden" name="_csrf" value="<%= csrfToken %>"><% if(kind==='watch'){ %><input type="hidden" name="activity_ids" value="<%= event.id %>"><% } %>
+  <strong><%= kind==='watch'?'Planning to watch?':'Joining as a creator?' %></strong>
+  <div class="feed-responses"><% [['going','Yes, I’m in'],['maybe','Maybe'],['declined','No, thanks']].filter(([v])=>kind!=='watch'||v!=='maybe').forEach(([v,label])=>{ const response=kind==='invitation'&&v==='going'?'accepted':v; %><button class="button <%= value===response?'primary':'' %>" name="response" value="<%= response %>" aria-pressed="<%= value===response %>"><%= label %></button><% }) %></div>
+  <p class="muted feed-response-status" role="status"><%= ({going:'You’re going.',accepted:'You’ve accepted.',maybe:'You’ve responded maybe.',declined:'You’ve declined.'})[value]||'No response yet.' %><%= kind==='watch'?' Viewer response only; this does not join the creator lineup.':'' %></p>
+ </form><% } %>
+ <a class="feed-details" href="/e/<%= event.slug %>"><%= event.has_sessions?'Choose days & view event':event.is_host?'Manage event':'View event & details' %></a>
+</article>
