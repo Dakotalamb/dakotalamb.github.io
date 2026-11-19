@@ -1,0 +1,7 @@
+.fdg-mobile-menu{display:none}
+@media(max-width:700px){
+ main{width:min(100% - 28px,900px);padding-top:16px}.site-header{gap:12px;padding-bottom:14px}.brand-card{padding:6px}.brand-card img{width:34px;height:34px}.brand-card strong{font-size:11px}.brand-card small{font-size:9px}
+ .fdg-mobile-ready .fdg-mobile-menu{display:inline-flex;min-height:44px;align-items:center;padding:8px 14px;background:#232629;color:#fff2df;border:1px solid #87553e;font:inherit;font-weight:bold}
+ .fdg-mobile-ready .site-header .nav-links{display:none;width:100%;flex-basis:100%}.fdg-mobile-ready .site-header:has(.fdg-mobile-menu[aria-expanded=true]) .nav-links{display:flex;gap:8px}.site-header .nav-links a{min-height:44px;padding:10px;box-sizing:border-box}
+ .hero h1{font-size:clamp(2rem,9vw,3rem);line-height:1.15}.hero{padding:30px 0}.website-ad img{height:auto!important;max-height:none;aspect-ratio:auto;object-fit:contain}.creator-tools-promo{padding:20px}.creator-tools-promo h2{font-size:1.35rem;line-height:1.3}
+}

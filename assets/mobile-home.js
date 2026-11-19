@@ -1,0 +1,2 @@
+const menu=document.querySelector('.fdg-mobile-menu');
+if(menu){document.documentElement.classList.add('fdg-mobile-ready');menu.addEventListener('click',()=>menu.setAttribute('aria-expanded',String(menu.getAttribute('aria-expanded')!=='true')));document.addEventListener('keydown',e=>{if(e.key==='Escape'&&menu.getAttribute('aria-expanded')==='true'){menu.setAttribute('aria-expanded','false');menu.focus();}});}
